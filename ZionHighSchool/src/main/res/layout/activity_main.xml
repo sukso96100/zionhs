@@ -1,7 +1,38 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    tools:ignore="MergeRootFrame" />
+    android:fillViewport="true"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/notices_cover"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/notices" />
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/meal_cover"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/notices"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/meal"/>
+        <include
+            android:id="@+id/info"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            layout="@layout/appinfo_cover"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/meal" />
+    </RelativeLayout>
+</ScrollView>
