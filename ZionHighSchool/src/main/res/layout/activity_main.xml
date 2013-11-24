@@ -3,14 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:paddingBottom="10dp"
-    android:paddingTop="10dp">
+    >
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
 
         <include
             android:layout_width="wrap_content"
@@ -32,7 +33,17 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             layout="@layout/appinfo_cover"
+            android:layout_below="@+id/schedule"
             android:layout_marginTop="10dp"
-            android:layout_below="@+id/meal" />
+            android:layout_alignParentLeft="true" />
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/schedule_cover"
+            android:layout_below="@+id/meal"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/schedule" />
     </RelativeLayout>
 </ScrollView>
