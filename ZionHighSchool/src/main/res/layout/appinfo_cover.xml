@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="About the App/App Settings"
+        android:text="@string/info"
         android:id="@+id/textView"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true" />

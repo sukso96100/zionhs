@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">시온고등학교</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="notices">공지사항</string>
+    <string name="meal">중식/석식</string>
+    <string name="schoolinfo">학교정보</string>
+    <string name="schedule">학사일정</string>
+    <string name="schoolintro">학교소개</string>
+    <string name="info">앱 정보 및 설정</string>
+</resources>
