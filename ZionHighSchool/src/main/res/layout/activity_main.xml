@@ -5,45 +5,69 @@
     android:fillViewport="true"
     >
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:orientation="horizontal"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:paddingTop="10dp">
 
-        <include
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            layout="@layout/notices_cover"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:id="@+id/notices" />
-        <include
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            layout="@layout/meal_cover"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/notices"
-            android:layout_alignParentLeft="true"
-            android:id="@+id/meal"/>
-        <include
-            android:id="@+id/info"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            layout="@layout/appinfo_cover"
-            android:layout_below="@+id/schedule"
-            android:layout_marginTop="10dp"
-            android:layout_alignParentLeft="true" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingRight="5dp">
+            <!-- child views -->
+            <include
+                layout="@layout/notices_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/notices"
+                />
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/schoolinfo_cover"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/schoolinfo"
+                android:layout_marginTop="10dp"/>
+            <include
+                layout="@layout/appinfo_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/info"
+                android:layout_marginTop="10dp"
+                />
+        </LinearLayout>
 
-        <include
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            layout="@layout/schedule_cover"
-            android:layout_below="@+id/meal"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="10dp"
-            android:id="@+id/schedule" />
-    </RelativeLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="fill_parent"
+            android:layout_weight="1" android:orientation="vertical"
+            android:paddingLeft="5dp">
+            <!-- child views -->
+            <include
+                layout="@layout/meal_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/meal"
+                />
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/schedule_cover"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/schedule"
+                android:layout_marginTop="10dp"/>
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/schoolintro_cover"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/schoolintro"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
 </ScrollView>

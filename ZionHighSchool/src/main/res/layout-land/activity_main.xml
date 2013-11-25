@@ -25,6 +25,13 @@
                 android:id="@+id/notices"
                 />
             <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/schoolinfo_cover"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/schoolinfo"
+                android:layout_marginTop="10dp"/>
+            <include
                 layout="@layout/appinfo_cover"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -50,6 +57,13 @@
                 layout="@layout/schedule_cover"
                 android:layout_gravity="center_horizontal"
                 android:id="@+id/schedule"
+                android:layout_marginTop="10dp"/>
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/schoolintro_cover"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/schoolintro"
                 android:layout_marginTop="10dp"/>
         </LinearLayout>
 
