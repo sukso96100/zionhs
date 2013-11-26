@@ -10,4 +10,6 @@
     <string name="schedule">Schedule</string>
     <string name="schoolintro">About the School</string>
     <string name="info">About the App/App Settings</string>
+    <string name="title_activity_appinfo">Appinfo</string>
+
 </resources>

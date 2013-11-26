@@ -19,7 +19,7 @@
 
 <resources>
 
-    <style name="Theme.Zion" parent="@style/Theme.AppCompat.Light">
+    <style name="Theme.Zion" parent="@style/Theme.AppCompat.Light.DarkActionBar">
         <item name="android:actionBarItemBackground">@drawable/selectable_background_zion</item>
         <item name="android:popupMenuStyle">@style/PopupMenu.Zion</item>
         <item name="android:dropDownListViewStyle">@style/DropDownListView.Zion</item>
@@ -30,17 +30,19 @@
         <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_zion</item>
         <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Zion</item>
         
-        
+                <!-- Light.DarkActionBar specific -->
+        <item name="android:actionBarWidgetTheme">@style/Theme.Zion.Widget</item>
+
     </style>
 
-    <style name="ActionBar.Solid.Zion" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+    <style name="ActionBar.Solid.Zion" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
         <item name="android:background">@drawable/ab_solid_zion</item>
         <item name="android:backgroundStacked">@drawable/ab_stacked_solid_zion</item>
         <item name="android:backgroundSplit">@drawable/ab_bottom_solid_zion</item>
         <item name="android:progressBarStyle">@style/ProgressBar.Zion</item>
     </style>
 
-    <style name="ActionBar.Transparent.Zion" parent="@style/Widget.AppCompat.Light.ActionBar">
+    <style name="ActionBar.Transparent.Zion" parent="@style/Widget.AppCompat.ActionBar">
         <item name="android:background">@drawable/ab_transparent_zion</item>
         <item name="android:progressBarStyle">@style/ProgressBar.Zion</item>
     </style>
