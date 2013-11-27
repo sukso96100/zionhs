@@ -24,6 +24,38 @@ public class MainActivity extends ActionBarActivity {
         View schedule = findViewById(R.id.schedule);
         View schoolintro = findViewById(R.id.schoolintro);
 
+        notices.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Notices.class);
+                startActivity(intent);
+            }
+        });
+
+        meal.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Meal.class);
+                startActivity(intent);
+            }
+        });
+
+        schoolinfo.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Schoolinfo.class);
+                startActivity(intent);
+            }
+        });
+
+       schedule.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Schedule.class);
+                startActivity(intent);
+            }
+        });
+
         appinfo.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,6 +63,16 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(intent);
             }
         });
+
+        schoolintro.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Schoolintro.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 

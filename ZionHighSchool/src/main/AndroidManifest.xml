@@ -24,7 +24,47 @@
         </activity>
         <activity
             android:name="com.licubeclub.zionhs.Appinfo"
-            android:label="@string/title_activity_appinfo"
+            android:label="@string/info"
+            android:parentActivityName="com.licubeclub.zionhs.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licubeclub.zionhs.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.licubeclub.zionhs.Notices"
+            android:label="@string/notices"
+            android:parentActivityName="com.licubeclub.zionhs.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licubeclub.zionhs.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.licubeclub.zionhs.Meal"
+            android:label="@string/meal"
+            android:parentActivityName="com.licubeclub.zionhs.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licubeclub.zionhs.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.licubeclub.zionhs.Schoolinfo"
+            android:label="@string/schoolinfo"
+            android:parentActivityName="com.licubeclub.zionhs.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licubeclub.zionhs.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.licubeclub.zionhs.Schedule"
+            android:label="@string/schedule"
+            android:parentActivityName="com.licubeclub.zionhs.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licubeclub.zionhs.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.licubeclub.zionhs.Schoolintro"
+            android:label="@string/schoolintro"
             android:parentActivityName="com.licubeclub.zionhs.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
