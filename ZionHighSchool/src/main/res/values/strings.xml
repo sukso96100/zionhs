@@ -10,5 +10,18 @@
     <string name="schedule">Schedule</string>
     <string name="schoolintro">About the School</string>
     <string name="info">About the App/App Settings</string>
+    <string name="quickexec">QuickLaunch : Launch with Home key Double Tap</string>
+    <string name="appsettings_settings_title">App Settings</string>
+    <string name="appsettings_settings_select">Select Screen to show on QuickLaunch :</string>
+    <string-array name="quickexec_select">
+        <item>Home</item>
+        <item>Notices</item>
+        <item>Lunch/Dinner</item>
+        <item>School Informations</item>
+        <item>Schedule</item>
+        <item>About the School</item>
+    </string-array>
+    <string name="appsettings_apinfo_title">Application Information</string>
+
 
 </resources>

@@ -10,4 +10,16 @@
     <string name="schedule">학사일정</string>
     <string name="schoolintro">학교소개</string>
     <string name="info">앱 정보 및 설정</string>
+    <string name="quickexec">빠른실행 : 홈키 더블탭으로 실행하기</string>
+    <string name="appsettings_settings_title">앱 설정</string>
+    <string name="appsettings_settings_select">빠른실행시 보여줄 화면 선택 :</string>
+    <string-array name="quickexec_select">
+        <item>홈 화면</item>
+        <item>공지사항</item>
+        <item>중식/석식</item>
+        <item>학교정보</item>
+        <item>학사일정</item>
+        <item>학교소개</item>
+    </string-array>
+    <string name="appsettings_apinfo_title">앱 정보</string>
 </resources>
