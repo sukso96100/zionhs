@@ -22,4 +22,7 @@
         <item>학교소개</item>
     </string-array>
     <string name="appsettings_apinfo_title">앱 정보</string>
+    <string name="appsettings_appinfo_update">Google Play 에서 업데이트 확인</string>
+    <string name="appsettings_appinfo_src">GitHub에서 소스코드 얻기</string>
+    <string name="appsettings_docs_title">법적 고지사항 문서</string>
 </resources>

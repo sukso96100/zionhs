@@ -22,6 +22,8 @@
         <item>About the School</item>
     </string-array>
     <string name="appsettings_apinfo_title">Application Information</string>
-
+    <string name="appsettings_appinfo_update">Check for updates on  Google Play</string>
+    <string name="appsettings_appinfo_src">Get full Sourcecode from GitHub</string>
+    <string name="appsettings_docs_title">Legal Notices Documents</string>
 
 </resources>
