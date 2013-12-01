@@ -70,6 +70,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.MainActivity" />
         </activity>
+
+        <service android:name=".ShakeDetectService" />
     </application>
 
 </manifest>
