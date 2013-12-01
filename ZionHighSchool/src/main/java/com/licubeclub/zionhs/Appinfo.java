@@ -1,5 +1,6 @@
 package com.licubeclub.zionhs;
 
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,6 +23,9 @@ public class Appinfo extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appinfo);
 
+        //Stop ShakeDetectService
+        Intent intent = new Intent(this, ShakeDetectService.class);
+        stopService(intent);
         // Load Preference Value
         SharedPreferences pref = getSharedPreferences("pref", Activity.MODE_PRIVATE);
         CheckBox Toggle = (CheckBox)findViewById(R.id.quickexec); //checkbox
@@ -60,7 +64,7 @@ public class Appinfo extends ActionBarActivity {
             public void onStop(){
         super.onStop();
         SharedPreferences pref = getSharedPreferences("pref", Activity.MODE_PRIVATE); // Save UI State
-        SharedPreferences.Editor editor = pref.edit(); // Load Editor
+        SharedPreferences.Editor editor = pref.edit(); //art Load Editor
         CheckBox check1 = (CheckBox)findViewById(R.id.quickexec);
         Spinner spinner = (Spinner) findViewById(R.id.quickexec_select);
         // Input values
@@ -68,6 +72,13 @@ public class Appinfo extends ActionBarActivity {
         editor.putInt("quickexec_select", quickexec_selected_value);
         editor.putBoolean("toggledata", check1.isChecked());
         editor.commit(); // Save calues
+
+        final boolean quicklaunchon = getSharedPreferences("pref", Context.MODE_PRIVATE).getBoolean("toggledata", true);
+                if(quicklaunchon){
+                    Intent intent = new Intent(this, ShakeDetectService.class);
+                    startService(intent);
+                }
+                else{}
     }
 
 
