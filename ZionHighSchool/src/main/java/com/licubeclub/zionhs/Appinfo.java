@@ -27,7 +27,7 @@ public class Appinfo extends ActionBarActivity {
         CheckBox Toggle = (CheckBox)findViewById(R.id.quickexec); //checkbox
         Spinner spinner = (Spinner) findViewById(R.id.quickexec_select);  //spinner
         Boolean Toggle_Boolean = pref.getBoolean("toggledata", false);
-        int Spinner_int = pref.getInt("quickexec_select", 0);
+        int Spinner_int = pref.getInt("quickexec_select",0);
         Toggle.setChecked(Toggle_Boolean);
         spinner.setSelection(Spinner_int);
 
