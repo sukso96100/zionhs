@@ -20,12 +20,13 @@ public class ShakeDetectService extends Service {
 
     @Override
     public void onCreate() {
-
+        Log.d("ShakeDetectService","Service Started");
 
         // ShakeDetector initialization
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mAccelerometer = mSensorManager
                 .getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        mSensorManager.registerListener(mShakeDetector, mAccelerometer,    SensorManager.SENSOR_DELAY_UI);
         mShakeDetector = new ShakeDetector();
         mShakeDetector.setOnShakeListener(new ShakeDetector.OnShakeListener() {
 
@@ -34,7 +35,7 @@ public class ShakeDetectService extends Service {
                 Log.d("ShakeDetectService","Shaken!");
                 //vibrate
                 Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                vibe.vibrate(10);
+                vibe.vibrate(100);
             }
         });
     }
