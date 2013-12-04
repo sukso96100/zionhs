@@ -4,6 +4,7 @@
     <string name="app_name">Zion High School</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="home">Home</string>
     <string name="notices">Notices</string>
     <string name="meal">Lunch/Dinner</string>
     <string name="schoolinfo">School Informations</string>
@@ -13,6 +14,7 @@
     <string name="quickexec">QuickLaunch : Launch with Shaking your device</string>
     <string name="appsettings_settings_title">App Settings</string>
     <string name="appsettings_settings_select">Select Screen to show on QuickLaunch :</string>
+
     <string-array name="quickexec_select">
         <item>Home</item>
         <item>Notices</item>
@@ -21,9 +23,11 @@
         <item>Schedule</item>
         <item>About the School</item>
     </string-array>
+
     <string name="appsettings_apinfo_title">Application Information</string>
     <string name="appsettings_appinfo_update">Check for updates on  Google Play</string>
     <string name="appsettings_appinfo_src">Get full Sourcecode from GitHub</string>
     <string name="appsettings_docs_title">Legal Notices Documents</string>
+    <string name="title_activity_quick_launcher">QuickLauncherActivity</string>
 
 </resources>

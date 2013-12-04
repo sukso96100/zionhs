@@ -10,8 +10,10 @@
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
 
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -76,7 +78,13 @@
                 android:value="com.licubeclub.zionhs.MainActivity" />
         </activity>
 
-        <service android:name=".ShakeDetectService" />
+        <service android:name="com.licubeclub.zionhs.ShakeDetectService" />
+
+        <activity
+            android:name="com.licubeclub.zionhs.QuickLauncherActivity"
+            android:label="@string/title_activity_quick_launcher"
+            android:theme="@style/Theme.Zion.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

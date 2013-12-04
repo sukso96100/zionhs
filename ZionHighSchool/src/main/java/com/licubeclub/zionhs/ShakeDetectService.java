@@ -33,9 +33,16 @@ public class ShakeDetectService extends Service {
             @Override
             public void onShake(int count) {
                 Log.d("ShakeDetectService","Shaken!");
+                //Following thing will be executed when shaking detected
+
                 //vibrate
                 Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                 vibe.vibrate(100);
+
+                //Run "QuickLauncherActivity"
+                Intent intent = new Intent(ShakeDetectService.this, QuickLauncherActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getApplication().startActivity(intent);
             }
         });
     }
