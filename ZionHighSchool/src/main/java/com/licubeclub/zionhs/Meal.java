@@ -1,65 +1,122 @@
 package com.licubeclub.zionhs;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v7.app.ActionBarActivity;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import toast.library.meal.MealLibrary;
 
 public class Meal extends ActionBarActivity {
+
+    private ProgressDialog progressDialog;
+    TextView lunchmon;
+    TextView lunchtue;
+    TextView lunchwed;
+    TextView lunchthu;
+    TextView lunchfri;
+    TextView dinnermon;
+    TextView dinnertue;
+    TextView dinnerwed;
+    TextView dinnerthu;
+    TextView dinnerfri;
+    String[] lunchstring = new String[7];
+    String[] dinnerstring = new String[7];
+    ConnectivityManager cManager;
+    NetworkInfo mobile;
+    NetworkInfo wifi;
+
+
+    private final Handler handler = new Handler()
+    {
+        @Override
+        public void handleMessage(Message msg)
+        {
+
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meal);
 
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
-                    .commit();
+        cManager=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        mobile = cManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        wifi = cManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+
+        if(mobile.isConnected() || wifi.isConnected())
+        {
+
         }
+        else{
+            Toast toast = Toast.makeText(getApplicationContext(),
+                    getString(R.string.network_connection_warning), Toast.LENGTH_LONG);
+                    finish();
+        }
+
+        lunchmon = (TextView)this.findViewById(R.id.lunchmon);
+        lunchtue = (TextView)this.findViewById(R.id.lunchtue);
+        lunchwed = (TextView)this.findViewById(R.id.lunchwed);
+        lunchthu = (TextView)this.findViewById(R.id.lunchthu);
+        lunchfri = (TextView)this.findViewById(R.id.lunchfri);
+        dinnermon = (TextView)this.findViewById(R.id.dinnermon);
+        dinnertue = (TextView)this.findViewById(R.id.dinnertue);
+        dinnerwed = (TextView)this.findViewById(R.id.dinnerwed);
+        dinnerthu = (TextView)this.findViewById(R.id.dinnerthu);
+        dinnerfri = (TextView)this.findViewById(R.id.dinnerfri);
+        //dinnertext = (TextView)this.findViewById(R.id.dinner);
+
+
+
+        final Handler mHandler = new Handler();
+        new Thread()
+        {
+
+            public void run()
+            {
+                mHandler.post(new Runnable(){
+
+                    public void run()
+                    {
+                        String loading = getString(R.string.loading);
+                        progressDialog = ProgressDialog.show(Meal.this,"",loading,true);
+                    }
+                });
+                lunchstring = MealLibrary.getMeal("goe.go.kr","J100000659","4","04","2"); //Get Lunch Menu Date
+                dinnerstring = MealLibrary.getMeal("goe.go.kr","J100000659","4","04","3"); //Get Dinner Menu Date
+
+                mHandler.post(new Runnable()
+                {
+                    public void run()
+                    {
+                        progressDialog.dismiss();
+                        lunchmon.setText(getString(R.string.monday) + ":\n" + lunchstring[1]);
+                        lunchtue.setText(getString(R.string.tuesday) + ":\n" + lunchstring[2]);
+                        lunchwed.setText(getString(R.string.wednsday) + ":\n" + lunchstring[3]);
+                        lunchthu.setText(getString(R.string.thursday) + ":\n" + lunchstring[4]);
+                        lunchfri.setText(getString(R.string.friday) + ":\n" + lunchstring[5]);
+
+                        dinnermon.setText(getString(R.string.monday) + ":\n" + dinnerstring[1]);
+                        dinnertue.setText(getString(R.string.tuesday) + ":\n" + dinnerstring[2]);
+                        dinnerwed.setText(getString(R.string.wednsday) + ":\n" + dinnerstring[3]);
+                        dinnerthu.setText(getString(R.string.thursday) + ":\n" + dinnerstring[4]);
+                        dinnerfri.setText(getString(R.string.friday) + ":\n" + dinnerstring[5]);
+                        handler.sendEmptyMessage(0);
+                    }
+                });
+
+            }
+        }.start();
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.meal, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_meal, container, false);
-            return rootView;
-        }
-    }
 
 }

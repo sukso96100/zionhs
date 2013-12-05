@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jericho-android.3.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ZionHighSchool/libs/jericho-android.3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

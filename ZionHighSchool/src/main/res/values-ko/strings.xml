@@ -25,4 +25,14 @@
     <string name="appsettings_appinfo_update">Google Play 에서 업데이트 확인</string>
     <string name="appsettings_appinfo_src">GitHub에서 소스코드 얻기</string>
     <string name="appsettings_docs_title">법적 고지사항 문서</string>
+
+    <string name="lunch">중식</string>
+    <string name="dinner">석식</string>
+    <string name="monday">월요일</string>
+    <string name="tuesday">화요일</string>
+    <string name="wednsday">수요일</string>중
+    <string name="thursday">목요일</string>
+    <string name="friday">금요일</string>
+    <string name="loading">불러오는 중...</string>
+    <string name="network_connection_warning">네트워크에 연결되어 있지 않습니다, 네트워크 연결을 먼저 확인하세요.</string>
 </resources>

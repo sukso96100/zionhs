@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Android_Meal_Library">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ZionHighSchool/libs/Android_Meal_Library.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

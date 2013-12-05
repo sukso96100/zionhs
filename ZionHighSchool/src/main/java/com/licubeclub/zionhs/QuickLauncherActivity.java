@@ -23,7 +23,7 @@ public class QuickLauncherActivity extends ActionBarActivity {
     @Override
     public void onResume(){
         super.onResume();
-
+        setContentView(R.layout.activity_quick_launcher);
         //Find a textView, "targetname"
         TextView targetname = (TextView)findViewById(R.id.targetname);
 
@@ -41,9 +41,6 @@ public class QuickLauncherActivity extends ActionBarActivity {
             Intent MainActivity = new Intent(QuickLauncherActivity.this, MainActivity.class);
             startActivity(MainActivity);
 
-            //Intent shakedetectservice = new Intent(this, ShakeDetectService.class);
-            //startService(shakedetectservice);
-
             finish();
         }
         else if(target == 1){
@@ -55,9 +52,6 @@ public class QuickLauncherActivity extends ActionBarActivity {
 
             Intent Notices = new Intent(QuickLauncherActivity.this, Notices.class);
             startActivity(Notices);
-
-            //Intent shakedetectservice = new Intent(this, ShakeDetectService.class);
-            //startService(shakedetectservice);
 
             finish();
         }
@@ -71,9 +65,6 @@ public class QuickLauncherActivity extends ActionBarActivity {
             Intent Meal = new Intent(QuickLauncherActivity.this, Meal.class);
             startActivity(Meal);
 
-            //Intent shakedetectservice = new Intent(this, ShakeDetectService.class);
-            //startService(shakedetectservice);
-
             finish();
         }
         else if(target == 3){
@@ -85,9 +76,6 @@ public class QuickLauncherActivity extends ActionBarActivity {
 
             Intent Schoolinfo = new Intent(QuickLauncherActivity.this, Schoolinfo.class);
             startActivity(Schoolinfo);
-
-            //Intent shakedetectservice = new Intent(this, ShakeDetectService.class);
-            //startService(shakedetectservice);
 
             finish();
         }
@@ -101,9 +89,6 @@ public class QuickLauncherActivity extends ActionBarActivity {
             Intent Schedule = new Intent(QuickLauncherActivity.this, Schedule.class);
             startActivity(Schedule);
 
-            //Intent shakedetectservice = new Intent(this, ShakeDetectService.class);
-            //startService(shakedetectservice);
-
             finish();
         }
         else{
@@ -115,9 +100,6 @@ public class QuickLauncherActivity extends ActionBarActivity {
 
             Intent Schoolintro = new Intent(QuickLauncherActivity.this, Schoolintro.class);
             startActivity(Schoolintro);
-
-            //Intent shakedetectservice = new Intent(this, ShakeDetectService.class);
-            //startService(shakedetectservice);
 
             finish();
         }
