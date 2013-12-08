@@ -37,5 +37,12 @@
     <string name="thursday">Thursday</string>
     <string name="friday">Friday</string>
     <string name="network_connection_warning">No network connection, Check your network connection first</string>
+    <stirng name="adress">(422-060)172-20, Eunseong-ro, Sosa-gu, Bucheon-si, Gyeonggi-do, Korea[Click to see more on Google Maps]</stirng>
+    <string name="transportations">Taking bus: \n Take 019-1 Bus and get off at the Zion High Schol front door \n Take 019, 019-1 or 23-3 bus and get off at the Hanshin Apartments and walk for 10minutes \n Take 22 or 71 Bus and get off at Poksa Elementary School and walk for 20 minutes \n Take 12, 12-1, 12-2, 33-1, 23-2, 018 Bus and get off at Hyundai Hometown Complex 4,5 and walk for 5 minutes</string>
+    <string name="location">Location of the School</string>
+    <string name="contact">Contact</string>
+    <string name="school_office">School Office : 032-3400-112~6</string>
+    <string name="administration_department">Administration Department : 032-3400-103~7</string>
+    <string name="fax">FAX : 032-341- 9196</string>
 
 </resources>
