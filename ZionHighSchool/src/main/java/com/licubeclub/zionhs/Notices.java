@@ -8,6 +8,7 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.widget.Toast;
 
 import net.htmlparser.jericho.Element;
@@ -16,6 +17,8 @@ import net.htmlparser.jericho.Source;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -26,8 +29,9 @@ public class Notices extends Activity {
     NetworkInfo mobile;
     NetworkInfo wifi;
     private ProgressDialog progressDialog;
-    String CommonAttr = new String();
+    String CommonAttr = new String("align=\"left\" style=\"padding-left:0ox;\" ");
     String EncodingType;
+    private ArrayList<HashMap<String, String>> data;
 
     private final Handler handler = new Handler()
     {
@@ -44,6 +48,8 @@ public class Notices extends Activity {
         cManager=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
         mobile = cManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
         wifi = cManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        data = new ArrayList<HashMap<String, String>>();
+
 
         if(mobile.isConnected() || wifi.isConnected())
         {
@@ -70,6 +76,7 @@ public class Notices extends Activity {
                     }
                 });
                 //Task
+
                 //Notices URL
                 String SRCURL = "http://www.zion.hs.kr/main.php?menugrp=110100&master=bbs&act=list&master_sid=58";
                 try {
@@ -87,16 +94,24 @@ public class Notices extends Activity {
 
                     for(int i=0; i<TdTags1.size(); i++){
                         Element TdElement = TdTags1.get(1);
-
-                        if(TdElement.getAttributes().toString().contains(CommonAttr)){
-                            //Get contents titles
-                            String notices_text = new String(
-                                    TdElement.getTextExtractor().toString().getBytes(HTML_Source.getEncoding()),EncodingType
-                            );
-                            //Get links of titles
-                            List<Element> Atags = TdElement.getAllElements(HTMLElementName.A);
-                            String herf = Atags.get(0).getAttributeValue("herf");
+                        /*
+                        if (!TdElement.getAttributes().toString().contains(CommonAttr)) {
+                            continue;
                         }
+                        */
+                        String notices_text = new String(
+                                TdElement.getTextExtractor().toString().getBytes(HTML_Source.getEncoding()),EncodingType
+                        );
+                        Log.d("title", notices_text);
+                        System.out.println(notices_text);
+
+                        //Get links of titles
+                        List<Element> Atags = TdElement.getAllElements(HTMLElementName.A);
+                        String herf = Atags.get(0).getAttributeValue("herf");
+                        Log.d("links", herf);
+                        System.out.println(herf);
+
+
                     }
 
                 } catch (IOException e) {
