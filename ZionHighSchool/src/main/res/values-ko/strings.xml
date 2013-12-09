@@ -36,11 +36,33 @@
     <string name="loading">불러오는 중...</string>
     <string name="network_connection_warning">네트워크에 연결되어 있지 않습니다, 네트워크 연결을 먼저 확인하세요.</string>
     <string name="address">(422-060)경기도 부천시 소사구 은성로 172-20[Google Maps에서 보려면 클릭]</string>
-    <string name="transportations">버스를 이용하여 오는경우: \n 019-1번 버스를 타고 시온고등학교 정문에서 하차 \n 019, 019-1 또는 23-3 번 버스를 타고 한신아파트에서 하차 후, 도보로 10분 정도 이동 \n 22 또는 71 번 버스를 타고 복사초등학교에서 하차 후, 도보로 20분 정도 이동 \n 12, 12-1, 12-2, 33-1, 23-2, 018 번 버스를 타고 현대홈타운 4,5단지에서 하차후, 도보로 5분정도 이동</string>
+    <string name="transportations">버스를 이용하여 오는경우: \n
+        019-1번 버스를 타고 시온고등학교 정문에서 하차 \n
+        019, 019-1 또는 23-3 번 버스를 타고 한신아파트에서 하차 후, 도보로 10분 정도 이동 \n
+        22 또는 71 번 버스를 타고 복사초등학교에서 하차 후, 도보로 20분 정도 이동 \n
+        12, 12-1, 12-2, 33-1, 23-2 또는 018 번 버스를 타고 현대홈타운 4,5단지에서 하차후, 도보로 5분정도 이동</string>
     <string name="location">오시는 길</string>
     <string name="contact">학교와 연락하기</string>
     <string name="school_office">교무실 : 032-3400-112~6</string>
     <string name="administration_department">행정실 : 032-3400-103~7</string>
     <string name="fax">FAX : 032-341- 9196</string>
+    <string name="feat_busin">특색사업</string>
+    <string name="feat_busin_desc_1">기본생활태도 실천 : \n
+        근검절약의 생활화 \n
+        교내 폭력 신고체제 구축 및 상담활동 강화</string>
+    <string name="feat_busin_desc_2">자기주도적 학습 정착 : \n
+        독서교육의 활성화 \n
+        정숙하고 바른 학습태도 정착</string>
+    <string name="feat_busin_desc_3">학습자 중심의 교육활동 추진 : \n
+        진수준별 보충수업 실시 \n
+        선택중심 교육과정 운영</string>
+    <string name="feat_busin_desc_4">외국어 교육의 생활화 : \n
+        현대화된 Lab실 개방 및 이용 극대화 \n
+        제2외국어 선택 폭 확대(스페인어, 중국어, 일본어)</string>
+    <string name="feat_busin_desc_5">개성신장교육 강화 : \n
+        화동아리 활동의 활성화 \n
+        학술, 학예발표 기회 부여</string>
+    <string name="homepage">홈페이지 방문(zion.hs.kr)</string>
+
 
 </resources>

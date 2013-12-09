@@ -38,11 +38,32 @@
     <string name="friday">Friday</string>
     <string name="network_connection_warning">No network connection, Check your network connection first</string>
     <stirng name="adress">(422-060)172-20, Eunseong-ro, Sosa-gu, Bucheon-si, Gyeonggi-do, Korea[Click to see more on Google Maps]</stirng>
-    <string name="transportations">Taking bus: \n Take 019-1 Bus and get off at the Zion High Schol front door \n Take 019, 019-1 or 23-3 bus and get off at the Hanshin Apartments and walk for 10minutes \n Take 22 or 71 Bus and get off at Poksa Elementary School and walk for 20 minutes \n Take 12, 12-1, 12-2, 33-1, 23-2, 018 Bus and get off at Hyundai Hometown Complex 4,5 and walk for 5 minutes</string>
+    <string name="transportations">Taking bus: \n
+        Take 019-1 Bus and get off at the Zion High Schol front door \n
+        Take 019, 019-1 or 23-3 bus and get off at the Hanshin Apartments and walk for 10minutes \n
+        Take 22 or 71 Bus and get off at Poksa Elementary School and walk for 20 minutes \n
+        Take 12, 12-1, 12-2, 33-1, 23-2, 018 Bus and get off at Hyundai Hometown Complex 4,5 and walk for 5 minutes</string>
     <string name="location">Location of the School</string>
     <string name="contact">Contact</string>
     <string name="school_office">School Office : 032-3400-112~6</string>
     <string name="administration_department">Administration Department : 032-3400-103~7</string>
     <string name="fax">FAX : 032-341- 9196</string>
+    <string name="feat_busin">Featuring Business</string>
+    <string name="feat_busin_desc_1">기본생활태도 실천 : \n
+        근검절약의 생활화 \n
+        교내 폭력 신고체제 구축 및 상담활동 강화</string>
+    <string name="feat_busin_desc_2">자기주도적 학습 정착 : \n
+        독서교육의 활성화 \n
+        정숙하고 바른 학습태도 정착</string>
+    <string name="feat_busin_desc_3">학습자 중심의 교육활동 추진 : \n
+        진수준별 보충수업 실시 \n
+        선택중심 교육과정 운영</string>
+    <string name="feat_busin_desc_4">외국어 교육의 생활화 : \n
+        현대화된 Lab실 개방 및 이용 극대화 \n
+        제2외국어 선택 폭 확대(스페인어, 중국어, 일본어)</string>
+    <string name="feat_busin_desc_5">개성신장교육 강화 : \n
+        화동아리 활동의 활성화 \n
+        학술, 학예발표 기회 부여</string>
+    <string name="homepage">Visit the Homepage(zion.hs.kr)</string>
 
 </resources>
