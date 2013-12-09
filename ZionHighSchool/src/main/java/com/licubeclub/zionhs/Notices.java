@@ -26,6 +26,8 @@ public class Notices extends Activity {
     NetworkInfo mobile;
     NetworkInfo wifi;
     private ProgressDialog progressDialog;
+    String CommonAttr = new String();
+    String EncodingType;
 
     private final Handler handler = new Handler()
     {
@@ -72,12 +74,35 @@ public class Notices extends Activity {
                 String SRCURL = "http://www.zion.hs.kr/main.php?menugrp=110100&master=bbs&act=list&master_sid=58";
                 try {
                     Source HTML_Source = new Source(new URL(SRCURL));
-                   // Element Tabletag = SRCURL.getAllElements(HTMLElementName.TABLE).get(0);
-                    List<Element> atags = HTML_Source.getAllElements(HTMLElementName.TABLE);
+                    //Set Encoding Type
+                    if(HTML_Source.getEncoding().equals("Cp1252")){
+                        EncodingType = new String("EUC-KR");
+                    }
+                    else{
+                        EncodingType = new String(HTML_Source.getEncoding());
+                    }
+                    //Extract Table tags and Td tags
+                    Element TableTags1 = HTML_Source.getAllElements(HTMLElementName.TABLE).get(0);
+                    List<Element> TdTags1 = HTML_Source.getAllElements(HTMLElementName.TD);
+
+                    for(int i=0; i<TdTags1.size(); i++){
+                        Element TdElement = TdTags1.get(1);
+
+                        if(TdElement.getAttributes().toString().contains(CommonAttr)){
+                            //Get contents titles
+                            String notices_text = new String(
+                                    TdElement.getTextExtractor().toString().getBytes(HTML_Source.getEncoding()),EncodingType
+                            );
+                            //Get links of titles
+                            List<Element> Atags = TdElement.getAllElements(HTMLElementName.A);
+                            String herf = Atags.get(0).getAttributeValue("herf");
+                        }
+                    }
 
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+
 
                 mHandler.post(new Runnable()
                 {
