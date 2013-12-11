@@ -66,6 +66,26 @@
     <string name="school_symbol">학교상징</string>
     <string name="goal_edu">교육목표</string>
     <string name="fe_eb">노력중점 및 역점사업</string>
+    <string name="motto">교훈 - 眞理에 살자 :
+    \n 진리는 참된 삶의 의지를 꺠우쳐 작게는 인간을
+        슬기롭게하며 크게는 바른 가치관과 합리적 사고는
+        낳아 인간의 행복과 인류의 평화를 이룩하는
+        원동력이 됩니다.</string>
+    <string name="symbol">교표 :
+    \n - 전체 글자형은 영문표기의 시온(ZION)을 뜻함
+    \n - 전체의 모양은 학교 건물의 개형으로서 시온학원을 뜻함
+    \n - 가운데의 O 자는 둥근 형태로서 평온, 평화, 원만을 뜻하고 일상생활을 나타냄
+    \n - O 의 i 는 촛불의 형상으로 교훈의 진리에 살자(진리의 촛불을 밝히자)를 뜻함
+    \n - O 형태는 원만하고 평화로운 가운데 진리의 촛불을 밝히고 생활에 임하는 자세의 의미가 담겨있음</string>
+    <string name="flower">교화 - 장미 :
+    \n - 사랑(愛)
+    \n - 아름다움(美)
+    \n - 향기(香)</string>
+    <string name="tree">교목 - 잣나무 :
+    \n - 깊게 뿌리를 내림 - 내실
+    \n - 단단한 열매 - 결실
+    \n - 줄기가 곧게 자람 - 지조
+    \n - 다양한 쓰임새 - 봉사</string>
 
 
 </resources>
