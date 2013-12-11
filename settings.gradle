@@ -1,1 +1,1 @@
-include ':ZionHighSchool'
+include ':ZionHighSchool' , ':library:ViewPagerIndicator'

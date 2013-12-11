@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/library/ViewPagerIndicator/ViewPagerIndicator.iml" filepath="$PROJECT_DIR$/library/ViewPagerIndicator/ViewPagerIndicator.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZionHighSchool/ZionHighSchool.iml" filepath="$PROJECT_DIR$/ZionHighSchool/ZionHighSchool.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZionHighSchoolProject.iml" filepath="$PROJECT_DIR$/ZionHighSchoolProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/zionhs.iml" filepath="$PROJECT_DIR$/zionhs.iml" />
