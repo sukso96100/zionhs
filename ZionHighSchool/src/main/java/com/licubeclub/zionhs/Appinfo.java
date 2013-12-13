@@ -61,6 +61,15 @@ public class Appinfo extends ActionBarActivity {
             }
         });
 
+        TextView tutorial = (TextView)findViewById(R.id.tutorial);
+        tutorial.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent tutorial = new Intent(Appinfo.this, Tutorial.class);
+                startActivity(tutorial);
+            }
+        });
+
 
 
     }

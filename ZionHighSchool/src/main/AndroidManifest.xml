@@ -80,17 +80,20 @@
                 android:value="com.licubeclub.zionhs.MainActivity" />
         </activity>
 
-        <service android:name="com.licubeclub.zionhs.ShakeDetectService">
-        <intent-filter>
-            <action android:name="com.licubeclub.zionhs" />
-            <category android:name="android.intent.category.DEFAULT" />
-        </intent-filter>
+        <service android:name="com.licubeclub.zionhs.ShakeDetectService" >
+            <intent-filter>
+                <action android:name="com.licubeclub.zionhs" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </service>
+
         <activity
             android:name="com.licubeclub.zionhs.QuickLauncherActivity"
             android:label="@string/title_activity_quick_launcher"
-            android:theme="@style/Theme.Zion.NoActionBar">
+            android:theme="@style/Theme.Zion.NoActionBar" >
         </activity>
+
         <receiver
             android:name="com.licubeclub.zionhs.AutoStarter"
             android:enabled="true"
@@ -100,5 +103,12 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
+        <activity
+            android:name="com.licubeclub.zionhs.Tutorial"
+            android:label="@string/title_activity_tutorial"
+            android:theme="@style/Theme.Zion.NoActionBar">
+        </activity>
     </application>
+
 </manifest>

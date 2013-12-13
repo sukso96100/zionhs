@@ -38,7 +38,9 @@
     <string name="thursday">Thursday</string>
     <string name="friday">Friday</string>
     <string name="network_connection_warning">No network connection, Check your network connection first</string>
+
     <stirng name="adress">(422-060)172-20, Eunseong-ro, Sosa-gu, Bucheon-si, Gyeonggi-do, Korea[Click to see more on Google Maps]</stirng>
+
     <string name="transportations">Taking bus: \n
         Take 019-1 Bus and get off at the Zion High Schol front door \n
         Take 019, 019-1 or 23-3 bus and get off at the Hanshin Apartments and walk for 10minutes \n
@@ -89,7 +91,6 @@
     \n - 단단한 열매 - 결실
     \n - 줄기가 곧게 자람 - 지조
     \n - 다양한 쓰임새 - 봉사</string>
-
     <string name="our_goal">본교 교육목표</string>
     <string name="our_goal_desc">건전한 가치관을 가진 능력있는 사람</string>
     <string name="our_goal_sub_1">자주인 육성 :
@@ -103,33 +104,24 @@
     <string name="our_goal_sub_5">건강인 육성 :
     \n 몸과 마음이 고루 건강한 사람으로 기른다</string>
     <string name="zion_human">시온인</string>
-    
     <string name="our_imagin">지향하는 학교상</string>
     <string name="our_imagin_sub_1">교사상 : 가르침기 기쁜 교사와
     \n학생 : 배움이 즐가운 학생이
     \n학교상 : 명랑하고 쾌적한 환경에서 사랑과 믿음으로 어울리는 학교</string>
-    
     <string name="our_philosophy">본교 교육이념</string>
-    <string name="our_philosophy_sub">
-        1.윤리 교육을 통한 예의 바른 인간 양성\n
+    <string name="our_philosophy_sub">        1.윤리 교육을 통한 예의 바른 인간 양성\n
         2.진리를 탐구하고 참된 삶의 가치를 발견\n
         3.지구 환경의 재인식과 자연 보호 의식의 고취\n
         4.존경받는 스승상 정립\n
-        5.세계화 개방화에 대응하는 능동적인 인간 양성
-    </string>
-
+        5.세계화 개방화에 대응하는 능동적인 인간 양성</string>
     <string name="our_activity">본교 교육활동</string>
-    <string name="our_activity_sub">
-        1.예절바른 학생, 실력 있는 학생 기르기
+    <string name="our_activity_sub">        1.예절바른 학생, 실력 있는 학생 기르기
         \n2.개인특기, 창의력 계발 교육 충실
         \n3.열린 교육을 지향하는 민주적 학교 운영
         \n4.능력별 학습으로 균등한 학습기회 제공
         \n5.회화 중심의 외국어 교육 강화(Lab 실 운영)
-        \n6.미래사회를 대비하는 컴퓨터 교육 강화(컴퓨터실 1,2 운영)
-    </string>
-
-    <string name="fe_eb_sub_1">
-        학력신장 및 개성, 창의력 신장
+        \n6.미래사회를 대비하는 컴퓨터 교육 강화(컴퓨터실 1,2 운영)</string>
+    <string name="fe_eb_sub_1">        학력신장 및 개성, 창의력 신장
         \n-영어, 수학교과 수준별 이동수업
         \n-수준별 방과 후 학력향상 프로그램(무학년제 포함)
         \n-상위권 학생들을 위한 심회반 전용독서실 운영(90석)
@@ -138,10 +130,8 @@
         \n-주1희 전문가초청 독서/논술지도
         \n-탐구중심의 열린 과학실험교실 및 과학탐구 대회
         \n-전문가 초청 토론기법 강좌
-        \n-JUMP UP 자기주도학습 프로그램 강화
-    </string>
-    <string name="fe_eb_sub_2">
-        학생밀착형 진로/진학 지도
+        \n-JUMP UP 자기주도학습 프로그램 강화</string>
+    <string name="fe_eb_sub_2">        학생밀착형 진로/진학 지도
         \n-진로/진학전문 상담교사를 통한 맞춤식 진로/진학상담
         \n-학생 개인별 상담 이력철을 통한 1:1 진학상담
         \n-연 4회 학생/학부모 대상 입시자료집 발간 및 지원전락 설명회
@@ -150,11 +140,8 @@
         \n-면접전형 대비 심층면접 분석 및 자기소개서 작성 심층 밀착지도
         \n-논술 및 적성전형 대비 방과 후 학교운영 및 연 3회 모의논술/적성시험
         \n-전문직업인 초청 직업설명회(Career Day) 운영
-        \n-직업현장 체험의 날 운영
-    </string>
-
-    <string name="fe_eb_sub_3">
-        건강한 신제와 따뜻한 감성지향 인성교육
+        \n-직업현장 체험의 날 운영</string>
+    <string name="fe_eb_sub_3">        건강한 신제와 따뜻한 감성지향 인성교육
         \n-Wee class 전문상담 프로그램 운영
         \n-미술/음악/원예치료 상담 프로그램 운영
         \n-예절준법교실 (부천신문보도)
@@ -163,22 +150,27 @@
         \n-명사초청 강연회, 동문초청 강연회
         \n-학교스포츠클럽 탁구대회, 창작음약 줄넘기대회
         \n-동아리/학술/학예활동 발표회(백향제)
-        \n-도자기 핸드페인팅 Vision 창조 발표대회(1학년)
-    </string>
-
-    <string name="fe_eb_sub_4">
-        세계와 교류하는 소통능력증대
+        \n-도자기 핸드페인팅 Vision 창조 발표대회(1학년)</string>
+    <string name="fe_eb_sub_4">        세계와 교류하는 소통능력증대
         \n-국내 유수 대학교들과의 MOU 체결
         \n-농촌학교와 교환학생 프로그램 운영(2012. 7. 19. EBS 방송보도)
         \n-중국 Zhejiang Wanli 대학교와 MOU 체결
         \n-증국학교와사 역문화체험 교류활동(홈스테이)
         \n-제2외국어 선택 폭 확대(스패인어, 중국어, 일본어)
         \n-외국어교육 강화를 위한 현대화된 Lab실 활용 극대화
-        \n-영어권, 일본 학교와 국제교류확대 추진
-    </string>
-
+        \n-영어권, 일본 학교와 국제교류확대 추진</string>
     <string name="noti_shake_start">Zion High School : QuickLaunch Service is Enabled</string>
     <string name="noti_shake_title">QuickLaunch Service</string>
     <string name="noti_shake_title_sub">Click to configure QuickLaunch Service</string>
-</resources>
+    <string name="title_activity_tutorial">Tutorial</string>
+    <string name="tutorial_0_0">Slide from right to continue</string>
+    <string name="tutorial_1">Features</string>
+    <string name="tutorial_1_0">Available Features : Notices, Meal Menu,\n School Information, Schedule, App Settings,\n About the School, QuickLaunch</string>
+    <string name="tutorial_2">School Information</string>
+    <string name="tutorial_2_0">You can Check for School Information \n such as the location, contact and more.</string>
+    <string name="tutorial_3">About the School</string>
+    <string name="tutorial_3_0">Read the introduction about our school</string>
+    <string name="tutorial_4">Lunch/Dinner</string>
+    <string name="tutorial_4_0">Check Lunch/Dinner Menu for this week</string>
 
+</resources>

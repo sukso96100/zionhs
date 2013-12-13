@@ -1,7 +1,9 @@
 package com.licubeclub.zionhs;
 
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +18,19 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Launch Tutorial Activity If user new to this app
+        SharedPreferences pref = getSharedPreferences("pref", Activity.MODE_PRIVATE);
+        Boolean firstrun = pref.getBoolean("firstrun", true);
+        if (firstrun) {
+            Intent guide = new Intent(MainActivity.this, Tutorial.class);
+            startActivity(guide);
+            SharedPreferences.Editor editor = pref.edit(); // Load Editor
+            editor.putBoolean("firstrun", false); //put value
+            editor.commit(); // Save value
+        }
+        else{
+            //Do Nothing
+        }
 
         View notices = findViewById(R.id.notices);
         View schoolinfo = findViewById(R.id.schoolinfo);

@@ -119,6 +119,19 @@
         android:background="@drawable/cardbg"/>
 
     <TextView
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/title_activity_tutorial"
+        android:id="@+id/tutorial"
+        android:background="@drawable/cardbg"/>
+
+    <TextView
         android:layout_marginTop="20dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"

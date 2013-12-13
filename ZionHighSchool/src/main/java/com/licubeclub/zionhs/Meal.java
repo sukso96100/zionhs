@@ -10,7 +10,6 @@ import android.os.Message;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import toast.library.meal.MealLibrary;
 
 public class Meal extends ActionBarActivity {
