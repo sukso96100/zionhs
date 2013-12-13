@@ -12,6 +12,7 @@
     <string name="schoolintro">About the School</string>
     <string name="info">About the App/App Settings</string>
     <string name="quickexec">QuickLaunch : Launch with Shaking your device</string>
+    <string name="quickexec_noti">Show Notification for QuickLaunch Service</string>
     <string name="appsettings_settings_title">App Settings</string>
     <string name="appsettings_settings_select">Select Screen to show on QuickLaunch :</string>
 
@@ -175,5 +176,9 @@
         \n-외국어교육 강화를 위한 현대화된 Lab실 활용 극대화
         \n-영어권, 일본 학교와 국제교류확대 추진
     </string>
+
+    <string name="noti_shake_start">Zion High School : QuickLaunch Service is Enabled</string>
+    <string name="noti_shake_title">QuickLaunch Service</string>
+    <string name="noti_shake_title_sub">Click to configure QuickLaunch Service</string>
 </resources>
 

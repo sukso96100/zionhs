@@ -43,6 +43,7 @@ public class Notices extends Activity {
     };
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_notices);
 
         cManager=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);

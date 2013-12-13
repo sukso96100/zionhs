@@ -12,13 +12,13 @@ public class QuickLauncherActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.slide_in_towrad_top, R.anim.zoom_out);
         setContentView(R.layout.activity_quick_launcher);
 
         //Stop ShakeDetectService for a few seconds
         Intent intent = new Intent(this, ShakeDetectService.class);
         stopService(intent);
     }
-
 
     @Override
     public void onResume(){
@@ -39,6 +39,7 @@ public class QuickLauncherActivity extends ActionBarActivity {
             } catch (InterruptedException ignore) {}
 
             Intent MainActivity = new Intent(QuickLauncherActivity.this, MainActivity.class);
+            overridePendingTransition(0, 0);
             startActivity(MainActivity);
 
             finish();
@@ -105,13 +106,9 @@ public class QuickLauncherActivity extends ActionBarActivity {
         }
     }
 
-
-
     protected void onDestroy(){
         super.onDestroy();
         Intent shakedetectservice = new Intent(this, ShakeDetectService.class);
         startService(shakedetectservice);
     }
-
-
 }

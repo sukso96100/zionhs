@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <uses-feature
         android:name="android.hardware.sensor.accelerometer"
@@ -79,13 +80,25 @@
                 android:value="com.licubeclub.zionhs.MainActivity" />
         </activity>
 
-        <service android:name="com.licubeclub.zionhs.ShakeDetectService" />
-
+        <service android:name="com.licubeclub.zionhs.ShakeDetectService">
+        <intent-filter>
+            <action android:name="com.licubeclub.zionhs" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        </service>
         <activity
             android:name="com.licubeclub.zionhs.QuickLauncherActivity"
             android:label="@string/title_activity_quick_launcher"
             android:theme="@style/Theme.Zion.NoActionBar">
         </activity>
+        <receiver
+            android:name="com.licubeclub.zionhs.AutoStarter"
+            android:enabled="true"
+            android:exported="false"
+            android:label="ShakeDetectServiceAutoStarter" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
     </application>
-
 </manifest>

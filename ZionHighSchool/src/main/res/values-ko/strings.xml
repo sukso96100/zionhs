@@ -11,6 +11,7 @@
     <string name="schoolintro">학교소개</string>
     <string name="info">앱 정보 및 설정</string>
     <string name="quickexec">빠른실행 : 흔들어서 실행하기</string>
+    <string name="quickexec_noti">빠른실행 서비스 알림 보이기</string>
     <string name="appsettings_settings_title">앱 설정</string>
     <string name="appsettings_settings_select">빠른실행시 보여줄 화면 선택 :</string>
     <string-array name="quickexec_select">
@@ -173,4 +174,8 @@
         \n-외국어교육 강화를 위한 현대화된 Lab실 활용 극대화
         \n-영어권, 일본 학교와 국제교류확대 추진
     </string>
+
+    <string name="noti_shake_start">시온고등학교 : 빠른실행 서비스가 켜졌습니다.</string>
+    <string name="noti_shake_title">빠른실행 서비스</string>
+    <string name="noti_shake_title_sub">빠른실행 서비스를 설정하려면 클릭하세요.</string>
 </resources>
