@@ -172,5 +172,6 @@
     <string name="tutorial_3_0">Read the introduction about our school</string>
     <string name="tutorial_4">Lunch/Dinner</string>
     <string name="tutorial_4_0">Check Lunch/Dinner Menu for this week</string>
+    <string name="notices_info">Showing 15 Recent Notices from the School</string>
 
 </resources>
