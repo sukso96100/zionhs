@@ -190,4 +190,5 @@
     <string name="tutorial_4">중식/석식</string>
     <string name="tutorial_4_0">이번주 중식/석식 을 확인하실 수 있습니다.</string>
     <string name="notices_info">학교로부터의 최근 15개 공지사항</string>
+    <string name="schedule_info">이번달 학사일정</string>
 </resources>

@@ -1,6 +1,5 @@
 package com.licubeclub.zionhs;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -26,7 +26,7 @@ import java.util.ArrayList;
 /**
  * Created by youngbin on 13. 11. 27.
  */
-public class Notices extends Activity {
+public class Notices extends ActionBarActivity {
     ConnectivityManager cManager;
     NetworkInfo mobile;
     NetworkInfo wifi;
