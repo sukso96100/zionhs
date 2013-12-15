@@ -107,7 +107,47 @@
         <activity
             android:name="com.licubeclub.zionhs.Tutorial"
             android:label="@string/title_activity_tutorial"
-            android:theme="@style/Theme.Zion.NoActionBar">
+            android:theme="@style/Theme.Zion.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.licubeclub.zionhs.Notices_Parents"
+            android:label="@string/title_activity_notices__parents"
+            android:parentActivityName="com.licubeclub.zionhs.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licubeclub.zionhs.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.licubeclub.zionhs.Doc_Readme"
+            android:label="@string/title_activity_doc__readme"
+            android:parentActivityName="com.licubeclub.zionhs.Appinfo" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licubeclub.zionhs.Appinfo" />
+        </activity>
+        <activity
+            android:name="com.licubeclub.zionhs.Doc_Notices"
+            android:label="@string/title_activity_doc__notices"
+            android:parentActivityName="com.licubeclub.zionhs.Appinfo" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licubeclub.zionhs.Appinfo" />
+        </activity>
+        <activity
+            android:name="com.licubeclub.zionhs.Doc_Copying"
+            android:label="@string/title_activity_doc__copying"
+            android:parentActivityName="com.licubeclub.zionhs.Appinfo" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licubeclub.zionhs.Appinfo" />
+        </activity>
+        <activity
+            android:name="com.licubeclub.zionhs.Doc_Contributors"
+            android:label="@string/title_activity_doc__contributors"
+            android:parentActivityName="com.licubeclub.zionhs.Appinfo" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licubeclub.zionhs.Appinfo" />
         </activity>
     </application>
 

@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.widget.Button;
 
 public class Tutorial extends ActionBarActivity {
 
@@ -31,11 +32,36 @@ public class Tutorial extends ActionBarActivity {
     private void setCurrentInflateItem(int type){
         if(type==0){
             mPager.setCurrentItem(0);
-        }else if(type==1){
+        }
+        else if(type==1){
             mPager.setCurrentItem(1);
         }
-        else{
+        else if(type==2){
             mPager.setCurrentItem(2);
+        }
+        else if(type==3){
+            mPager.setCurrentItem(3);
+        }
+        else if(type==4){
+            mPager.setCurrentItem(4);
+        }
+        else if(type==5){
+            mPager.setCurrentItem(5);
+        }
+        else if(type==6){
+            mPager.setCurrentItem(6);
+        }
+        else if(type==7){
+            mPager.setCurrentItem(7);
+        }
+        else if(type==8){
+            mPager.setCurrentItem(8);
+        }
+        else if(type==9){
+            mPager.setCurrentItem(9);
+        }
+        else{
+            mPager.setCurrentItem(10);
         }
     }
     /**
@@ -51,9 +77,14 @@ public class Tutorial extends ActionBarActivity {
 
         @Override
         public int getCount() {
-            return 5;
+            return 11;
         }
-
+        private View.OnClickListener mPagerListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        };
 
         @Override
         public Object instantiateItem(View pager, int position) {
@@ -70,8 +101,27 @@ public class Tutorial extends ActionBarActivity {
             else if(position == 3){
                 v = mInflater.inflate(R.layout.tutorial_3, null);
             }
-            else{
+            else if(position == 4){
                 v = mInflater.inflate(R.layout.tutorial_4, null);
+            }
+            else if(position == 5){
+                v = mInflater.inflate(R.layout.tutorial_5, null);
+            }
+            else if(position == 6){
+                v = mInflater.inflate(R.layout.tutorial_6, null);
+            }
+            else if(position == 7){
+                v = mInflater.inflate(R.layout.tutorial_7, null);
+            }
+            else if(position == 8){
+                v = mInflater.inflate(R.layout.tutorial_8, null);
+            }
+            else if(position == 9){
+                v = mInflater.inflate(R.layout.tutorial_9, null);
+            }
+            else{
+                v = mInflater.inflate(R.layout.tutorial_done, null);
+                v.findViewById(R.id.button).setOnClickListener(mPagerListener);
             }
             ((ViewPager)pager).addView(v, 0);
             return v;
@@ -100,8 +150,26 @@ public class Tutorial extends ActionBarActivity {
             else if(position == 3){
                 return getString(R.string.tutorial_3);
             }
-            else{
+            else if(position == 4){
                 return getString(R.string.tutorial_4);
+            }
+            else if(position == 5){
+                return getString(R.string.tutorial_5);
+            }
+            else if(position == 6){
+                return getString(R.string.tutorial_6);
+            }
+            else if(position == 7){
+                return getString(R.string.tutorial_7);
+            }
+            else if(position == 8){
+                return getString(R.string.tutorial_8);
+            }
+            else if(position == 9){
+                return getString(R.string.tutorial_9);
+            }
+            else{
+                return getString(R.string.tutorial_done);
             }
         }
     }

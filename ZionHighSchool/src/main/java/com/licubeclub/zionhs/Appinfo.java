@@ -70,10 +70,42 @@ public class Appinfo extends ActionBarActivity {
             }
         });
 
+        TextView readme = (TextView)findViewById(R.id.readme);
+        readme.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent readme = new Intent(Appinfo.this, Doc_Readme.class);
+                startActivity(readme);
+            }
+        });
 
+        TextView notices = (TextView)findViewById(R.id.notices);
+        notices.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent notices = new Intent(Appinfo.this, Doc_Notices.class);
+                startActivity(notices);
+            }
+        });
 
+        TextView copying = (TextView)findViewById(R.id.copying);
+        copying.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent copying = new Intent(Appinfo.this, Doc_Copying.class);
+                startActivity(copying);
+            }
+        });
+
+        TextView contrubutors = (TextView)findViewById(R.id.contrubutors);
+        contrubutors.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent contrubutors = new Intent(Appinfo.this, Doc_Contributors.class);
+                startActivity(contrubutors);
+            }
+        });
     }
-
 
             public void onStop(){
         super.onStop();
@@ -97,11 +129,8 @@ public class Appinfo extends ActionBarActivity {
                 }
                 else{}
     }
-
     protected void onDestroy(){
         super.onDestroy();
 
     }
-
-
 }

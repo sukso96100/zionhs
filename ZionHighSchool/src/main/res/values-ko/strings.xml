@@ -191,4 +191,29 @@
     <string name="tutorial_4_0">이번주 중식/석식 을 확인하실 수 있습니다.</string>
     <string name="notices_info">학교로부터의 최근 15개 공지사항</string>
     <string name="schedule_info">이번달 학사일정</string>
+    <string name="tutorial_5">공지사항</string>
+    <string name="tutorial_5_0">최근 15개 학교 공지사항을 확인하실 수 있습니다.</string>
+    <string name="tutorial_6">학사일정</string>
+    <string name="tutorial_6_0">이번달 학사일정을 확인하실 수 있습니다.</string>
+    <string name="title_activity_notices__parents">가정통신문</string>
+    <string name="noti_parents_info">학교로부터의 최근 15개 가정통신문</string>
+    <string name="tutorial_7">가정통신문</string>
+    <string name="tutorial_7_0">최근 15개 학교 가정통신문을 확인하실 수 있습니다.</string>
+    <string name="tutorial_8">빠른실행</string>
+    <string name="tutorial_8_0">
+        디바이스를 흔들어서 특정 기능을 바로 사용 가능합니다.\n
+        이 기능을 사용하려면, [앱 정보 및 설정]에서\n
+        [빠른실행]을 켜시면 됩니다.</string>
+    <string name="tutorial_9">오픈소스</string>
+    <string name="tutorial_9_0">
+        이 애플리케이션은 GNU GPL V3 이 적용된\n
+        오픈소스 소프트웨어 입니다.\n
+        언제든지 이 앱의 소스코드를 얻으실 수 있습니다.\n
+        (참고 : 이 앱이 무료인 이유는\n
+        오픈소스 소프트웨어여서가 아닙니다.)</string>
+    <string name="tutorial_done">끝!</string>
+    <string name="tutorial_done_0">
+        튜토리얼을 마치려면,\n
+        [튜토리얼 마치기] 버튼을 누르세요.</string>
+    <string name="tutorial_done_btn">튜토리얼 마치기</string>
 </resources>

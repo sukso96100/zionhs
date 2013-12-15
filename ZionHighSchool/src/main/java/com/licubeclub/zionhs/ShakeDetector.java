@@ -7,8 +7,8 @@ import android.hardware.SensorManager;
 import android.util.FloatMath;
 
 public class ShakeDetector implements SensorEventListener {
-
     /*
+     *  Author : Jason McReynold
      *  http://jasonmcreynolds.com/?p=388
      */
 

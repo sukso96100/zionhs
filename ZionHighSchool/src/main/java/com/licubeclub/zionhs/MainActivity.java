@@ -38,6 +38,7 @@ public class MainActivity extends ActionBarActivity {
         View meal = findViewById(R.id.meal);
         View schedule = findViewById(R.id.schedule);
         View schoolintro = findViewById(R.id.schoolintro);
+        View notices_parents = findViewById(R.id.notices_parents);
 
         notices.setOnClickListener(new OnClickListener() {
             @Override
@@ -83,6 +84,13 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Schoolintro.class);
+                startActivity(intent);
+            }
+        });
+        notices_parents.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Notices_Parents.class);
                 startActivity(intent);
             }
         });
