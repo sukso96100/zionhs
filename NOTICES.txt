@@ -1,7 +1,7 @@
 Zion High School Application for Android : Third Party Notices
 
 ====================
-This software is licensed under the GNU Gernel Public License Version 2(GNU GPL v2)
+This software is licensed under the GNU Gernel Public License Version 3(GNU GPL v3)
 for more details, please read "README.txt" and "COPYING.txt'
 
 ====================
