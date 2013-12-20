@@ -1,75 +1,90 @@
 <html>
 <head>
+    <!--META-->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 부트스트램 Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <!-- 구글플러스 API -->
-<script type="text/javascript" src="https://apis.google.com/js/platform.js">
-  {lang: 'ko'}
-</script>
-    <!-- 제목 -->
-    <title>시온고등학교 for  Android™</title>
-</head>
-<body>
+    <!--구성요소 로드--> 
+<!--    <link href="css/semantic.min.css" rel="stylesheet" type="text/css"/>   -->
+    <link href="css/semantic.css" rel="stylesheet" type="text/css"/>
+    <title>시온고등학교 for Android™</title>
+    </head>
 
-    
-    <!-- 컨텐츠 -->
-    <div class="container">
-        <!-- Navbar -->
-        <div class="navbar navbar-default" role="navigation">
-            <!--navbar 헤더-->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">시온고등학교 <small><span class="label label-default">for Android™</span></small></a>
+    <body>
+        <!--사이드바-->
+        <div class="ui vertical sidebar menu">
+         <a class="active item" href="index.html">
+    <i class="large home icon"></i>홈 화면</a>
+            <a class="item" href="intro.html">
+    <i class="large info icon"></i>앱 소개</a>
+            <a class="item" href="download.html">
+    <i class="large download icon"></i>다운로드</a>
+      <a class="item" href="opensource.html">
+    <i class="large code icon"></i>오픈소스</a>
+            <div class="item">
+    <b>다른 곳으로...</b>
+    <div class="menu">
+      <a class="item"><i class="github icon"></i>GitHub 에서 이 프로젝트 보기</a>
+      <a class="item"><i class="globe icon"></i>시온고등학교 홈페이지로 이동</a>
+    </div>
+  </div>
+            <!--구글플러스 +1 버튼-->
+            <a class="item"><div class="g-plusone" data-annotation="inline" data-width="300" data-href="http://sukso96100.github.io/zionhs/"></div></a>
         </div>
-            <!--NavBar 메뉴-->
-            <div class="navbar-collapse collapse">
-                <!--NavBar 좌측메뉴-->
-            <ul class="nav navbar-nav">
-                <li><a href="intro.html">소개</a></li>
-                <li><a href="download.html">다운로드</a></li>
-                <li><a href="opensource.html">오픈소스</a></li>
-                
-                </ul>
-                <!--NavBar 우측메뉴-->
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">다른곳으로...<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    <li><a href="https://github.com/sukso96100/zionhs">GitHub 에서 프로젝트 보기</a></li>
-                        <li><a href="http://www.zion.hs.kr">시온고등학교 옴페이지로</a></li>  
-                    </ul>
-                <li><a href="#"></a></li>
-                </ul>           
+        <!--상단 막대-->
+    <div class="ui fixed inverted menu">
+        <a class="item"><div class="ui toggle button">
+    <i class="large list layout icon"></i>메뉴</div></a>
+           <a class="itam"><i class="list layout icon"></i>메뉴</a>
+        <a class="item">
+        <img src="contentimg/logo_menu.png"></a>
+        <a class="item">시온고등학교 <small>for Android™</small></a>
+        </div>
+        <!--컨텐츠-->
+        <br><br><br>
+        <div class="ui purple inverted segment">
+           <div class="ui stackable center aligned grid">
+            <div class="two column row">
+               <div class="column">
+    <img class="ui superhuge image" src="contentimg/front.png">
+               </div>
+        <div class="column"><br><br><br><br><br>
+      <h1 class="ui superhuge header">시온고등학교 <small>for Android™</small><div class="ui label">BETA</div></h1>
+          <br>
+          <p>여러분들의 안드로이드 디바이스에서 시온고등학교 애플리케이션을 만나보세요!<br><br>
+          손 안에서 공지사항, 가정통신문, 급식식단 등을 편리하게 확인하실 수 있습니다.</p><br><br>
+                <a href="intro.html"><div class="massive ui animated fade button">
+            <div class="visible content">자세히 알아보기</div>
+  <div class="hidden content">
+    애플리케이션 소개
+  </div>
+        </div>
+                    </a>
+                </div>
+</div>
+            </div>
+           </div>
+        <!--하단 푸터-->
+        <div class="ui segment">
+            <div align="center">
+         <p>Zion High School Applicaiton for Android / Maintained by <a href="https://github.com/sukso96100">Youngbin Han</a> / License : <a href="http://www.gnu.org/licenses/gpl-3.0-standalone.html">GNU GPLv3</a></p>
             </div>
         </div>
-    <!--컨텐츠-->
-    <div class="jumbotron">
         
-  <a class="pull-left" href="#">
-    <img class="img-responsive" src="img/front.png" alt="Responsive image">
-  </a>
-    <h1 >시온고등학교 <small><span class="label label-default">for Android™</span></small></h1>
-      <br>
-    <p>여러분들의 안드로이드 디바이스에서 시온고등학교 애플리케이션을 만나보세요!<br>손 안에서 공지사항, 가정통신문, 급식식단 등을 편리하게 확인하실 수 있습니다.</p>
-        <a class="btn btn-primary btn-lg" role="button" href="intro.html">더 알아보기</a>
-        <br><br>
-        <!-- 구글플러스 "+1" 버튼 -->
-<div class="g-plusone" data-annotation="inline" data-width="400" data-href="http://sukso96100.github.io/zionhs/"></div>
-        </div>
-    <br><br><br><br><br><br><br><br>
-    <!--하단 막대-->
-    <div class="jumbotron">
-    <small>This Project is maintained by <a href="https://github.com/sukso96100">Youngbin Han</a>,<br>and Licensed under the <a href="http://www.gnu.org/licenses/gpl-3.0-standalone.html">GNU Gernel Public License Version 3</a></small></div>
-    </div>
-    <script src="js/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
+<!-- 마지막 +1 버튼 태그의 뒤에 이 태그를 배치하세요. -->
+<script type="text/javascript">
+  window.___gcfg = {lang: 'ko'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+        <script src="javascript/jquery-1.10.2.min.js"></script>
+        <script src="javascript/semantic.min.js"></script>
+        <script src="javascript/sidebar.js"></script>
+        
     </body>
 </html>

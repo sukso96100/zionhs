@@ -1,176 +1,273 @@
 <html>
 <head>
+    <!--META-->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 부트스트램 Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <!-- 제목 -->
-    <title>소개 | 시온고등학교 for  Android™</title>
-</head>
-<body>
-    <!-- 컨텐츠 -->
-    <div class="container">
-        <!-- Navbar -->
-        <div class="navbar navbar-default" role="navigation">
-            <!--navbar 헤더-->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">시온고등학교 <small><span class="label label-default">for Android™</span></small></a>
+    <!--구성요소 로드--> 
+<!--    <link href="css/semantic.min.css" rel="stylesheet" type="text/css"/>   -->
+    <link href="css/semantic.css" rel="stylesheet" type="text/css"/>
+    <title>시온고등학교 for Android™</title>
+    </head>
+
+    <body>
+        <!--사이드바-->
+        <div class="ui vertical sidebar menu">
+         <a class="item" href="index.html">
+    <i class="large home icon"></i>홈 화면</a>
+            <a class="active item" href="intro.html">
+    <i class="large info icon"></i>앱 소개</a>
+            <a class="item" href="download.html">
+    <i class="large download icon"></i>다운로드</a>
+      <a class="item" href="opensource.html">
+    <i class="large code icon"></i>오픈소스</a>
+            <div class="item">
+    <b>다른 곳으로...</b>
+    <div class="menu">
+      <a class="item"><i class="github icon"></i>GitHub 에서 이 프로젝트 보기</a>
+      <a class="item"><i class="globe icon"></i>시온고등학교 홈페이지로 이동</a>
+    </div>
+  </div>
+            <!--구글플러스 +1 버튼-->
+            <a class="item"><div class="g-plusone" data-annotation="inline" data-width="300" data-href="http://sukso96100.github.io/zionhs/"></div></a>
         </div>
-            <!--NavBar 메뉴-->
-            <div class="navbar-collapse collapse">
-                <!--NavBar 좌측메뉴-->
-            <ul class="nav navbar-nav">
-                <li class="active">
-                <a href="#">소개</a>
-                </li>
-                <li><a href="download.html">다운로드</a></li>
-                <li><a href="opensource.html">오픈소스</a></li>
-                
-                </ul>
-                <!--NavBar 우측메뉴-->
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">다른곳으로...<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    <li><a href="https://github.com/sukso96100/zionhs">GitHub 에서 프로젝트 보기</a></li>
-                        <li><a href="http://www.zion.hs.kr">시온고등학교 옴페이지로</a></li>  
-                    </ul>
-                <li><a href="#"></a></li>
-                </ul>           
+        <!--상단 막대-->
+    <div class="ui fixed inverted menu">
+        <a class="item"><div class="ui toggle button">
+    <i class="large list layout icon"></i>메뉴</div></a>
+        <a class="item">
+        <img src="contentimg/logo_menu.png"></a>
+        <a class="item">시온고등학교 <small>for Android™</small></a>
+        <a class="item">앱 소개</a>
+        </div>
+        <!--컨텐츠-->
+       <br><br><br>
+        <div class="ui purple inverted segment">
+           <div class="ui stackable center aligned grid">
+            <div class="two column row">
+               <div class="column">
+    <img class="ui superhuge image" src="contentimg/front.png">
+               </div>
+        <div class="column"><br><br><br><br><br><br>
+      <h1>안드로이드용 시온고등학교 애플리케이션을 소개합니다.<br><br>
+            아래로 스크롤 하여 애플리케이션에 대한<br><br>
+          간단한 소개를 읽어보세요.</h1><br><br>
+            <div class="ui divider"></div><br><br>
+            <br><br><i class="huge hand down icon"></i> 
+                </div>
+</div>
+            </div>
+           </div>
+        
+        <br><br>
+        
+        <!--기능소개 : 공지사항-->
+        <div class="ui segment">
+           <div class="ui stackable center aligned grid">
+            <div class="two column row">
+               <div class="column">
+                   <div align="center">
+    <img class="ui large image" src="contentimg/notices.png">
+                   </div>
+               </div>
+        <div class="column"><br><br><br><br><br><br>
+            <i class="huge bullhorn icon"></i>
+      <h1 class="ui superhuge header">학교로부터의 공지사항 확인하기.</h1>
+            <br><br>
+            <div class="ui divider"></div><br><br>
+            <h2>최근 15개의 학교로부터의 공지사항을 확인해 보실 수 있습니다.</h2>
+                </div>
+</div>
+            </div>
+           </div>
+        
+        <!--기능소개 : 급식식단-->
+        <div class="ui segment">
+           <div class="ui stackable center aligned grid">
+            <div class="two column row">
+                <div class="column"><br><br><br><br><br><br>
+            <i class="huge food icon"></i>
+      <h1 class="ui superhuge header">오늘 급식식단이 알고 싶은데,<br>
+          식단표를 분실하셨나요?</h1>
+            <br><br>
+            <div class="ui divider"></div><br><br>
+            <h2>오늘 급식식단이 알고 싶은대, 식단표를 분실하셨나요?<br>
+            시온고등학교 앱으로 식단표가 없어도, 언제든지 식단을 확인하실 수 있습니다.</h2>
+                </div>
+               <div class="column">
+                   <div align="center">
+    <img class="ui large image" src="contentimg/diet.png">
+                   </div>
+               </div>
+</div>
+            </div>
+           </div>
+        
+        <!--기능소개 : 학교정보-->
+        <div class="ui segment">
+           <div class="ui stackable center aligned grid">
+            <div class="two column row">
+                <div class="column">
+                   <div align="center">
+    <img class="ui large image" src="contentimg/schoolinfo.png">
+                   </div>
+               </div>
+                <div class="column"><br><br><br><br><br><br>
+            <i class="huge info icon"></i>
+      <h1 class="ui superhuge header">시온고등학교에 처음 오시나요?</h1>
+            <br><br>
+            <div class="ui divider"></div><br><br>
+            <h2>"학교정보" 에서, 시온고등학교로 오는 길, 연락처 등의<br>
+                시온고등학교에 대한 몇몇 정보를 확인하실 수 있습니다.</h2>
+                </div>
+</div>
+            </div>
+           </div>
+        
+        <!--기능소개 : 학사일정-->
+        <div class="ui segment">
+           <div class="ui stackable center aligned grid">
+            <div class="two column row">
+                <div class="column"><br><br><br><br><br><br>
+            <i class="huge calendar icon"></i>
+      <h1 class="ui superhuge header">"내일 학급별로 봉사활동<br>간다고 했었나...?"</h1>
+            <br><br>
+            <div class="ui divider"></div><br><br>
+            <h2>학사일정이 잘 기억이 나지 않나요?<br>
+                "학사일정" 에서 이번달 학사일정을 확인해 보실 수 있습니다.</h2>
+                </div>
+               <div class="column">
+                   <div align="center">
+    <img class="ui large image" src="contentimg/schedules.png">
+                   </div>
+               </div>
+</div>
+            </div>
+           </div>
+        
+        <!--기능소개 : 학교소개-->
+        <div class="ui segment">
+           <div class="ui stackable center aligned grid">
+            <div class="two column row">
+                <div class="column">
+                   <div align="center">
+    <img class="ui large image" src="contentimg/schoolinfo.png">
+                   </div>
+               </div>
+                <div class="column"><br><br><br><br><br><br>
+            <i class="huge building icon"></i>
+      <h1 class="ui superhuge header">"이 학교는 어떤 학교지?"</h1>
+            <br><br>
+            <div class="ui divider"></div><br><br>
+            <h2>"학교소개" 에서 학교상징, 교육목표 와 같은<br>
+                시온고등학교에 대한 자세한 소개를 확인하실 수 있습니다.</h2>
+                </div>
+</div>
+            </div>
+           </div>
+        
+        <!--기능소개 : 가정통신문-->
+        <div class="ui segment">
+           <div class="ui stackable center aligned grid">
+            <div class="two column row">
+                <div class="column"><br><br><br><br><br><br>
+            <i class="huge text file icon"></i>
+      <h1 class="ui superhuge header">"종례시간 때 받은<br>
+          가정통신문이 어디 있었지...?"</h1>
+            <br><br>
+            <div class="ui divider"></div><br><br>
+            <h2>종례시간 때 받은 가정 통신문을 분실하셨나요?<br>
+                "가정통신문" 에서 최근 15개의 가정통신문을 확인하실 수 있습니다.<br>
+                (앱으로 가정통신문 확인 가능하다고 가정통신문 안 챙기시면 안됩니다...)</h2>
+                </div>
+                <div class="column">
+                   <div align="center">
+    <img class="ui large image" src="contentimg/notices_parents.png">
+                   </div>
+               </div>    
+</div>
+            </div>
+           </div>
+        
+        <!--기능소개 : 빠른실행-->
+        <div class="ui segment">
+            <div align="center">
+        <img class="ui superhuge image" src="contentimg/shake_it.png">
+                <br><br><br>
+                <i class="huge shuffle icon"></i>
+                <h1 class="ui superhuge header">흔들어 보세요!</h1>
+            <br><br>
+            <div class="ui divider"></div><br><br>
+            <h2>어떤 화면에서든, 여러분들의 안드로이드 디바이스를 가볍게 흔들어서<br>
+                이 앱의 특정 기능을 바로 사용하실 수 있습니다.<br>
+                "앱 정보 및 설정" 에서 기능을 활성화 시키고 이 기능을 사용하실 수 있습니다.</h2>
+                </div>
+            </div>
+        </div>
+    
+    <!--오픈소스 소프트웨어-->
+        <div class="ui segment">
+            <div align="center">
+        <img class="ui superhuge image" src="contentimg/gnu.png">
+                <br><br><br>
+                <i class="huge code icon"></i>
+                <h1 class="ui superhuge header">오픈소스 소프트웨어</h1>
+            <br><br>
+            <div class="ui divider"></div><br><br>
+            <h2>오픈소스 소프트웨어는 소프트웨어의 가격이 무료라는 것을 의미하는 것이 아닙니다.<br>
+                누구든지 해당 소프트웨어의 소스코드를 열람할 수 있고,<br>
+                소스코드를 원하는대로 수정하여 새로운 소프트웨어를 만들어 낼 수 있음을 의미하며.<br>
+                누구든지 해당 소프트웨어를 개발하는대 참여할 수 있음을 의미하기도 합니다.<br>
+                소스코드가 GNU GPL v3(GNU 일반 공중 사용 허가서 V3)에 의거하여 공개되어 있는<br>
+                오픈소스 소프트웨어인 안드로이드용 시온고등학교 앱은 누구든지<br>
+                소스코드를 자유롭게 이용하거나, 이 앱을 개발하는대 참여하실 수 있습니다.</h2>
+                </div>
+            </div>
+        </div>
+
+<!--다운로드-->
+        <div class="ui segment">
+            <div align="center">
+        <img class="ui huge image" src="contentimg/logo.png">
+                <br><br><br>
+                <i class="huge download icon"></i>
+                <h1 class="ui superhuge header">지금 사용해 보세요!</h1>
+            <br><br>
+            <div class="ui divider"></div><br><br>
+            <h2>지금 당장 안드로이드용 시온고등학교 애플리케이션을 다운로드 받아서 사용해 보세요!</h2>
+                <br><br>
+                <a href="download.html"><div class="massive ui purple animated fade button">
+            <div class="visible content">지금 다운로드</div>
+  <div class="hidden content">
+    <i class="large download icon"></i>
+  </div>
+        </div>
+                    </a>
+                </div>
             </div>
         </div>
         
-        
-        
-    <!--컨텐츠-->
-        <!--첫 부분-->
-    <div class="jumbotron">
-        
-  <a class="pull-left" href="#">
-    <img class="img-responsive" src="img/front.png" alt="Responsive image">
-  </a>
-   <h2>이제 여러분들의 안드로이드 디바이스에서 시온고등학교 앱을 만나보세요.</h2>
+<!--하단 푸터-->
+        <div class="ui segment">
+            <div align="center">
+         <p>Zion High School Applicaiton for Android / Maintained by <a href="https://github.com/sukso96100">Youngbin Han</a> / License : <a href="http://www.gnu.org/licenses/gpl-3.0-standalone.html">GNU GPLv3</a></p>
+            </div>
         </div>
         
-        <!--기능소개 : 공지사항 -->
-        <div class="jumbotron">
-  <a class="pull-left" href="#">
-    <img class="img-responsive" src="img/notices.png" alt="Responsive image">
-  </a><br>
-   <h1>학교로부터의 공지사항 확인하기.</h1>
-            <br>
-            <p>최근 15개의 학교로부터의 공지사항을 확인해 보실 수 있습니다.</p>
-            <br><br><br><br>
-        </div>
+
+<!-- 마지막 +1 버튼 태그의 뒤에 이 태그를 배치하세요. -->
+<script type="text/javascript">
+  window.___gcfg = {lang: 'ko'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+        <script src="javascript/jquery-1.10.2.min.js"></script>
+        <script src="javascript/semantic.min.js"></script>
+        <script src="javascript/sidebar.js"></script>
         
-        <!--기능소개 : 급식식단 -->
-        <div class="jumbotron">
-  <a class="pull-right" href="#">
-    <img class="img-responsive" src="img/diet.png" alt="Responsive image">
-  </a><br>
-   <h1>오늘 급식식단이 알고 싶은데, 식단표를 분실하셨나요?</h1>
-            <br>
-            <p>오늘 급식식단이 알고 싶은대, 식단표를 분실하셨나요?
-            <br>시온고등학교 앱으로 식단표가 없어도, 언제든지 식단을 확인하실 수 있습니다.</p>
-            <br><br><br>
-            <small><div class="alert alert-info">급식식단 조회가 되지 않는 경우가 있는데, 보통 아래와 같은 경우 조회가 되지 않습니다.<br>-원래 그 날 급식이 제공되지 않는경우<br>-학교측에서 그날 급식식단 정보를 나이스 대국민 서비스 측에 전달하지 않은경우(이 앱의 급식식단 정보는 나이스 대국민 서비스에서 가져옵니다.)</div></small>
-        </div>
-        
-        <!--기능소개 : 학교정보 -->
-        <div class="jumbotron">
-  <a class="pull-left" href="#">
-    <img class="img-responsive" src="img/schoolinfo.png" alt="Responsive image">
-  </a><br>
-   <h1>시온고등학교에 처음 오시나요?</h1>
-            <br>
-            <p>"학교정보" 에서, 시온고등학교로 오는 길, 연락처 등의 시온고등학교에 대한 몇몇 정보를 확인하실 수 있습니다.</p>
-            <br><br><br>
-        </div>
-        
-        <!--기능소개 : 학사일정 -->
-        <div class="jumbotron">
-  <a class="pull-right" href="#">
-    <img class="img-responsive" src="img/schedules.png" alt="Responsive image">
-  </a><br>
-   <h1>"내일 학급별로 봉사활동 간다고 했었나...?"</h1>
-            <br>
-            <p>학사일정이 잘 기억이 나지 않나요? "학사일정" 에서 이번달 학사일정을 확인해 보실 수 있습니다.</p>
-            <br><br><br>
-        </div>
-        
-        <!--기능소개 : 학교소개 -->
-        <div class="jumbotron">
-  <a class="pull-left" href="#">
-    <img class="img-responsive" src="img/aboutzion.png" alt="Responsive image">
-  </a><br>
-   <h1>"이 학교는 어떤 학교지?"</h1>
-            <br>
-            <p>"학교소개" 에서 학교상징, 교육목표 와 같은 시온고등학교에 대한 자세한 소개를 확인하실 수 있습니다.</p>
-            <br><br><br><br>
-        </div>
-        
-        <!--기능소개 : 가정통신문 -->
-        <div class="jumbotron">
-  <a class="pull-right" href="#">
-    <img class="img-responsive" src="img/notices_parents.png" alt="Responsive image">
-  </a><br>
-   <h1>"종례시간 때 받은 가정통신문이 어디 있었지...?"</h1>
-            <br>
-            <p>종례시간 때 받은 가정 통신문을 분실하셨나요? "가정통신문" 에서 최근 15개의 가정통신문을 확인하실 수 있습니다.(앱으로 가정통신문 확인 가능하다고 가정통신문 안 챙기시면 안됩니다...)</p>
-            <br><br><br>
-        </div>
-        
-        <!--기능소개 : 빠른실행 -->
-        <div class="jumbotron">
-  <div align="center">
-    <img class="img-responsive" src="img/shake_it.png" alt="Responsive image"></div>
-  <br>
-   <h1>흔들어 보세요!</h1>
-            <br>
-            <p>어떤 화면에서든, 여러분들의 안드로이드 디바이스를 가볍게 흔들어서 이 앱의 특정 기능을 바로 사용하실 수 있습니다. "앱 정보 및 설정" 에서 기능을 활성화 시키고 이 기능을 사용하실 수 있습니다.</p>
-            <br>
-        </div>
-        
-        <!--특징소개 : 오픈소스 소프트웨어 -->
-        <div class="jumbotron">
-  <div align="center">
-    <img class="img-responsive" src="img/gnu.png" alt="Responsive image"></div>
-  <br>
-   <h1>오픈소스 소프트웨어</h1>
-            <br>
-            <p>오픈소스 소프트웨어는 소프트웨어의 가격이 무료라는 것을 의미하는 것이 아닙니다. 누구든지 해당 소프트웨어의 소스코드를 열람할 수 있고, 소스코드를 원하는대로 수정하여 새로운 소프트웨어를 만들어 낼 수 있음을 의미하며. 누구든지 해당 소프트웨어를 개발하는대 참여할 수 있음을 의미하기도 합니다.<br>소스코드가 GNU GPL v3(GNU 일반 공중 사용 허가서 V3)에 의거하여 공개되어 있는 오픈소스 소프트웨어인 안드로이드용 시온고등학교 앱은 누구든지 소스코드를 자유롭게 이용하거나, 이 앱을 개발하는대 참여하실 수 있습니다.</p>
-            <br>
-        </div>
-        
-        <!-- 다운로드 안내 -->
-        <div class="jumbotron">
-  <div align="center">
-    <img class="img-responsive" src="img/logo.png" alt="Responsive image">
-  <br>
-   <h1>지금 사용해 보세요!</h1>
-            <br>
-            <p>지금 당장 안드로이드용 시온고등학교 애플리케이션을 다운로드 받아서 사용해 보세요!</p>
-            <br>
-      <a class="btn btn-primary btn-lg" role="button" href="download.html">다운로드 받기</a>
-      </div>
-        </div>
-    <br><br><br><br><br><br><br><br>
-    <!--하단 막대-->
-   <div class="jumbotron">
-    <small>This Project is maintained by <a href="https://github.com/sukso96100">Youngbin Han</a>,<br>and Licensed under the <a href="http://www.gnu.org/licenses/gpl-3.0-standalone.html">GNU Gernel Public License Version 3</a></small></div>
-    
-    
-    </div>
-    <script src="js/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     </body>
-
-
 </html>
