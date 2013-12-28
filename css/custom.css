@@ -4,3 +4,8 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+.ui.inverted.bg.segment {
+background-image: url(../contentimg/mainbg.jpg) !important; 
+  color: #FFFFFF !important;
+}
