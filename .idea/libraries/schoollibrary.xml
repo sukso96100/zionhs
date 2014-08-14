@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="schoollibrary">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/ZionHighSchool/libs/schoollibrary.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

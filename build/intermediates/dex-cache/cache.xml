@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/release/jsoup-1.7.3-2cdc3040429074eb233a1f3b88d37b935a509921.jar"
+        jar="/home/youngbin/zionhs/ZionHighSchool/libs/jsoup-1.7.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="ab1f22cadc2f8b514e55ba368f5128056fe304da"/>
+    <item
+        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/release/classes-51a2c4d2acc422b29229a5f25f45b6b9ae315978.jar"
+        jar="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/19.0.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="2ada8b8f7c8fa9ddb6734e527d8e99d2f90174a3"/>
+    <item
+        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/release/support-v4-19.0.0-d3222753be715b9700a06d4e91f3344b928cacd6.jar"
+        jar="/usr/share/android-studio/data/sdk/extras/android/m2repository/com/android/support/support-v4/19.0.0/support-v4-19.0.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="afee690af14bd2c32d400cdf78e746fd45c386fa"/>
+    <item
+        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/release/jericho-android.3.1-de24887505164de5855b64a2301c666e0816cf1e.jar"
+        jar="/home/youngbin/zionhs/ZionHighSchool/libs/jericho-android.3.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="b9d53e9eeea55b5b67e78a0c94e1a1ac8b357ffc"/>
+    <item
+        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/release/classes-eb8112deb9ba41b031b47b3edf06c2d09539fc8e.jar"
+        jar="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.0.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="eb69b5c2e53e59d82f7439f3217f46f9d98f0c89"/>
+    <item
+        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/release/Android_Meal_Library-155fdb8e9cb65806acb8c2a3537c1f0d297c7af0.jar"
+        jar="/home/youngbin/zionhs/ZionHighSchool/libs/Android_Meal_Library.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="bfe6b8de7dbcf534e1433b8aa0a9c6118da9a89e"/>
+
+</pre-dex-items>
