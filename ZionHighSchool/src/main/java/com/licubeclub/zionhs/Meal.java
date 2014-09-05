@@ -28,7 +28,6 @@ import android.os.Message;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.TextView;
 import android.widget.Toast;
-import toast.library.meal.MealLibrary;
 
 public class Meal extends ActionBarActivity {
 
@@ -45,6 +44,8 @@ public class Meal extends ActionBarActivity {
     TextView dinnerfri;
     String[] lunchstring = new String[7];
     String[] dinnerstring = new String[7];
+    String[] lunchkcalstring = new String[7];
+    String[] dinnerkcalstring = new String[7];
     ConnectivityManager cManager;
     NetworkInfo mobile;
     NetworkInfo wifi;
@@ -107,25 +108,28 @@ public class Meal extends ActionBarActivity {
                         progressDialog = ProgressDialog.show(Meal.this,"",loading,true);
                     }
                 });
-                lunchstring = MealLibrary.getMeal("goe.go.kr","J100000659","4","04","2"); //Get Lunch Menu Date
-                dinnerstring = MealLibrary.getMeal("goe.go.kr","J100000659","4","04","3"); //Get Dinner Menu Date
+                lunchstring = MealLoadHelper.getMeal("goe.go.kr","J100000659","4","04","2"); //Get Lunch Menu Date
+                lunchkcalstring = MealLoadHelper.getKcal("goe.go.kr","J100000659","4","04","2"); //Get Lunch Menu Kcal Value
+                dinnerstring = MealLoadHelper.getMeal("goe.go.kr","J100000659","4","04","3"); //Get Dinner Menu Date
+                dinnerkcalstring = MealLoadHelper.getKcal("goe.go.kr","J100000659","4","04","3"); //Get Dinner Menu Kcal Value
+
 
                 mHandler.post(new Runnable()
                 {
                     public void run()
                     {
                         progressDialog.dismiss();
-                        lunchmon.setText(getString(R.string.monday) + ":\n" + lunchstring[1]);
-                        lunchtue.setText(getString(R.string.tuesday) + ":\n" + lunchstring[2]);
-                        lunchwed.setText(getString(R.string.wednsday) + ":\n" + lunchstring[3]);
-                        lunchthu.setText(getString(R.string.thursday) + ":\n" + lunchstring[4]);
-                        lunchfri.setText(getString(R.string.friday) + ":\n" + lunchstring[5]);
+                        lunchmon.setText(getString(R.string.monday) + ":\n" + lunchstring[1] + "\n" + lunchkcalstring[1]);
+                        lunchtue.setText(getString(R.string.tuesday) + ":\n" + lunchstring[2] + "\n" + lunchkcalstring[2]);
+                        lunchwed.setText(getString(R.string.wednsday) + ":\n" + lunchstring[3] + "\n" + lunchkcalstring[3]);
+                        lunchthu.setText(getString(R.string.thursday) + ":\n" + lunchstring[4] + "\n" + lunchkcalstring[4]);
+                        lunchfri.setText(getString(R.string.friday) + ":\n" + lunchstring[5] + "\n" + lunchkcalstring[5]);
 
-                        dinnermon.setText(getString(R.string.monday) + ":\n" + dinnerstring[1]);
-                        dinnertue.setText(getString(R.string.tuesday) + ":\n" + dinnerstring[2]);
-                        dinnerwed.setText(getString(R.string.wednsday) + ":\n" + dinnerstring[3]);
-                        dinnerthu.setText(getString(R.string.thursday) + ":\n" + dinnerstring[4]);
-                        dinnerfri.setText(getString(R.string.friday) + ":\n" + dinnerstring[5]);
+                        dinnermon.setText(getString(R.string.monday) + ":\n" + dinnerstring[1] + "\n" + dinnerkcalstring[1]);
+                        dinnertue.setText(getString(R.string.tuesday) + ":\n" + dinnerstring[2] + "\n" + dinnerkcalstring[2]);
+                        dinnerwed.setText(getString(R.string.wednsday) + ":\n" + dinnerstring[3] + "\n" + dinnerkcalstring[3]);
+                        dinnerthu.setText(getString(R.string.thursday) + ":\n" + dinnerstring[4] + "\n" + dinnerkcalstring[4]);
+                        dinnerfri.setText(getString(R.string.friday) + ":\n" + dinnerstring[5] + "\n" + dinnerkcalstring[5]);
                         handler.sendEmptyMessage(0);
                     }
                 });
