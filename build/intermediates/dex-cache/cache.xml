@@ -2,29 +2,35 @@
 <pre-dex-items>
 
     <item
+        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-5ef04b06cef7059de9e361259ed6ecacbf8eb91c.jar"
+        jar="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+    <item
         dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/jsoup-1.7.3-2cdc3040429074eb233a1f3b88d37b935a509921.jar"
         jar="/home/youngbin/zionhs/ZionHighSchool/libs/jsoup-1.7.3.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="ab1f22cadc2f8b514e55ba368f5128056fe304da"/>
     <item
-        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/classes-51a2c4d2acc422b29229a5f25f45b6b9ae315978.jar"
-        jar="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/19.0.0/classes.jar"
+        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/classes-93c893dd42c528f0814be0ee4faed631dfe2d035.jar"
+        jar="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/20.0.0/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="2ada8b8f7c8fa9ddb6734e527d8e99d2f90174a3"/>
+        sha1="e5531cb41e35c81a051a274945542f6b31e4c97e"/>
     <item
-        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/support-v4-19.0.0-d3222753be715b9700a06d4e91f3344b928cacd6.jar"
-        jar="/usr/share/android-studio/data/sdk/extras/android/m2repository/com/android/support/support-v4/19.0.0/support-v4-19.0.0.jar"
+        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/classes-d03dd204837934a9629656f7549ae842ded8d994.jar"
+        jar="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="afee690af14bd2c32d400cdf78e746fd45c386fa"/>
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
     <item
-        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/classes-eb8112deb9ba41b031b47b3edf06c2d09539fc8e.jar"
-        jar="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.0.0/classes.jar"
+        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-820090ec777e85e5f91abc11b0ce2cdd64f29191.jar"
+        jar="/usr/share/android-studio/data/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="eb69b5c2e53e59d82f7439f3217f46f9d98f0c89"/>
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
     <item
         dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/jericho-android.3.1-de24887505164de5855b64a2301c666e0816cf1e.jar"
         jar="/home/youngbin/zionhs/ZionHighSchool/libs/jericho-android.3.1.jar"
@@ -32,10 +38,10 @@
         revision="19.1.0"
         sha1="b9d53e9eeea55b5b67e78a0c94e1a1ac8b357ffc"/>
     <item
-        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/Android_Meal_Library-155fdb8e9cb65806acb8c2a3537c1f0d297c7af0.jar"
-        jar="/home/youngbin/zionhs/ZionHighSchool/libs/Android_Meal_Library.jar"
+        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/classes-7ad2cf574b1b0d7ba459288c12c6ca07bd1fb8fd.jar"
+        jar="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="bfe6b8de7dbcf534e1433b8aa0a9c6118da9a89e"/>
+        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef"/>
 
 </pre-dex-items>

@@ -29,63 +29,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:layout_marginRight="10dp"
         android:paddingBottom="20dp">
 
-
-    <TextView
-        android:layout_marginTop="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/appsettings_settings_title"
-        android:id="@+id/textView" />
-
-    <CheckBox
-        android:layout_marginTop="10dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/quickexec"
-        android:id="@+id/quickexec"
-        android:background="@drawable/cardbg"/>
-
-    <CheckBox
-        android:layout_marginTop="10dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/quickexec_noti"
-        android:id="@+id/quickexec_noti"
-        android:background="@drawable/cardbg"/>
-
-    <TextView
-        android:layout_marginTop="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/appsettings_settings_select"
-        android:id="@+id/textView2" />
-
-    <Spinner
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/quickexec_select"
-        android:background="@drawable/cardbg"
-        android:entries="@array/quickexec_select"/>
-
     <TextView
         android:layout_marginTop="20dp"
         android:paddingLeft="10dp"

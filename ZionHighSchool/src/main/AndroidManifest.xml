@@ -18,8 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.licubeclub.zionhs"
-    android:versionCode="5"
-    android:versionName="0.1-beta1" >
+    android:versionCode="6"
+    android:versionName="0.1" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -40,7 +40,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:label="@string/app_name"
         android:theme="@style/Theme.Zion" >
         <activity
-            android:name="com.licubeclub.zionhs.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,55 +49,55 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             </intent-filter>
         </activity>
         <activity
-            android:name="com.licubeclub.zionhs.Appinfo"
+            android:name=".Appinfo"
             android:label="@string/info"
-            android:parentActivityName="com.licubeclub.zionhs.MainActivity" >
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.MainActivity" />
         </activity>
         <activity
-            android:name="com.licubeclub.zionhs.Notices"
+            android:name=".Notices"
             android:label="@string/notices"
-            android:parentActivityName="com.licubeclub.zionhs.MainActivity" >
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.MainActivity" />
         </activity>
         <activity
-            android:name="com.licubeclub.zionhs.Meal"
+            android:name=".Meal"
             android:label="@string/meal"
-            android:parentActivityName="com.licubeclub.zionhs.MainActivity" >
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.MainActivity" />
         </activity>
         <activity
-            android:name="com.licubeclub.zionhs.Schoolinfo"
+            android:name=".Schoolinfo"
             android:label="@string/schoolinfo"
-            android:parentActivityName="com.licubeclub.zionhs.MainActivity" >
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.MainActivity" />
         </activity>
         <activity
-            android:name="com.licubeclub.zionhs.Schedule"
+            android:name=".Schedule"
             android:label="@string/schedule"
-            android:parentActivityName="com.licubeclub.zionhs.MainActivity" >
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.MainActivity" />
         </activity>
         <activity
-            android:name="com.licubeclub.zionhs.Schoolintro"
+            android:name=".Schoolintro"
             android:label="@string/schoolintro"
-            android:parentActivityName="com.licubeclub.zionhs.MainActivity" >
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.MainActivity" />
         </activity>
 
-        <service android:name="com.licubeclub.zionhs.ShakeDetectService" >
+        <service android:name=".ShakeDetectService" >
             <intent-filter>
                 <action android:name="com.licubeclub.zionhs" />
 
@@ -106,13 +106,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         </service>
 
         <activity
-            android:name="com.licubeclub.zionhs.QuickLauncherActivity"
+            android:name=".QuickLauncherActivity"
             android:label="@string/title_activity_quick_launcher"
             android:theme="@style/Theme.Zion.NoActionBar" >
         </activity>
 
         <receiver
-            android:name="com.licubeclub.zionhs.AutoStarter"
+            android:name=".AutoStarter"
             android:enabled="true"
             android:exported="false"
             android:label="ShakeDetectServiceAutoStarter" >
@@ -122,49 +122,53 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         </receiver>
 
         <activity
-            android:name="com.licubeclub.zionhs.Tutorial"
+            android:name=".Tutorial"
             android:label="@string/title_activity_tutorial"
             android:theme="@style/Theme.Zion.NoActionBar" >
         </activity>
         <activity
-            android:name="com.licubeclub.zionhs.Notices_Parents"
+            android:name=".Notices_Parents"
             android:label="@string/title_activity_notices__parents"
-            android:parentActivityName="com.licubeclub.zionhs.MainActivity" >
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.MainActivity" />
         </activity>
         <activity
-            android:name="com.licubeclub.zionhs.Doc_Readme"
+            android:name=".Doc_Readme"
             android:label="@string/title_activity_doc__readme"
-            android:parentActivityName="com.licubeclub.zionhs.Appinfo" >
+            android:parentActivityName=".Appinfo" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.Appinfo" />
         </activity>
         <activity
-            android:name="com.licubeclub.zionhs.Doc_Notices"
+            android:name=".Doc_Notices"
             android:label="@string/title_activity_doc__notices"
-            android:parentActivityName="com.licubeclub.zionhs.Appinfo" >
+            android:parentActivityName=".Appinfo" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.Appinfo" />
         </activity>
         <activity
-            android:name="com.licubeclub.zionhs.Doc_Copying"
+            android:name=".Doc_Copying"
             android:label="@string/title_activity_doc__copying"
-            android:parentActivityName="com.licubeclub.zionhs.Appinfo" >
+            android:parentActivityName=".Appinfo" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.Appinfo" />
         </activity>
         <activity
-            android:name="com.licubeclub.zionhs.Doc_Contributors"
+            android:name=".Doc_Contributors"
             android:label="@string/title_activity_doc__contributors"
-            android:parentActivityName="com.licubeclub.zionhs.Appinfo" >
+            android:parentActivityName=".Appinfo" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.Appinfo" />
+        </activity>
+        <activity
+            android:name=".WebViewActivity"
+            android:label="@string/title_activity_web_view" >
         </activity>
     </application>
 

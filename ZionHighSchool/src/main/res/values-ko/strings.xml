@@ -233,4 +233,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         튜토리얼을 마치려면,\n
         [튜토리얼 마치기] 버튼을 누르세요.</string>
     <string name="tutorial_done_btn">튜토리얼 마치기</string>
+    <string name="title_activity_web_view">웹 뷰어</string>
 </resources>

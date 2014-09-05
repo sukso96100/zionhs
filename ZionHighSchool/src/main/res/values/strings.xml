@@ -55,9 +55,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="thursday">Thursday</string>
     <string name="friday">Friday</string>
     <string name="network_connection_warning">No network connection, Check your network connection first</string>
-
     <string name="address">(422-060)172-20, Eunseong-ro, Sosa-gu, Bucheon-si, Gyeonggi-do, Korea[Click to see more on Google Maps]</string>
-
     <string name="transportations">Taking bus: \n
         Take 019-1 Bus and get off at the Zion High Schol front door \n
         Take 019, 019-1 or 23-3 bus and get off at the Hanshin Apartments and walk for 10minutes \n
@@ -216,5 +214,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="title_activity_doc__copying">COPYING</string>
     <string name="title_activity_doc__contributors">CONTRIBUTORS</string>
     <string name="loading">Loading...</string>
+    <string name="title_activity_web_view">Web Viewer</string>
 
 </resources>

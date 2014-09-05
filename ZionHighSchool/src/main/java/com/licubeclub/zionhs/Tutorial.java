@@ -75,11 +75,8 @@ public class Tutorial extends ActionBarActivity {
         else if(type==8){
             mPager.setCurrentItem(8);
         }
-        else if(type==9){
-            mPager.setCurrentItem(9);
-        }
         else{
-            mPager.setCurrentItem(10);
+            mPager.setCurrentItem(9);
         }
     }
     /**
@@ -95,7 +92,7 @@ public class Tutorial extends ActionBarActivity {
 
         @Override
         public int getCount() {
-            return 11;
+            return 1;
         }
         private View.OnClickListener mPagerListener = new View.OnClickListener() {
             @Override
@@ -132,9 +129,6 @@ public class Tutorial extends ActionBarActivity {
                 v = mInflater.inflate(R.layout.tutorial_7, null);
             }
             else if(position == 8){
-                v = mInflater.inflate(R.layout.tutorial_8, null);
-            }
-            else if(position == 9){
                 v = mInflater.inflate(R.layout.tutorial_9, null);
             }
             else{
@@ -181,9 +175,6 @@ public class Tutorial extends ActionBarActivity {
                 return getString(R.string.tutorial_7);
             }
             else if(position == 8){
-                return getString(R.string.tutorial_8);
-            }
-            else if(position == 9){
                 return getString(R.string.tutorial_9);
             }
             else{

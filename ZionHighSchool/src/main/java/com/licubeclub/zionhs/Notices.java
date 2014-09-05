@@ -144,9 +144,9 @@ public class Notices extends ActionBarActivity {
         public void onItemClick(AdapterView<?> adapterView, View clickedView, int pos, long id)
         {
            String herfitem = titleherfarray.get(pos);
-            Intent gotowebpage = new Intent(Intent.ACTION_VIEW);
-            gotowebpage.setData(Uri.parse(herfitem));
-            startActivity(gotowebpage);
+           Intent intent = new Intent(Notices.this, WebViewActivity.class);
+           intent.putExtra("URL", herfitem);
+            startActivity(intent);
         }
     };
 

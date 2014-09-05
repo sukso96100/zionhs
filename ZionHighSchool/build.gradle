@@ -28,10 +28,10 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:19.0.0'
-    compile 'com.android.support:gridlayout-v7:19.0.0'
-    compile 'com.android.support:appcompat-v7:19.0.0'
     compile files('libs/Android_Meal_Library.jar')
     compile files('libs/jericho-android.3.1.jar')
     compile files('libs/jsoup-1.7.3.jar')
+    compile 'com.android.support:support-v4:20.0.0'
+    compile 'com.android.support:gridlayout-v7:20.0.0'
+    compile 'com.android.support:appcompat-v7:20.0.0'
 }
