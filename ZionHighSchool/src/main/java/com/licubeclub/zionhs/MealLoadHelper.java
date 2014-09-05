@@ -140,17 +140,17 @@ public class MealLoadHelper
             {
                 List<Element> tbody = ((Element)table.get(i)).getAllElements("tbody");
                 List<Element> __tr = ((Element)tbody.get(0)).getAllElements("tr");
-                List<Element> __th = ((Element)__tr.get(18)).getAllElements("th");
+                List<Element> __th = ((Element)__tr.get(16)).getAllElements("th");
                 if (((Element)__th.get(0)).getContent().toString().equals("에너지(kcal)"))
                 {
-                    List<Element> td = ((Element)__tr.get(18)).getAllElements("td");
-                    content[0] = ((Element)td.get(0)).getContent().toString();
-                    content[1] = ((Element)td.get(1)).getContent().toString();
-                    content[2] = ((Element)td.get(2)).getContent().toString();
-                    content[3] = ((Element)td.get(3)).getContent().toString();
-                    content[4] = ((Element)td.get(4)).getContent().toString();
-                    content[5] = ((Element)td.get(5)).getContent().toString();
-                    content[6] = ((Element)td.get(6)).getContent().toString();
+                    List<Element> td = ((Element)__tr.get(16)).getAllElements("td");
+                    content[0] = ((Element)td.get(0)).getContent().toString() + "kcal";
+                    content[1] = ((Element)td.get(1)).getContent().toString() + "kcal";
+                    content[2] = ((Element)td.get(2)).getContent().toString() + "kcal";
+                    content[3] = ((Element)td.get(3)).getContent().toString() + "kcal";
+                    content[4] = ((Element)td.get(4)).getContent().toString() + "kcal";
+                    content[5] = ((Element)td.get(5)).getContent().toString() + "kcal";
+                    content[6] = ((Element)td.get(6)).getContent().toString() + "kcal";
                     break;
                 }
                 content[0] = null;
