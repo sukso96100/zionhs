@@ -18,8 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.licubeclub.zionhs"
-    android:versionCode="6"
-    android:versionName="0.1" >
+    android:versionCode="7"
+    android:versionName="0.1.1" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -97,29 +97,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 android:value="com.licubeclub.zionhs.MainActivity" />
         </activity>
 
-        <service android:name=".ShakeDetectService" >
-            <intent-filter>
-                <action android:name="com.licubeclub.zionhs" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </service>
-
-        <activity
-            android:name=".QuickLauncherActivity"
-            android:label="@string/title_activity_quick_launcher"
-            android:theme="@style/Theme.Zion.NoActionBar" >
-        </activity>
-
-        <receiver
-            android:name=".AutoStarter"
-            android:enabled="true"
-            android:exported="false"
-            android:label="ShakeDetectServiceAutoStarter" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
 
         <activity
             android:name=".Tutorial"

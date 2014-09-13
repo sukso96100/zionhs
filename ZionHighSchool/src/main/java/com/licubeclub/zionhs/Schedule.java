@@ -21,12 +21,14 @@ package com.licubeclub.zionhs;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
@@ -51,6 +53,8 @@ public class Schedule extends ActionBarActivity {
     private ArrayList<String> dayarray;
     private ArrayList<String> schedulearray;
     private ListCalendarAdapter adapter;
+    private SwipeRefreshLayout SRL;
+    ListView listview;
 
     private final Handler handler = new Handler()
     {
@@ -64,11 +68,22 @@ public class Schedule extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_schedule);
-        final ListView listview = (ListView) findViewById(R.id.listView);
+        listview = (ListView) findViewById(R.id.listView);
 
         cManager=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
         mobile = cManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
         wifi = cManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        SRL = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+        SRL.setColorSchemeColors(Color.rgb(231, 76, 60),
+                Color.rgb(46, 204, 113),
+                Color.rgb(41, 128, 185),
+                Color.rgb(241, 196, 15));
+        SRL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                networkTask();
+            }
+        });
 
         if(mobile.isConnected() || wifi.isConnected()){}
         else{
@@ -76,7 +91,11 @@ public class Schedule extends ActionBarActivity {
                     getString(R.string.network_connection_warning), Toast.LENGTH_LONG);
             finish();
         }
+            networkTask();
 
+    }
+
+    private void networkTask(){
         final Handler mHandler = new Handler();
         new Thread()
         {
@@ -88,8 +107,7 @@ public class Schedule extends ActionBarActivity {
 
                     public void run()
                     {
-                        String loading = getString(R.string.loading);
-                        progressDialog = ProgressDialog.show(Schedule.this,"",loading,true);
+                        SRL.setRefreshing(true);
                     }
                 });
 
@@ -125,12 +143,12 @@ public class Schedule extends ActionBarActivity {
                 {
                     public void run()
                     {
-                        progressDialog.dismiss();
                         //UI Task
                         adapter = new ListCalendarAdapter(Schedule.this, dayarray, schedulearray);
                         listview.setAdapter(adapter);
 
                         handler.sendEmptyMessage(0);
+                        SRL.setRefreshing(false);
                     }
                 });
 

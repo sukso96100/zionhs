@@ -18,15 +18,15 @@
 
 package com.licubeclub.zionhs;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
@@ -48,10 +48,11 @@ public class Notices_Parents extends ActionBarActivity {
     ConnectivityManager cManager;
     NetworkInfo mobile;
     NetworkInfo wifi;
-    private ProgressDialog progressDialog;
     private ArrayList<String> titlearray;
     private ArrayList<String> titleherfarray;
     private ArrayAdapter<String> adapter;
+    private SwipeRefreshLayout SRL;
+    ListView listview;
 
     private final Handler handler = new Handler()
     {
@@ -65,11 +66,22 @@ public class Notices_Parents extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_notices_parents);
-        final ListView listview = (ListView) findViewById(R.id.listView);
+         listview = (ListView) findViewById(R.id.listView);
 
         cManager=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
         mobile = cManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
         wifi = cManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        SRL = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+        SRL.setColorSchemeColors(Color.rgb(231, 76, 60),
+                Color.rgb(46, 204, 113),
+                Color.rgb(41, 128, 185),
+                Color.rgb(241, 196, 15));
+        SRL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                networkTask();
+            }
+        });
 
         if(mobile.isConnected() || wifi.isConnected()){}
         else{
@@ -77,7 +89,22 @@ public class Notices_Parents extends ActionBarActivity {
                     getString(R.string.network_connection_warning), Toast.LENGTH_LONG);
             finish();
         }
+        networkTask();
 
+    }
+    private AdapterView.OnItemClickListener GoToWebPage = new AdapterView.OnItemClickListener()
+    {
+        public void onItemClick(AdapterView<?> adapterView, View clickedView, int pos, long id)
+        {
+            String herfitem = titleherfarray.get(pos);
+            Intent intent = new Intent(Notices_Parents.this, WebViewActivity.class);
+            intent.putExtra("URL", herfitem);
+            startActivity(intent);
+        }
+    };
+
+//    Method for get list of notices for parents
+    private void networkTask(){
         final Handler mHandler = new Handler();
         new Thread()
         {
@@ -89,8 +116,7 @@ public class Notices_Parents extends ActionBarActivity {
 
                     public void run()
                     {
-                        String loading = getString(R.string.loading);
-                        progressDialog = ProgressDialog.show(Notices_Parents.this,"",loading,true);
+                        SRL.setRefreshing(true);
                     }
                 });
 
@@ -125,13 +151,13 @@ public class Notices_Parents extends ActionBarActivity {
                 {
                     public void run()
                     {
-                        progressDialog.dismiss();
                         //UI Task
                         adapter = new ArrayAdapter<String>(Notices_Parents.this,
                                 android.R.layout.simple_list_item_1, titlearray);
                         listview.setAdapter(adapter);
                         listview.setOnItemClickListener(GoToWebPage);
                         handler.sendEmptyMessage(0);
+                        SRL.setRefreshing(false);
                     }
                 });
 
@@ -139,17 +165,5 @@ public class Notices_Parents extends ActionBarActivity {
         }.start();
 
     }
-    private AdapterView.OnItemClickListener GoToWebPage = new AdapterView.OnItemClickListener()
-    {
-        public void onItemClick(AdapterView<?> adapterView, View clickedView, int pos, long id)
-        {
-            String herfitem = titleherfarray.get(pos);
-            Intent intent = new Intent(Notices_Parents.this, WebViewActivity.class);
-            intent.putExtra("URL", herfitem);
-            startActivity(intent);
-        }
-    };
-
-
 
 }

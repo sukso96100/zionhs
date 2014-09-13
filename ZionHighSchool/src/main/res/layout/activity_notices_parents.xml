@@ -18,7 +18,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
-
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView">
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,7 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:layout_below="@+id/textView" />
-
+</android.support.v4.widget.SwipeRefreshLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

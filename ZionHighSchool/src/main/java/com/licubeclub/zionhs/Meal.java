@@ -18,20 +18,20 @@
 
 package com.licubeclub.zionhs;
 
-import android.app.ProgressDialog;
 import android.content.Context;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class Meal extends ActionBarActivity {
 
-    private ProgressDialog progressDialog;
     TextView lunchmon;
     TextView lunchtue;
     TextView lunchwed;
@@ -49,6 +49,7 @@ public class Meal extends ActionBarActivity {
     ConnectivityManager cManager;
     NetworkInfo mobile;
     NetworkInfo wifi;
+    SwipeRefreshLayout SRL;
 
 
     private final Handler handler = new Handler()
@@ -90,10 +91,25 @@ public class Meal extends ActionBarActivity {
         dinnerwed = (TextView)this.findViewById(R.id.dinnerwed);
         dinnerthu = (TextView)this.findViewById(R.id.dinnerthu);
         dinnerfri = (TextView)this.findViewById(R.id.dinnerfri);
+        SRL = (SwipeRefreshLayout)this.findViewById(R.id.swipe_container);
         //dinnertext = (TextView)this.findViewById(R.id.dinner);
 
+        SRL.setColorSchemeColors(Color.rgb(231, 76, 60),
+                Color.rgb(46, 204, 113),
+                Color.rgb(41, 128, 185),
+                Color.rgb(241, 196, 15));
+        SRL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                loadMealTask();
+            }
+        });
 
+        loadMealTask();
 
+    }
+
+    private void loadMealTask(){
         final Handler mHandler = new Handler();
         new Thread()
         {
@@ -104,8 +120,7 @@ public class Meal extends ActionBarActivity {
 
                     public void run()
                     {
-                        String loading = getString(R.string.loading);
-                        progressDialog = ProgressDialog.show(Meal.this,"",loading,true);
+                        SRL.setRefreshing(true);
                     }
                 });
                 lunchstring = MealLoadHelper.getMeal("goe.go.kr","J100000659","4","04","2"); //Get Lunch Menu Date
@@ -118,7 +133,8 @@ public class Meal extends ActionBarActivity {
                 {
                     public void run()
                     {
-                        progressDialog.dismiss();
+//                        progressDialog.dismiss();
+                        SRL.setRefreshing(false);
                         lunchmon.setText(getString(R.string.monday) + ":\n" + lunchstring[1] + "\n" + lunchkcalstring[1]);
                         lunchtue.setText(getString(R.string.tuesday) + ":\n" + lunchstring[2] + "\n" + lunchkcalstring[2]);
                         lunchwed.setText(getString(R.string.wednsday) + ":\n" + lunchstring[3] + "\n" + lunchkcalstring[3]);
@@ -137,8 +153,6 @@ public class Meal extends ActionBarActivity {
             }
         }.start();
     }
-
-
 
 
 }
