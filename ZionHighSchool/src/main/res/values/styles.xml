@@ -21,7 +21,13 @@
         <!-- Customize your theme here. -->
     </style>
 
-
+    <!-- extend one of the Theme.AppCompat themes -->
+    <style name="Theme.Zion_Material" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- customize the color palette -->
+        <item name="colorPrimary">#ff27347a</item>
+        <item name="colorPrimaryDark">#ff202c59</item>
+        <item name="colorAccent">#ff27347a</item>
+    </style>
 
 
 </resources>

@@ -35,16 +35,16 @@ public class MainActivity extends ActionBarActivity {
         //Launch Tutorial Activity If user new to this app
         SharedPreferences pref = getSharedPreferences("pref", Activity.MODE_PRIVATE);
         Boolean firstrun = pref.getBoolean("firstrun", true);
-        if (firstrun) {
-            Intent guide = new Intent(MainActivity.this, Tutorial.class);
-            startActivity(guide);
-            SharedPreferences.Editor editor = pref.edit(); // Load Editor
-            editor.putBoolean("firstrun", false); //put value
-            editor.commit(); // Save value
-        }
-        else{
-            //Do Nothing
-        }
+//        if (firstrun) {
+//            Intent guide = new Intent(MainActivity.this, Tutorial.class);
+//            startActivity(guide);
+//            SharedPreferences.Editor editor = pref.edit(); // Load Editor
+//            editor.putBoolean("firstrun", false); //put value
+//            editor.commit(); // Save value
+//        }
+//        else{
+//            //Do Nothing
+//        }
 
         View notices = findViewById(R.id.notices);
         View schoolinfo = findViewById(R.id.schoolinfo);
