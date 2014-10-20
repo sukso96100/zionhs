@@ -40,7 +40,7 @@ public class Appinfo extends ActionBarActivity {
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_appinfo);
 
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Get app version name from Manifest
         String app_ver = null;
