@@ -68,6 +68,7 @@ public class Schedule extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_schedule);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         listview = (ListView) findViewById(R.id.listView);
 
         cManager=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
