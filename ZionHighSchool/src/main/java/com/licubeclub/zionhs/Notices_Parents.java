@@ -66,6 +66,7 @@ public class Notices_Parents extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_notices_parents);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
          listview = (ListView) findViewById(R.id.listView);
 
         cManager=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
