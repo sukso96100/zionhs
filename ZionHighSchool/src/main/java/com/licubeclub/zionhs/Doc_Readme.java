@@ -34,6 +34,8 @@ public class Doc_Readme extends ActionBarActivity {
         setContentView(R.layout.activity_docs);
         TextView helloTxt = (TextView)findViewById(R.id.doc);
         helloTxt.setText(readTxt());
+        
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
     private String readTxt(){
         InputStream inputStream = getResources().openRawResource(R.raw.readme);
