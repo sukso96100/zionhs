@@ -68,6 +68,7 @@ public class Schedule extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_schedule);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         listview = (ListView) findViewById(R.id.listView);
 
         cManager=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -117,6 +118,7 @@ public class Schedule extends ActionBarActivity {
                 try {
                     schedulearray = new ArrayList<String>();
                     dayarray = new ArrayList<String>();
+//                    학사일정 데이터 학교 홈페이지에서 파싱해 가져오기
                     Document doc = Jsoup.connect("http://www.zion.hs.kr/main.php?menugrp=020500&master=diary&act=list&master_sid=1").get();
 
                     Elements rawdaydata = doc.select(".listDay"); //Get contents from the class,"listDay"

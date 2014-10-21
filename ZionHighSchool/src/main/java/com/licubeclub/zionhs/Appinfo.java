@@ -39,6 +39,7 @@ public class Appinfo extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_appinfo);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
 

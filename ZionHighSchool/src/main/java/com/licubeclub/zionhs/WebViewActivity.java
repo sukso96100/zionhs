@@ -16,6 +16,7 @@ public class WebViewActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         WebView WB = (WebView)findViewById(R.id.webView);
         String ViewURL = getIntent().getStringExtra("URL");
