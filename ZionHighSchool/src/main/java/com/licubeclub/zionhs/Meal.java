@@ -27,6 +27,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.view.Gravity;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -57,7 +58,10 @@ public class Meal extends ActionBarActivity {
         @Override
         public void handleMessage(Message msg)
         {
-
+//            Toast toast = Toast.makeText(getApplicationContext(),
+//                    getString(R.string.notices_info), Toast.LENGTH_LONG);
+//            toast.setGravity(Gravity.TOP, 0, 0);
+//            toast.show();
         }
     };
 
@@ -68,18 +72,19 @@ public class Meal extends ActionBarActivity {
         setContentView(R.layout.activity_meal);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
         cManager=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
         mobile = cManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
         wifi = cManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
 
-        if(mobile.isConnected() || wifi.isConnected())
-        {
-
-        }
+        if(mobile.isConnected() || wifi.isConnected()){}
         else{
+
             Toast toast = Toast.makeText(getApplicationContext(),
                     getString(R.string.network_connection_warning), Toast.LENGTH_LONG);
-                    finish();
+            toast.setGravity(Gravity.BOTTOM, 0, 0);
+            toast.show();
+            finish();
         }
 
         lunchmon = (TextView)this.findViewById(R.id.lunchmon);
@@ -124,10 +129,13 @@ public class Meal extends ActionBarActivity {
                         SRL.setRefreshing(true);
                     }
                 });
-                lunchstring = MealLoadHelper.getMeal("goe.go.kr","J100000659","4","04","2"); //Get Lunch Menu Date
-                lunchkcalstring = MealLoadHelper.getKcal("goe.go.kr","J100000659","4","04","2"); //Get Lunch Menu Kcal Value
-                dinnerstring = MealLoadHelper.getMeal("goe.go.kr","J100000659","4","04","3"); //Get Dinner Menu Date
-                dinnerkcalstring = MealLoadHelper.getKcal("goe.go.kr","J100000659","4","04","3"); //Get Dinner Menu Kcal Value
+                try{
+                    lunchstring = MealLoadHelper.getMeal("goe.go.kr","J100000659","4","04","2"); //Get Lunch Menu Date
+                    lunchkcalstring = MealLoadHelper.getKcal("goe.go.kr","J100000659","4","04","2"); //Get Lunch Menu Kcal Value
+                    dinnerstring = MealLoadHelper.getMeal("goe.go.kr","J100000659","4","04","3"); //Get Dinner Menu Date
+                    dinnerkcalstring = MealLoadHelper.getKcal("goe.go.kr","J100000659","4","04","3"); //Get Dinner Menu Kcal Value
+                }catch (Exception e){}
+
 
 
                 mHandler.post(new Runnable()

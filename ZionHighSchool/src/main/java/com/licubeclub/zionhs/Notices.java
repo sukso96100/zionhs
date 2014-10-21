@@ -31,6 +31,7 @@ import android.os.Message;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -91,8 +92,11 @@ public class Notices extends ActionBarActivity {
 
         if(mobile.isConnected() || wifi.isConnected()){}
         else{
+
             Toast toast = Toast.makeText(getApplicationContext(),
                     getString(R.string.network_connection_warning), Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.BOTTOM, 0, 0);
+            toast.show();
             finish();
         }
 
@@ -183,6 +187,11 @@ private void networkTask(){
                     listview.setOnItemClickListener(GoToWebPage);
                     handler.sendEmptyMessage(0);
                     SRL.setRefreshing(false);
+
+                    Toast toast = Toast.makeText(getApplicationContext(),
+                            getString(R.string.notices_info), Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.TOP, 0, 0);
+                    toast.show();
                 }
             });
 
