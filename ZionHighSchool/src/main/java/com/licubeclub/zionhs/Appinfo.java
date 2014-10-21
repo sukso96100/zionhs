@@ -41,7 +41,7 @@ public class Appinfo extends ActionBarActivity {
         setContentView(R.layout.activity_appinfo);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Get app version name from Manifest
         String app_ver = null;
