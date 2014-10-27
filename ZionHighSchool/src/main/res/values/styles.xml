@@ -26,7 +26,7 @@
         <!-- customize the color palette -->
         <item name="colorPrimary">#ff27347a</item>
         <item name="colorPrimaryDark">#ff202c59</item>
-        <item name="colorAccent">#ff27347a</item>
+        <item name="colorAccent">#fff</item>
     </style>
 
 

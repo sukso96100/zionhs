@@ -65,7 +65,7 @@ public class MainActivity extends ActionBarActivity {
         meal.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Meal.class);
+                Intent intent = new Intent(MainActivity.this, MealActivity3.class);
                 startActivity(intent);
             }
         });

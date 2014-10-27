@@ -96,8 +96,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.MainActivity" />
         </activity>
-
-
         <activity
             android:name=".Tutorial"
             android:label="@string/title_activity_tutorial"
@@ -146,6 +144,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <activity
             android:name=".WebViewActivity"
             android:label="@string/title_activity_web_view" >
+        </activity>
+        <activity
+            android:name=".MealActivity"
+            android:label="@string/title_activity_meal"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licubeclub.zionhs.MainActivity" />
+        </activity>
+        <activity
+            android:name=".MealActivity3"
+            android:label="@string/title_activity_meal_activity3"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licubeclub.zionhs.MainActivity" />
         </activity>
     </application>
 
