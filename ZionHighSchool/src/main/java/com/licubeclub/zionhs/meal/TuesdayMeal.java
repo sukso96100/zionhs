@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,6 +47,8 @@ public class TuesdayMeal extends Fragment {
     TextView LunchText;
     TextView DinnerText;
 
+    SwipeRefreshLayout SRL;
+
     // TODO: Rename and change types and number of parameters
     public static TuesdayMeal newInstance(int sectionNumber) {
         TuesdayMeal fragment = new TuesdayMeal();
@@ -83,11 +86,19 @@ public class TuesdayMeal extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        LinearLayout LI = (LinearLayout)inflater.inflate(R.layout.fragment_day_meal, container, false);
-        LunchText = (TextView)LI.findViewById(R.id.lunchtxt);
-        DinnerText = (TextView)LI.findViewById(R.id.dinnertxt);
+        SRL = (SwipeRefreshLayout)
+                inflater.inflate(R.layout.fragment_day_meal, container, false);
+        LunchText = (TextView)SRL.findViewById(R.id.lunchtxt);
+        DinnerText = (TextView)SRL.findViewById(R.id.dinnertxt);
+        SRL.setRefreshing(true);
+        SRL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                loadMealTask();
+            }
+        });
         loadMealTask();
-        return LI;
+        return SRL;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -125,6 +136,7 @@ public class TuesdayMeal extends Fragment {
     }
 
     private void loadMealTask(){
+        SRL.setRefreshing(true);
         final Handler mHandler = new Handler();
         new Thread()
         {
@@ -139,7 +151,7 @@ public class TuesdayMeal extends Fragment {
                     }
                 });
                 try{
-                    lunchstring = MealLoadHelper.getMeal("goe.go.kr", "J100000659", "4", "04", "2"); //Get Lunch Menu Date
+                    lunchstring = MealLoadHelper.getMeal("goe.go.kr","J100000659","4","04","2"); //Get Lunch Menu Date
                     lunchkcalstring = MealLoadHelper.getKcal("goe.go.kr","J100000659","4","04","2"); //Get Lunch Menu Kcal Value
                     dinnerstring = MealLoadHelper.getMeal("goe.go.kr","J100000659","4","04","3"); //Get Dinner Menu Date
                     dinnerkcalstring = MealLoadHelper.getKcal("goe.go.kr","J100000659","4","04","3"); //Get Dinner Menu Kcal Value
@@ -152,11 +164,12 @@ public class TuesdayMeal extends Fragment {
 //                        progressDialog.dismiss();
 //                        SRL.setRefreshing(false);
                         Log.d("Setting Text", "Setting Meal Text");
-                        Log.d("Content", lunchstring[1]+lunchkcalstring[1]);
-                        Log.d("Content", dinnerstring[1]+dinnerkcalstring[1]);
-                        LunchText.setText(lunchstring[1] + "\n" + lunchkcalstring[1]);
-                        DinnerText.setText(dinnerstring[1] + "\n" + dinnerkcalstring[1]);
-                        Log.d("DONE","Done Setting Content");
+                        Log.d("Content", lunchstring[2]+lunchkcalstring[2]);
+                        Log.d("Content", dinnerstring[2]+dinnerkcalstring[2]);
+                        LunchText.setText(lunchstring[2] + "\n" + lunchkcalstring[2]);
+                        DinnerText.setText(dinnerstring[2] + "\n" + dinnerkcalstring[2]);
+                        Log.d("DONE", "Done Setting Content");
+                        SRL.setRefreshing(false);
                         handler.sendEmptyMessage(0);
                     }
                 });

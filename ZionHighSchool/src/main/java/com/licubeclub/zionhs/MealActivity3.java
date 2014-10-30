@@ -78,6 +78,9 @@ public class MealActivity3 extends ActionBarActivity implements ActionBar.TabLis
                             .setText(mSectionsPagerAdapter.getPageTitle(i))
                             .setTabListener(this));
         }
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        mViewPager.setCurrentItem(0);
+
     }
 
 

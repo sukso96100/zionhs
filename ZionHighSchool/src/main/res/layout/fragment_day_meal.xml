@@ -1,9 +1,21 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.licubeclub.zionhs.meal.MondayMeal"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:id="@+id/scroll">
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.licubeclub.zionhs.meal.MondayMeal">
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.CardView
@@ -28,7 +40,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Large Text"
+                android:text="@string/not_loaded_yet"
                 android:id="@+id/lunchtxt" />
             </LinearLayout>
 
@@ -58,10 +70,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Large Text"
+                android:text="@string/not_loaded_yet"
                 android:id="@+id/dinnertxt" />
             </LinearLayout>
 
     </android.support.v7.widget.CardView>
 
 </LinearLayout>
+</ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>

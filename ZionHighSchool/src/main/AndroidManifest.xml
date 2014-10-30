@@ -146,16 +146,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:label="@string/title_activity_web_view" >
         </activity>
         <activity
-            android:name=".MealActivity"
-            android:label="@string/title_activity_meal"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.licubeclub.zionhs.MainActivity" />
-        </activity>
-        <activity
             android:name=".MealActivity3"
-            android:label="@string/title_activity_meal_activity3"
+            android:label="@string/meal"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

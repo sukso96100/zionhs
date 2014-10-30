@@ -234,4 +234,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         [튜토리얼 마치기] 버튼을 누르세요.</string>
     <string name="tutorial_done_btn">튜토리얼 마치기</string>
     <string name="title_activity_web_view">웹 뷰어</string>
+    <string name="not_loaded_yet">아직 로드되지 않음...</string>
 </resources>

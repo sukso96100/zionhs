@@ -20,10 +20,10 @@
         revision="21.0.0"
         sha1="b9d53e9eeea55b5b67e78a0c94e1a1ac8b357ffc"/>
     <item
-        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-7f093a0808783c8e278274a76b63a7b85fd0f5b7.jar"
-        jar="/home/youngbin/android-studio/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
+        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-9684f64dd745477e083e5c19f4df0dcda1e56dd1.jar"
+        jar="/home/youngbin/android-sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
         jumboMode="false"
-        revision="21.0.0"
+        revision="21.0.2"
         sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e"/>
     <item
         dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/classes-fec1d16aa6edcdb6ce7554832a3132c8480e90c2.jar"

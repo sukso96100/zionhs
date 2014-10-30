@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,6 +48,8 @@ public class MondayMeal extends Fragment {
     TextView LunchText;
     TextView DinnerText;
 
+    SwipeRefreshLayout SRL;
+
 
     // TODO: Rename and change types and number of parameters
     public static MondayMeal newInstance(int sectionNumber) {
@@ -85,11 +88,19 @@ public class MondayMeal extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        LinearLayout LI = (LinearLayout)inflater.inflate(R.layout.fragment_day_meal, container, false);
-        LunchText = (TextView)LI.findViewById(R.id.lunchtxt);
-        DinnerText = (TextView)LI.findViewById(R.id.dinnertxt);
+        SRL = (SwipeRefreshLayout)
+                inflater.inflate(R.layout.fragment_day_meal, container, false);
+        LunchText = (TextView)SRL.findViewById(R.id.lunchtxt);
+        DinnerText = (TextView)SRL.findViewById(R.id.dinnertxt);
+        SRL.setRefreshing(true);
+        SRL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                loadMealTask();
+            }
+        });
         loadMealTask();
-        return LI;
+        return SRL;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -127,6 +138,7 @@ public class MondayMeal extends Fragment {
     }
 
     private void loadMealTask(){
+        SRL.setRefreshing(true);
         final Handler mHandler = new Handler();
         new Thread()
         {
@@ -159,7 +171,7 @@ public class MondayMeal extends Fragment {
                         LunchText.setText(lunchstring[1] + "\n" + lunchkcalstring[1]);
                         DinnerText.setText(dinnerstring[1] + "\n" + dinnerkcalstring[1]);
                         Log.d("DONE", "Done Setting Content");
-
+                        SRL.setRefreshing(false);
                         handler.sendEmptyMessage(0);
                     }
                 });
