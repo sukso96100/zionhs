@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,14 +47,7 @@ public class MondayMeal extends Fragment {
     TextView LunchText;
     TextView DinnerText;
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MondayMeal.
-     */
+
     // TODO: Rename and change types and number of parameters
     public static MondayMeal newInstance(int sectionNumber) {
         MondayMeal fragment = new MondayMeal();
@@ -95,7 +89,7 @@ public class MondayMeal extends Fragment {
         LunchText = (TextView)LI.findViewById(R.id.lunchtxt);
         DinnerText = (TextView)LI.findViewById(R.id.dinnertxt);
         loadMealTask();
-        return inflater.inflate(R.layout.fragment_day_meal, container, false);
+        return LI;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -147,7 +141,7 @@ public class MondayMeal extends Fragment {
                     }
                 });
                 try{
-                    lunchstring = MealLoadHelper.getMeal("goe.go.kr", "J100000659", "4", "04", "2"); //Get Lunch Menu Date
+                    lunchstring = MealLoadHelper.getMeal("goe.go.kr","J100000659","4","04","2"); //Get Lunch Menu Date
                     lunchkcalstring = MealLoadHelper.getKcal("goe.go.kr","J100000659","4","04","2"); //Get Lunch Menu Kcal Value
                     dinnerstring = MealLoadHelper.getMeal("goe.go.kr","J100000659","4","04","3"); //Get Dinner Menu Date
                     dinnerkcalstring = MealLoadHelper.getKcal("goe.go.kr","J100000659","4","04","3"); //Get Dinner Menu Kcal Value
@@ -159,8 +153,13 @@ public class MondayMeal extends Fragment {
                     {
 //                        progressDialog.dismiss();
 //                        SRL.setRefreshing(false);
+                        Log.d("Setting Text", "Setting Meal Text");
+                        Log.d("Content", lunchstring[1]+lunchkcalstring[1]);
+                        Log.d("Content", dinnerstring[1]+dinnerkcalstring[1]);
                         LunchText.setText(lunchstring[1] + "\n" + lunchkcalstring[1]);
                         DinnerText.setText(dinnerstring[1] + "\n" + dinnerkcalstring[1]);
+                        Log.d("DONE", "Done Setting Content");
+
                         handler.sendEmptyMessage(0);
                     }
                 });
