@@ -38,12 +38,6 @@
         revision="21.0.0"
         sha1="e5531cb41e35c81a051a274945542f6b31e4c97e"/>
     <item
-        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/classes-2cd558c28fffea576d6522044e76666bbfca687d.jar"
-        jar="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/21.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.0.0"
-        sha1="6c6b497aa9e3aadbaabf975379e7914fa9e65523"/>
-    <item
         dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/jericho-android.3.1-de24887505164de5855b64a2301c666e0816cf1e.jar"
         jar="/home/youngbin/zionhs/ZionHighSchool/libs/jericho-android.3.1.jar"
         jumboMode="false"
@@ -61,5 +55,11 @@
         jumboMode="false"
         revision="21.0.0"
         sha1="95fd37732ec852e99f07eeb516a3650172f1d136"/>
+    <item
+        dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/classes-88b97d8819ac27d64880b9489ba022be46c5b999.jar"
+        jar="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="7d2525cba8ed61fff102977caed964fc22061e34"/>
 
 </pre-dex-items>
