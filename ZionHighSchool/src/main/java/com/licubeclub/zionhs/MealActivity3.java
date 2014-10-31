@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -79,27 +80,31 @@ public class MealActivity3 extends ActionBarActivity implements ActionBar.TabLis
                             .setText(mSectionsPagerAdapter.getPageTitle(i))
                             .setTabListener(this));
         }
-        Calendar Cal = Calendar.getInstance();
-        switch(Cal.get(Calendar.DAY_OF_WEEK)){
-            case 0 | 1 :
-                mViewPager.setCurrentItem(0);
-                break;
-            case 2 :
-                mViewPager.setCurrentItem(0);
-            case 3:
-                mViewPager.setCurrentItem(1);
-                break;
-            case 4:
-                mViewPager.setCurrentItem(2);
-                break;
-            case 5:
-                mViewPager.setCurrentItem(3);
-                break;
-            case 6 | 7:
-                mViewPager.setCurrentItem(4);
-        }
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        mViewPager.setCurrentItem(0);
+        Calendar Cal = Calendar.getInstance();
+
+        int TODAY = Cal.get(Calendar.DAY_OF_WEEK);
+        Log.d("TODAY", "TODAY is -" + TODAY);
+        switch(TODAY){
+            case 0:
+                mViewPager.setCurrentItem(0, true);
+                break;
+            case 1:
+                mViewPager.setCurrentItem(0, true);
+                break;
+            case 3:
+                mViewPager.setCurrentItem(1, true);
+                break;
+            case 4:
+                mViewPager.setCurrentItem(2, true);
+                break;
+            case 5:
+                mViewPager.setCurrentItem(3, true);
+                break;
+            case 6 | 7:
+                mViewPager.setCurrentItem(4, true);
+        }
 
     }
 
