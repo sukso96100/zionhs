@@ -1,5 +1,6 @@
 package com.licubeclub.zionhs;
 
+import java.util.Calendar;
 import java.util.Locale;
 
 import android.support.v7.app.ActionBarActivity;
@@ -77,6 +78,25 @@ public class MealActivity3 extends ActionBarActivity implements ActionBar.TabLis
                     actionBar.newTab()
                             .setText(mSectionsPagerAdapter.getPageTitle(i))
                             .setTabListener(this));
+        }
+        Calendar Cal = Calendar.getInstance();
+        switch(Cal.get(Calendar.DAY_OF_WEEK)){
+            case 0 | 1 :
+                mViewPager.setCurrentItem(0);
+                break;
+            case 2 :
+                mViewPager.setCurrentItem(0);
+            case 3:
+                mViewPager.setCurrentItem(1);
+                break;
+            case 4:
+                mViewPager.setCurrentItem(2);
+                break;
+            case 5:
+                mViewPager.setCurrentItem(3);
+                break;
+            case 6 | 7:
+                mViewPager.setCurrentItem(4);
         }
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        mViewPager.setCurrentItem(0);
