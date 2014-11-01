@@ -49,6 +49,8 @@ public class MealActivity3 extends ActionBarActivity implements ActionBar.TabLis
 
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
+
+        /**TODO - Replace Old ActionBar.NAVIGATION_MODE_TABS with SlidingTabLayout**/
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
         // Create the adapter that will return a fragment for each of the three
@@ -88,22 +90,22 @@ public class MealActivity3 extends ActionBarActivity implements ActionBar.TabLis
         Log.d("TODAY", "TODAY is -" + TODAY);
         switch(TODAY){
             case 0:
-                mViewPager.setCurrentItem(0, true);
+                actionBar.setSelectedNavigationItem(0);
                 break;
             case 1:
-                mViewPager.setCurrentItem(0, true);
+                actionBar.setSelectedNavigationItem(0);
                 break;
             case 3:
-                mViewPager.setCurrentItem(1, true);
+                actionBar.setSelectedNavigationItem(1);
                 break;
             case 4:
-                mViewPager.setCurrentItem(2, true);
+                actionBar.setSelectedNavigationItem(2);
                 break;
             case 5:
-                mViewPager.setCurrentItem(3, true);
+                actionBar.setSelectedNavigationItem(3);
                 break;
             case 6 | 7:
-                mViewPager.setCurrentItem(4, true);
+                actionBar.setSelectedNavigationItem(4);
         }
 
     }
