@@ -41,7 +41,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:theme="@style/Theme.Zion_Material" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Zion_Material.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -83,7 +84,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <activity
             android:name=".Schedule"
             android:label="@string/schedule"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.Zion_Material.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.MainActivity" />

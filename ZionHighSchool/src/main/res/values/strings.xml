@@ -222,5 +222,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
     <string name="not_loaded_yet">Not Loaded Yet...</string>
-
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+    <string name="nodata">No Data</string>
 </resources>

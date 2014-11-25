@@ -235,4 +235,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="tutorial_done_btn">튜토리얼 마치기</string>
     <string name="title_activity_web_view">웹 뷰어</string>
     <string name="not_loaded_yet">아직 로드되지 않음...</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+    <string name="nodata">데이터 없음</string>
 </resources>

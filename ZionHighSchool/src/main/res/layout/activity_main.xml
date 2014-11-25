@@ -15,83 +15,146 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Main"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- The main content view -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    >
+    android:fillViewport="true">
 
-
-    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp">
-
-        <LinearLayout android:layout_width="0dp" android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:paddingRight="5dp">
-            <!-- child views -->
-            <include
-                layout="@layout/notices_cover"
-                android:layout_width="wrap_content"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swiperefresh">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+           <android.support.v7.widget.Toolbar
+               android:layout_width="match_parent"
+               android:layout_height="140dp"
+               android:background="@drawable/schoolintro"
+               android:id="@+id/toolbar"
+               android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+               android:gravity="bottom"
+               android:paddingBottom="16dp"/>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/notices"
-                />
-            <include
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                layout="@layout/schoolinfo_cover"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/schoolinfo"
-                android:layout_marginTop="10dp"/>
-            <include
-                layout="@layout/appinfo_cover"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/info"
-                android:layout_marginTop="10dp"
-                />
-            <include
-                layout="@layout/notices_parents_cover"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/notices_parents"
-                android:layout_marginTop="10dp"
-                />
-        </LinearLayout>
-
-        <LinearLayout android:layout_width="0dp" android:layout_height="fill_parent"
-            android:layout_weight="1" android:orientation="vertical"
-            android:paddingLeft="5dp">
-            <!-- child views -->
-            <include
-                layout="@layout/meal_cover"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
                 android:id="@+id/meal"
-                />
-
-            <include
-                android:layout_width="wrap_content"
+                android:foreground="?selectableItemBackground">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/meal"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/not_loaded_yet"
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/mealdata"/>
+                    </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                layout="@layout/schedule_cover"
-                android:layout_gravity="center_horizontal"
+                android:layout_margin="16dp"
                 android:id="@+id/schedule"
-                android:layout_marginTop="10dp"/>
-
-            <include
-                android:layout_width="wrap_content"
+                android:foreground="?selectableItemBackground">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/schedule"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/not_loaded_yet"
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/schedata"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                layout="@layout/schoolintro_cover"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/schoolintro"
-                android:layout_marginTop="10dp"/>
-        </LinearLayout>
-
+                android:layout_margin="16dp"
+                android:id="@+id/notices_parents"
+                android:foreground="?selectableItemBackground">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_activity_notices__parents"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/not_loaded_yet"
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/notiparentdata"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:id="@+id/notices"
+                android:foreground="?selectableItemBackground">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notices"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/not_loaded_yet"
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/notidata"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
     </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </ScrollView>
+    <!-- The navigation drawer -->
+    <ListView android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start|bottom"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:background="#ffffff"/>
+</android.support.v4.widget.DrawerLayout>

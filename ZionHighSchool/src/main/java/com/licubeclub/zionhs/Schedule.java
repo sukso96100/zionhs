@@ -18,23 +18,21 @@
 
 package com.licubeclub.zionhs;
 
-import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.jsoup.Jsoup;
@@ -44,17 +42,24 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class Schedule extends ActionBarActivity {
     ConnectivityManager cManager;
     NetworkInfo mobile;
     NetworkInfo wifi;
-    private ProgressDialog progressDialog;
     private ArrayList<String> dayarray;
     private ArrayList<String> schedulearray;
     private ListCalendarAdapter adapter;
     private SwipeRefreshLayout SRL;
+    private String URL = "http://www.zion.hs.kr/main.php?menugrp=020500&master=" +
+            "diary&act=list&master_sid=1";
+    private String NewURL;
+    private String NextMonthURL;
     ListView listview;
+    private int month;
+    private int year;
+    int movement = 0;
 
     private final Handler handler = new Handler()
     {
@@ -68,6 +73,57 @@ public class Schedule extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_schedule);
+
+        final TextView MonthTxt = (TextView)findViewById(R.id.month);
+        Button Minus = (Button)findViewById(R.id.minus);
+        Button Plus = (Button)findViewById(R.id.plus);
+
+        Calendar Cal = Calendar.getInstance();
+        month = Cal.get(Calendar.MONTH)+1;
+        year = Cal.get(Calendar.YEAR);
+
+        final int MONTH = month;
+        final int YEAR = year;
+
+        MonthTxt.setText(String.valueOf(year)+"."+String.valueOf(month));
+        Minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                movement--;
+                NewURL = "http://www.zion.hs.kr/main.php?menugrp=020500&master=diary&act=list&master_sid=1&" +
+                        "SearchYear="+YEAR+"&SearchMonth="+MONTH+"&SearchCategory=&SearchMoveMonth="+movement;
+                URL = NewURL;
+                networkTask();
+                if(month==1){
+                    month=12;
+                    year--;
+                }else{
+                    month--;
+                }
+                MonthTxt.setText(String.valueOf(year)+"."+String.valueOf(month));
+            }
+        });
+        Plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                movement++;
+                NewURL = "http://www.zion.hs.kr/main.php?menugrp=020500&master=diary&act=list&master_sid=1&" +
+                        "SearchYear="+YEAR+"&SearchMonth="+MONTH+"&SearchCategory=&SearchMoveMonth="+movement;
+                URL = NewURL;
+                networkTask();
+                if(month==12){
+                    month=1;
+                    year++;
+                }else{
+                    month++;
+                }
+                MonthTxt.setText(String.valueOf(year)+"."+String.valueOf(month));
+            }
+        });
+
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         listview = (ListView) findViewById(R.id.listView);
 
@@ -116,27 +172,44 @@ public class Schedule extends ActionBarActivity {
 
                 //Notices URL
                 try {
+                    int skip = 0;
+                    boolean skipedboolean = false;
                     schedulearray = new ArrayList<String>();
                     dayarray = new ArrayList<String>();
+
 //                    학사일정 데이터 학교 홈페이지에서 파싱해 가져오기
-                    Document doc = Jsoup.connect("http://www.zion.hs.kr/main.php?menugrp=020500&master=diary&act=list&master_sid=1").get();
+                    Document doc = Jsoup.connect(URL).get();
 
                     Elements rawdaydata = doc.select(".listDay"); //Get contents from the class,"listDay"
                     for (Element el : rawdaydata) {
                         String daydata = el.text();
-                        dayarray.add(daydata); // add value to ArrayList
+                        if(daydata.equals("") | daydata==null){
+                            if(skipedboolean){
+                            }else{
+                                skip++;
+                            }
+                        }else{
+                            dayarray.add(daydata); // add value to ArrayList
+                            skipedboolean = true;
+                        }
                     }
                     Log.d("Schedule","Parsed Day Array" + dayarray);
 
                     Elements rawscheduledata = doc.select(".listData"); //Get contents from tags,"a" which are in the class,"ellipsis"
                     for (Element el : rawscheduledata) {
                         String scheduledata = el.text();
-                        schedulearray.add(scheduledata); // add value to ArrayList
+                        if(skip>0){
+                            skip--;
+                        }else {
+                            schedulearray.add(scheduledata); // add value to ArrayList
+                        }
                     }
                     Log.d("Schedule","Parsed Schedule Array" + schedulearray);
 
+//                    SRL.setRefreshing(false);
                 } catch (IOException e) {
                     e.printStackTrace();
+//                    SRL.setRefreshing(false);
 
                 }
 
@@ -148,9 +221,9 @@ public class Schedule extends ActionBarActivity {
                         //UI Task
                         adapter = new ListCalendarAdapter(Schedule.this, dayarray, schedulearray);
                         listview.setAdapter(adapter);
-
-                        handler.sendEmptyMessage(0);
                         SRL.setRefreshing(false);
+                        handler.sendEmptyMessage(0);
+
                     }
                 });
 
