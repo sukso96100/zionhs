@@ -43,7 +43,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
            <android.support.v7.widget.Toolbar
                android:layout_width="match_parent"
                android:layout_height="140dp"
-               android:background="@drawable/schoolintro"
+               android:background="@drawable/schoolimg"
                android:id="@+id/toolbar"
                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                android:gravity="bottom"
