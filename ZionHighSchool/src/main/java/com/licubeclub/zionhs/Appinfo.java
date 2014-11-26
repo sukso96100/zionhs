@@ -32,6 +32,8 @@ import android.view.View;
 import android.app.Activity;
 import android.content.SharedPreferences;
 
+import org.w3c.dom.Text;
+
 public class Appinfo extends ActionBarActivity {
 
     @Override
@@ -65,6 +67,16 @@ public class Appinfo extends ActionBarActivity {
             }
         });
 
+        TextView update = (TextView)findViewById(R.id.update);
+        update.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent update = new Intent(Intent.ACTION_VIEW);
+                update.setData(Uri.parse("https://play.google.com/store/" +
+                        "apps/details?id=com.licubeclub.zionhs&hl=ko"));
+                startActivity(update);
+            }
+        });
 
         TextView readme = (TextView)findViewById(R.id.readme);
         readme.setOnClickListener(new OnClickListener() {
