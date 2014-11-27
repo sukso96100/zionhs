@@ -29,6 +29,7 @@ import android.os.Message;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -50,7 +51,9 @@ public class Notices_Parents extends ActionBarActivity {
     NetworkInfo wifi;
     private ArrayList<String> titlearray;
     private ArrayList<String> titleherfarray;
-    private ArrayAdapter<String> adapter;
+    private ArrayList<String> authorarray;
+    private ArrayList<String> datearray;
+    private PostListAdapter adapter;
     private SwipeRefreshLayout SRL;
     ListView listview;
 
@@ -64,7 +67,6 @@ public class Notices_Parents extends ActionBarActivity {
     };
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_notices_parents);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
          listview = (ListView) findViewById(R.id.listView);
@@ -129,6 +131,9 @@ public class Notices_Parents extends ActionBarActivity {
                     titleherfarray = new ArrayList<String>();
                     Document doc = Jsoup.connect("http://www.zion.hs.kr/main.php?menugrp=110100&master=bbs&act=list&master_sid=59").get();
                     Elements rawdata = doc.select(".listbody a"); //Get contents from tags,"a" which are in the class,"listbody"
+                    Elements rawauthordata = doc.select("td:eq(3)"); //작성자 이름 얻기 - 3번째 td셀 에서 얻기
+                    Elements rawdatedata = doc.select("td:eq(4)"); //작성 날자 얻기 - 4번째 td셀 에서 얻기
+
                     String titlestring = rawdata.toString();
                     Log.i("Notices","Parsed Strings" + titlestring);
 
@@ -140,6 +145,17 @@ public class Notices_Parents extends ActionBarActivity {
                     }
                     Log.i("Notices","Parsed Link Array Strings" + titleherfarray);
                     Log.i("Notices","Parsed Array Strings" + titlearray);
+
+                    for (Element el : rawauthordata){
+                        String authordata = el.text();
+                        Log.d("Author",el.text());
+                        authorarray.add(authordata);
+                    }
+                    for (Element el : rawdatedata){
+                        String datedata = el.text();
+                        Log.d("Date",el.text());
+                        datearray.add(datedata);
+                    }
 
 
                 } catch (IOException e) {
@@ -153,12 +169,16 @@ public class Notices_Parents extends ActionBarActivity {
                     public void run()
                     {
                         //UI Task
-                        adapter = new ArrayAdapter<String>(Notices_Parents.this,
-                                android.R.layout.simple_list_item_1, titlearray);
+                        adapter = new PostListAdapter(Notices_Parents.this, titlearray,datearray,authorarray);
                         listview.setAdapter(adapter);
                         listview.setOnItemClickListener(GoToWebPage);
                         handler.sendEmptyMessage(0);
                         SRL.setRefreshing(false);
+
+                        Toast toast = Toast.makeText(getApplicationContext(),
+                                getString(R.string.noti_parents_info), Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.TOP, 0, 0);
+                        toast.show();
                     }
                 });
 

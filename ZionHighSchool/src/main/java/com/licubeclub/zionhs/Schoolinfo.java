@@ -30,7 +30,6 @@ public class Schoolinfo extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_schoolinfo);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
