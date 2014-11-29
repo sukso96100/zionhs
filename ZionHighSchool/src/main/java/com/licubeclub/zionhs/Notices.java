@@ -31,6 +31,7 @@ import android.os.Message;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -53,7 +54,9 @@ public class Notices extends ActionBarActivity {
     private ProgressDialog progressDialog;
     private ArrayList<String> titlearray;
     private ArrayList<String> titleherfarray;
-    private ArrayAdapter<String> adapter;
+    private ArrayList<String> authorarray;
+    private ArrayList<String> datearray;
+    private PostListAdapter adapter;
     private SwipeRefreshLayout SRL;
     ListView listview;
 
@@ -67,8 +70,8 @@ public class Notices extends ActionBarActivity {
     };
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_notices);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         listview = (ListView) findViewById(R.id.listView);
 
         cManager=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -88,8 +91,11 @@ public class Notices extends ActionBarActivity {
 
         if(mobile.isConnected() || wifi.isConnected()){}
         else{
+
             Toast toast = Toast.makeText(getApplicationContext(),
                     getString(R.string.network_connection_warning), Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.BOTTOM, 0, 0);
+            toast.show();
             finish();
         }
 
@@ -130,12 +136,19 @@ private void networkTask(){
             try {
                 titlearray = new ArrayList<String>();
                 titleherfarray = new ArrayList<String>();
+                authorarray = new ArrayList<String>();
+                datearray = new ArrayList<String>();
+                //파싱할 페이지 URL
                 Document doc = Jsoup.connect("http://www.zion.hs.kr/main.php?menugrp=110100&master=bbs&act=list&master_sid=58").get();
-                Elements rawdata = doc.select(".listbody a"); //Get contents from tags,"a" which are in the class,"listbody"
-                String titlestring = rawdata.toString();
+                Elements rawmaindata = doc.select(".listbody a"); //Get contents from tags,"a" which are in the class,"listbody"
+                Elements rawauthordata = doc.select("td:eq(3)"); //작성자 이름 얻기 - 3번째 td셀 에서 얻기
+                Elements rawdatedata = doc.select("td:eq(4)"); //작성 날자 얻기 - 4번째 td셀 에서 얻기
+                String titlestring = rawmaindata.toString();
                 Log.i("Notices","Parsed Strings" + titlestring);
 
-                for (Element el : rawdata) {
+
+               //파싱할 데이터로 배열 생성
+                for (Element el : rawmaindata) {
                     String titlherfedata = el.attr("href");
                     String titledata = el.attr("title");
                     titleherfarray.add("http://www.zion.hs.kr/" + titlherfedata); // add value to ArrayList
@@ -143,6 +156,17 @@ private void networkTask(){
                 }
                 Log.i("Notices","Parsed Link Array Strings" + titleherfarray);
                 Log.i("Notices","Parsed Array Strings" + titlearray);
+
+                for (Element el : rawauthordata){
+                    String authordata = el.text();
+                    Log.d("Author",el.text());
+                    authorarray.add(authordata);
+                }
+                for (Element el : rawdatedata){
+                    String datedata = el.text();
+                    Log.d("Date",el.text());
+                    datearray.add(datedata);
+                }
 
 
             } catch (IOException e) {
@@ -156,12 +180,17 @@ private void networkTask(){
                 public void run()
                 {
                     //UI Task
-                    adapter = new ArrayAdapter<String>(Notices.this,
-                            android.R.layout.simple_list_item_1, titlearray);
+                    //배열로 어뎁터 설정
+                    adapter = new PostListAdapter(Notices.this, titlearray,datearray,authorarray);
                     listview.setAdapter(adapter);
                     listview.setOnItemClickListener(GoToWebPage);
                     handler.sendEmptyMessage(0);
                     SRL.setRefreshing(false);
+
+                    Toast toast = Toast.makeText(getApplicationContext(),
+                            getString(R.string.notices_info), Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.TOP, 0, 0);
+                    toast.show();
                 }
             });
 

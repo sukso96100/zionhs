@@ -32,15 +32,17 @@ import android.view.View;
 import android.app.Activity;
 import android.content.SharedPreferences;
 
+import org.w3c.dom.Text;
+
 public class Appinfo extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_appinfo);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Get app version name from Manifest
         String app_ver = null;
@@ -64,12 +66,14 @@ public class Appinfo extends ActionBarActivity {
             }
         });
 
-        TextView tutorial = (TextView)findViewById(R.id.tutorial);
-        tutorial.setOnClickListener(new OnClickListener() {
+        TextView update = (TextView)findViewById(R.id.update);
+        update.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tutorial = new Intent(Appinfo.this, Tutorial.class);
-                startActivity(tutorial);
+                Intent update = new Intent(Intent.ACTION_VIEW);
+                update.setData(Uri.parse("https://play.google.com/store/" +
+                        "apps/details?id=com.licubeclub.zionhs&hl=ko"));
+                startActivity(update);
             }
         });
 

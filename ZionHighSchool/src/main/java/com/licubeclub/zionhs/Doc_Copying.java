@@ -32,8 +32,11 @@ public class Doc_Copying extends ActionBarActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_docs);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         TextView helloTxt = (TextView)findViewById(R.id.doc);
         helloTxt.setText(readTxt());
+        
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
     private String readTxt(){
         InputStream inputStream = getResources().openRawResource(R.raw.copying);

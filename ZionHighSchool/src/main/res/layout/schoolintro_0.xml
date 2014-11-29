@@ -24,11 +24,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:paddingBottom="20dp">
-
+        android:padding="8dp">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="300dp"
@@ -36,8 +41,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:src="@drawable/truth"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:scaleType="fitXY"
-            android:background="@drawable/cardbg"/>
+            android:scaleType="fitXY"/>
 
         <TextView
             android:layout_width="fill_parent"
@@ -45,21 +49,28 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/motto"
             android:id="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/cardbg"
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:textColor="@android:color/black"/>
-
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <ImageView
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:id="@+id/imageView0"
             android:src="@drawable/symbol"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:scaleType="fitXY"
-            android:background="@drawable/cardbg"/>
+            android:scaleType="fitXY"/>
 
         <TextView
             android:layout_width="fill_parent"
@@ -67,13 +78,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/symbol"
             android:id="@+id/textView0"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/cardbg"
+            
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:textColor="@android:color/black"/>
-
+</LinearLayout>
+        </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <ImageView
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:id="@+id/imageView1"
@@ -81,7 +101,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:scaleType="fitXY"
-            android:background="@drawable/cardbg"/>
+            />
 
         <TextView
             android:layout_width="fill_parent"
@@ -89,13 +109,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/flower"
             android:id="@+id/textView1"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/cardbg"
+            
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:textColor="@android:color/black"/>
-
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <ImageView
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:id="@+id/imageView2"
@@ -103,7 +132,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:scaleType="fitXY"
-            android:background="@drawable/cardbg"/>
+            />
 
         <TextView
             android:layout_width="fill_parent"
@@ -111,11 +140,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/tree"
             android:id="@+id/textView2"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/cardbg"
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:textColor="@android:color/black"/>
-
+</LinearLayout>
+        </android.support.v7.widget.CardView>
 
 
 

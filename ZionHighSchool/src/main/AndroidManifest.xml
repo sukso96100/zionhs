@@ -18,8 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.licubeclub.zionhs"
-    android:versionCode="7"
-    android:versionName="0.1.1" >
+    android:versionCode="8"
+    android:versionName="0.1.2" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -38,10 +38,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Zion" >
+        android:theme="@style/Theme.Zion_Material" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Zion_Material.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -83,7 +84,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <activity
             android:name=".Schedule"
             android:label="@string/schedule"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.Zion_Material.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.MainActivity" />
@@ -96,12 +98,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.MainActivity" />
         </activity>
-
-
         <activity
             android:name=".Tutorial"
             android:label="@string/title_activity_tutorial"
-            android:theme="@style/Theme.Zion.NoActionBar" >
+            android:theme="@style/Theme.Zion_Material" >
         </activity>
         <activity
             android:name=".Notices_Parents"
@@ -146,6 +146,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <activity
             android:name=".WebViewActivity"
             android:label="@string/title_activity_web_view" >
+        </activity>
+        <activity
+            android:name=".MealActivity3"
+            android:label="@string/meal"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licubeclub.zionhs.MainActivity" />
         </activity>
     </application>
 
