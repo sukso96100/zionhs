@@ -129,6 +129,8 @@ public class Notices_Parents extends ActionBarActivity {
                 try {
                     titlearray = new ArrayList<String>();
                     titleherfarray = new ArrayList<String>();
+                    authorarray = new ArrayList<String>();
+                    datearray = new ArrayList<String>();
                     Document doc = Jsoup.connect("http://www.zion.hs.kr/main.php?menugrp=110100&master=bbs&act=list&master_sid=59").get();
                     Elements rawdata = doc.select(".listbody a"); //Get contents from tags,"a" which are in the class,"listbody"
                     Elements rawauthordata = doc.select("td:eq(3)"); //작성자 이름 얻기 - 3번째 td셀 에서 얻기

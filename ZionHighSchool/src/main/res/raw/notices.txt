@@ -668,16 +668,10 @@ THE SOFTWARE.
 This software includes following software components: 
 
 Android Meal Library
+MealLoadHelper.java
 ----------
 Android Meal Library was authord by 'Hoyeon Lee'
 for more details, please visit the following site.
 http://blog.naver.com/rimal/140186322365
 
-====================
-Notices for the file: 
 
-ShakeDetector.java
-----------
-It was authord by 'Jason McReynold'
-for more details, please visit the following site.
-http://jasonmcreynolds.com/?p=388

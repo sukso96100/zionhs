@@ -258,7 +258,7 @@ public class MainActivity extends ActionBarActivity {
         else{
 
             Toast toast = Toast.makeText(getApplicationContext(),
-                    getString(R.string.network_connection_warning), Toast.LENGTH_LONG);
+                    getResources().getString(R.string.network_connection_warning), Toast.LENGTH_LONG);
             toast.setGravity(Gravity.BOTTOM, 0, 0);
             toast.show();
         }
@@ -274,7 +274,7 @@ public class MainActivity extends ActionBarActivity {
                 else{
 
                     Toast toast = Toast.makeText(getApplicationContext(),
-                            getString(R.string.network_connection_warning), Toast.LENGTH_LONG);
+                            getResources().getString(R.string.network_connection_warning), Toast.LENGTH_LONG);
                     toast.setGravity(Gravity.BOTTOM, 0, 0);
                     toast.show();
                     SRL.setRefreshing(false);
@@ -326,7 +326,7 @@ public class MainActivity extends ActionBarActivity {
             public void handleMessage(Message msg)
             {
 //            Toast toast = Toast.makeText(getApplicationContext(),
-//                    getString(R.string.notices_info), Toast.LENGTH_LONG);
+//                    getResources().getString(R.string.notices_info), Toast.LENGTH_LONG);
 //            toast.setGravity(Gravity.TOP, 0, 0);
 //            toast.show();
             }
@@ -444,14 +444,20 @@ public class MainActivity extends ActionBarActivity {
                         }else{
                             MealString = dinnerstring[DAYofWEEK - 1];
                         }
-                        ScheduleString = schedulearray.get(DAYofMONTH - 1);
-                        NoticesParentString = titlearray_np.get(0);
-                        NoticeString = titlearray_n.get(0);
+                        try {
+                            ScheduleString = schedulearray.get(DAYofMONTH - 1);
+                            NoticesParentString = titlearray_np.get(0);
+                            NoticeString = titlearray_n.get(0);
+                        }catch (Exception e){
+                            ScheduleString = getResources().getString(R.string.error);
+                            NoticesParentString = getResources().getString(R.string.error);
+                            NoticeString = getResources().getString(R.string.error);
+                        }
                         if(MealString.equals("") |MealString==null){
-                            MealString = getString(R.string.nodata);
+                            MealString = getResources().getString(R.string.nodata);
                         }
                         if(ScheduleString.equals("") |ScheduleString==null){
-                            ScheduleString = getString(R.string.nodata);
+                            ScheduleString = getResources().getString(R.string.nodata);
                         }
                         SRL.setRefreshing(false);
                         handler.sendEmptyMessage(0);

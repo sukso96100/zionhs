@@ -18,16 +18,32 @@ https://github.com/sukso96100/zionhs/graphs/contributors
 Main contributors of this project
 이 프로젝트의 주요 기여자
 
-N : Young Bin, Han
+N : Youngbin, Han
 E : sukso96100@gmail.com
 D : maintainer of this project
-W : http://hybdms.blogspot.com
+W : http://youngbin-han.kr.pe
+
+N : Hyesu, Shin
+E : exeplain@naver.com
+D : main developer of this project
+
+N : Minjun, Kim
+E : rgg800@gmail.com
+D : main developer of this project
+
+N : Huynjung, Kim
+E : bbkim98@naver.com
+D : main developer of this project
+
+N : Hyungi, Shin
+E : tlsgusrl9942@gmail.com
+D : main developer of this project
 
 ====================
 
 Contributors of this project
 이 프로젝트의 기여자
 
-N : Min Seok, Kim
+N : Minseok, Kim
 E : iluvmc969@naver.com
 D : English Translator of this Project

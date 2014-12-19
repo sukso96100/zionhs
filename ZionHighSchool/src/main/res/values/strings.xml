@@ -32,6 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="quickexec_noti">Show Notification for QuickLaunch Service</string>
     <string name="appsettings_settings_title">App Settings</string>
     <string name="appsettings_settings_select">Select Screen to show on QuickLaunch :</string>
+    <string name="error">Loading Error. Cannot Load from the School Homepage</string>
 
     <string-array name="quickexec_select">
         <item>Home</item>
