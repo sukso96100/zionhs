@@ -66,14 +66,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 android:value="com.licubeclub.zionhs.MainActivity" />
         </activity>
         <activity
-            android:name=".Meal"
-            android:label="@string/meal"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.licubeclub.zionhs.MainActivity" />
-        </activity>
-        <activity
             android:name=".Schoolinfo"
             android:label="@string/schoolinfo"
             android:parentActivityName=".MainActivity" >
@@ -97,11 +89,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.MainActivity" />
-        </activity>
-        <activity
-            android:name=".Tutorial"
-            android:label="@string/title_activity_tutorial"
-            android:theme="@style/Theme.Zion_Material" >
         </activity>
         <activity
             android:name=".Notices_Parents"
