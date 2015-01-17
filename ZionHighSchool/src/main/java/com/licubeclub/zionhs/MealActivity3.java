@@ -18,12 +18,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.licubeclub.zionhs.meal.FridayMeal;
-import com.licubeclub.zionhs.meal.MondayMeal;
-import com.licubeclub.zionhs.meal.ThursdayMeal;
-import com.licubeclub.zionhs.meal.TuesdayMeal;
-import com.licubeclub.zionhs.meal.WednsdayMeal;
-
 
 public class MealActivity3 extends ActionBarActivity implements ActionBar.TabListener {
 
@@ -162,19 +156,19 @@ public class MealActivity3 extends ActionBarActivity implements ActionBar.TabLis
             Fragment frag = PlaceholderFragment.newInstance(position+1);
             switch(position){
                 case 0:
-                    frag = MondayMeal.newInstance(0);
+                    frag = DailyMealFragment.newInstance(0,1);
                     break;
                 case 1:
-                    frag = TuesdayMeal.newInstance(1);
+                    frag = DailyMealFragment.newInstance(1,2);
                     break;
                 case 2:
-                    frag = WednsdayMeal.newInstance(2);
+                    frag = DailyMealFragment.newInstance(2,3);
                     break;
                 case 3:
-                    frag = ThursdayMeal.newInstance(3);
+                    frag = DailyMealFragment.newInstance(3,4);
                     break;
                 case 4:
-                    frag = FridayMeal.newInstance(4);
+                    frag = DailyMealFragment.newInstance(4,5);
                     break;
 
             }

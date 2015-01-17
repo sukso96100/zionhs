@@ -453,12 +453,17 @@ public class MainActivity extends ActionBarActivity {
                             NoticesParentString = getResources().getString(R.string.error);
                             NoticeString = getResources().getString(R.string.error);
                         }
-                        if(MealString.equals("") |MealString==null){
-                            MealString = getResources().getString(R.string.nodata);
-                        }
-                        if(ScheduleString.equals("") |ScheduleString==null){
-                            ScheduleString = getResources().getString(R.string.nodata);
-                        }
+
+                            if (MealString == null) {
+                                MealString = getResources().getString(R.string.nodata);
+                            }else if(MealString.equals("")){
+                                MealString = getResources().getString(R.string.nodata);
+                            }
+                            if (ScheduleString == null) {
+                                ScheduleString = getResources().getString(R.string.nodata);
+                            }else if(ScheduleString.equals("")){
+                                ScheduleString = getResources().getString(R.string.nodata);
+                            }
                         SRL.setRefreshing(false);
                         handler.sendEmptyMessage(0);
                         setContentData();
