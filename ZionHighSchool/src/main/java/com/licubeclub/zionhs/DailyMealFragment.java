@@ -1,4 +1,4 @@
-package com.licubeclub.zionhs.meal;
+package com.licubeclub.zionhs;
 
 import android.app.Activity;
 import android.net.Uri;
@@ -11,22 +11,18 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.licubeclub.zionhs.MealLoadHelper;
-import com.licubeclub.zionhs.R;
-
 /**
- * A simple {@link Fragment} subclass.
+ * A simple {@link android.support.v4.app.Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link FridayMeal.OnFragmentInteractionListener} interface
+ * {@link DailyMealFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link FridayMeal#newInstance} factory method to
+ * Use the {@link DailyMealFragment#newInstance} factory method to
  * create an instance of this fragment.
  *
  */
-public class FridayMeal extends Fragment {
+public class DailyMealFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -47,16 +43,19 @@ public class FridayMeal extends Fragment {
     TextView DinnerText;
 
     SwipeRefreshLayout SRL;
+    
+    static int DAY;
 
     // TODO: Rename and change types and number of parameters
-    public static FridayMeal newInstance(int sectionNumber) {
-        FridayMeal fragment = new FridayMeal();
+    public static DailyMealFragment newInstance(int sectionNumber, int day) {
+        DailyMealFragment fragment = new DailyMealFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         fragment.setArguments(args);
+        DAY = day;
         return fragment;
     }
-    public FridayMeal() {
+    public DailyMealFragment() {
         // Required empty public constructor
     }
 
@@ -164,10 +163,16 @@ public class FridayMeal extends Fragment {
 //                        progressDialog.dismiss();
 //                        SRL.setRefreshing(false);
                         Log.d("Setting Text", "Setting Meal Text");
-                        Log.d("Content", lunchstring[5]+lunchkcalstring[5]);
-                        Log.d("Content", dinnerstring[5]+dinnerkcalstring[5]);
-                        LunchText.setText(lunchstring[5] + "\n" + lunchkcalstring[5]);
-                        DinnerText.setText(dinnerstring[5] + "\n" + dinnerkcalstring[5]);
+                        Log.d("Content", lunchstring[DAY]+lunchkcalstring[DAY]);
+                        Log.d("Content", dinnerstring[DAY]+dinnerkcalstring[DAY]);
+                        if(lunchstring[DAY]==null){
+                            LunchText.setText(getResources().getString(R.string.nodata));
+                        }else{
+                        LunchText.setText(lunchstring[DAY] + "\n" + lunchkcalstring[DAY]);}
+                        if(dinnerstring[DAY] == null){
+                            DinnerText.setText(getResources().getString(R.string.nodata));
+                        }else{
+                        DinnerText.setText(dinnerstring[DAY] + "\n" + dinnerkcalstring[DAY]);}
                         Log.d("DONE", "Done Setting Content");
                         SRL.setRefreshing(false);
                         handler.sendEmptyMessage(0);
