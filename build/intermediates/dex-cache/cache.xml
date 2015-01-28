@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/exploded-aar/com.github.satyan/sugar/1.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="07e07903922250dabf50c7d131d6fa069a050305">
+        <dex dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/classes-52e8ecf20a7f7dded2121349ec3e6349f083b08f.jar" />
+    </item>
+    <item
         jar="/home/youngbin/zionhs/ZionHighSchool/libs/jericho-android.3.1.jar"
         jumboMode="false"
         revision="21.0.2"
