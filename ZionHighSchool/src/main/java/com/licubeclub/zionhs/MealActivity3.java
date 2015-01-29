@@ -44,7 +44,6 @@ public class MealActivity3 extends ActionBarActivity implements ActionBar.TabLis
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
 
-        /**TODO - Replace Old ActionBar.NAVIGATION_MODE_TABS with SlidingTabLayout**/
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
         // Create the adapter that will return a fragment for each of the three
@@ -105,24 +104,6 @@ public class MealActivity3 extends ActionBarActivity implements ActionBar.TabLis
     }
 
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.meal_activity3, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
 
     @Override
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
@@ -232,5 +213,9 @@ public class MealActivity3 extends ActionBarActivity implements ActionBar.TabLis
             return rootView;
         }
     }
+
+    /* TODO - 네트워킹 코드 DailyMealFragment 에서 MealActivity3 으로 이동
+       TODO - 데이터 캐싱
+     */
 
 }

@@ -44,6 +44,7 @@ import java.util.ArrayList;
 
 /**
  * Created by youngbin on 13. 11. 27.
+ * TODO - Notices, Notices_Parents 하나로 통합
  */
 public class Notices_Parents extends ActionBarActivity {
     ConnectivityManager cManager;

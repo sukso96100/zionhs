@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.licubeclub.zionhs.data.MealCacheManager;
+
 /**
  * A simple {@link android.support.v4.app.Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -22,14 +24,16 @@ import android.widget.TextView;
  * create an instance of this fragment.
  *
  */
+
+/*
+* TODO - 공유버튼 추가(ShareActionProvider 이용)
+* */
 public class DailyMealFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private static final String ARG_SECTION_NUMBER = "section_number";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -46,7 +50,6 @@ public class DailyMealFragment extends Fragment {
     
     static int DAY;
 
-    // TODO: Rename and change types and number of parameters
     public static DailyMealFragment newInstance(int sectionNumber, int day) {
         DailyMealFragment fragment = new DailyMealFragment();
         Bundle args = new Bundle();
@@ -100,7 +103,6 @@ public class DailyMealFragment extends Fragment {
         return SRL;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -130,11 +132,13 @@ public class DailyMealFragment extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         public void onFragmentInteraction(Uri uri);
     }
 
     private void loadMealTask(){
+        /*
+        * TODO - 네트워킹 코드 모두 MealActivity3 으로 이동
+        * */
         SRL.setRefreshing(true);
         final Handler mHandler = new Handler();
         new Thread()

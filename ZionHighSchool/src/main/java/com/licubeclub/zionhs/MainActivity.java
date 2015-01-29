@@ -51,7 +51,9 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
-
+/*
+* TODO - 중식/석식, 학사일정 알림서비스 추가(이건 가장 마지막에 시간 날떄)
+* */
 public class MainActivity extends ActionBarActivity {
     private DrawerLayout NavigationDrawer;
     private ActionBarDrawerToggle DrawerToggle;
@@ -108,20 +110,10 @@ public class MainActivity extends ActionBarActivity {
         wifi = cManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
 
         setContentView(R.layout.activity_main);
-        //Launch Tutorial Activity If user new to this app
-        SharedPreferences pref = getSharedPreferences("pref", Activity.MODE_PRIVATE);
-        Boolean firstrun = pref.getBoolean("firstrun", true);
-//        if (firstrun) {
-//            Intent guide = new Intent(MainActivity.this, Tutorial.class);
-//            startActivity(guide);
-//            SharedPreferences.Editor editor = pref.edit(); // Load Editor
-//            editor.putBoolean("firstrun", false); //put value
-//            editor.commit(); // Save value
-//        }
-//        else{
-//            //Do Nothing
-//        }
 
+        /*
+        * TODO - 시간에 따른 툴바 배경 설정(아침/점심/저녁)
+        * */
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

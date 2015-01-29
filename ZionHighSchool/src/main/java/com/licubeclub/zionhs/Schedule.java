@@ -211,7 +211,9 @@ public class Schedule extends ActionBarActivity {
 //                    SRL.setRefreshing(false);
 
                 }
-
+                /*
+                * TODO - 데이터 캐싱
+                * */
 
                 mHandler.post(new Runnable()
                 {

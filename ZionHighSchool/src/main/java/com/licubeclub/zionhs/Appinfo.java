@@ -35,6 +35,9 @@ import android.content.SharedPreferences;
 import org.w3c.dom.Text;
 
 public class Appinfo extends ActionBarActivity {
+    /*
+    * TODO -  학사일정 및 급식 알림 설정 항목 추가(알림 서비스 만 떄 작업)
+    * */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
