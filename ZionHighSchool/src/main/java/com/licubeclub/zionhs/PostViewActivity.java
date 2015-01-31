@@ -1,21 +1,48 @@
 package com.licubeclub.zionhs;
 
 import android.content.Intent;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.ShareActionProvider;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import  android.support.v7.widget.Toolbar;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Toast;
+
+import com.licubeclub.zionhs.data.ScheduleCacheManager;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class PostViewActivity extends ActionBarActivity {
     String URL;
+    WebView WV;
+    String data;
+    private final Handler handler = new Handler()
+    {
+        @Override
+        public void handleMessage(Message msg)
+        {
+
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_view);
+        WV = (WebView)findViewById(R.id.webView);
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         String Title = getIntent().getStringExtra("title");
         String Date = getIntent().getStringExtra("date");
@@ -24,7 +51,7 @@ public class PostViewActivity extends ActionBarActivity {
         toolbar.setTitle(Title);
         toolbar.setSubtitle(Author+" - "+Date);
         setSupportActionBar(toolbar);
-
+        networkTask();
     }
 
 
@@ -76,5 +103,44 @@ public class PostViewActivity extends ActionBarActivity {
         //보낼 데이터를 Extra 로 넣어줍니다.
         shareIntent.putExtra(Intent.EXTRA_TEXT,URL);
         return shareIntent;
+    }
+
+    private void networkTask(){
+
+        final Handler mHandler = new Handler();
+
+        new Thread()
+        {
+            public void run()
+            {
+
+                try {
+                    Document doc = Jsoup.connect(URL).get();
+                    Element element = doc.select("td").get(4);
+                   data = element.getAllElements().toString();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Log.d("DATA",data);
+                mHandler.post(new Runnable()
+                {
+                    public void run()
+                    {
+                        WV.getSettings().setJavaScriptEnabled(true);
+                        WV.setWebViewClient(new WebViewClient() {
+                            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                                Toast.makeText(PostViewActivity.this, description, Toast.LENGTH_SHORT).show();
+                            }
+                        });
+//                        WV.loadData(data,"text/html","utf-8");
+                        WV.loadDataWithBaseURL(null, data, "text/html", "utf-8", null);
+                        handler.sendEmptyMessage(0);
+                    }
+                });
+
+            }
+        }.start();
+
     }
 }

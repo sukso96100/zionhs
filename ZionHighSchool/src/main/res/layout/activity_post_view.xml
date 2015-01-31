@@ -11,5 +11,12 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:gravity="bottom"
         android:paddingBottom="16dp"/>
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webView"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"></WebView>
 
 </RelativeLayout>
