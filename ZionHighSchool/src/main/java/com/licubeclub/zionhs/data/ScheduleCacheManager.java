@@ -1,5 +1,7 @@
 package com.licubeclub.zionhs.data;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +20,10 @@ public class ScheduleCacheManager {
                 ScheduleCache scheduleCacheItem = new ScheduleCache(Date.get(i), Content.get(i));
                 scheduleCacheItem.save();
             }
-        }catch(Exception e){}
+        }catch(Exception e){
+            Log.d("ERROR","Error Updating Cache");
+            e.printStackTrace();
+        }
     }
 
     public ArrayList<String> loadDateCache(){

@@ -30,6 +30,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -147,20 +148,29 @@ public class Schedule extends ActionBarActivity {
         else{
             Toast toast = Toast.makeText(getApplicationContext(),
                     getString(R.string.network_connection_warning), Toast.LENGTH_LONG);
-            finish();
+//            finish();
         }
             networkTask();
 
     }
 
     private void networkTask(){
+        try {
+            ScheduleCacheManager manager = new ScheduleCacheManager();
+            ArrayList<String> dateArray = manager.loadDateCache();
+            ArrayList<String> contentArray = manager.loadContentCache();
+            adapter = new ListCalendarAdapter(Schedule.this, dayarray, contentArray);
+            listview.setAdapter(adapter);
+        }catch (Exception e){
+            Log.d("ERROR","Error Loading Cache");
+        }
+
         final Handler mHandler = new Handler();
+
         new Thread()
         {
-
             public void run()
             {
-
                 mHandler.post(new Runnable(){
 
                     public void run()
@@ -213,13 +223,6 @@ public class Schedule extends ActionBarActivity {
 //                    SRL.setRefreshing(false);
 
                 }
-                /*
-                * TODO - 데이터 캐싱
-                * */
-
-                ScheduleCacheManager manager = new ScheduleCacheManager();
-                manager.updateCache(dayarray,schedulearray);
-
                 mHandler.post(new Runnable()
                 {
                     public void run()
@@ -227,9 +230,10 @@ public class Schedule extends ActionBarActivity {
                         //UI Task
                         adapter = new ListCalendarAdapter(Schedule.this, dayarray, schedulearray);
                         listview.setAdapter(adapter);
+                        ScheduleCacheManager manager = new ScheduleCacheManager();
+                        manager.updateCache(dayarray,schedulearray);
                         SRL.setRefreshing(false);
                         handler.sendEmptyMessage(0);
-
                     }
                 });
 
