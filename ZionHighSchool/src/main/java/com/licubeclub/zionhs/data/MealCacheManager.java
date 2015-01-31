@@ -13,11 +13,14 @@ public class MealCacheManager {
     }
 
     public void updateCache(String[] Lunch, String[] Dinner){
+        try{
         MealCache.deleteAll(MealCache.class);
-        for(int i=0; i<Lunch.length; i++){
-            MealCache mealCacheItem = new MealCache(Lunch[i], Dinner[i]);
-            mealCacheItem.save();
-        }
+            for(int i=0; i<Lunch.length; i++){
+                MealCache mealCacheItem = new MealCache(Lunch[i], Dinner[i]);
+                mealCacheItem.save();
+            }
+        }catch (Exception e){}
+
     }
 
     public String[] loadLunchCache(){

@@ -3,6 +3,8 @@ package com.licubeclub.zionhs;
 import java.util.Calendar;
 import java.util.Locale;
 
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -17,6 +19,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.licubeclub.zionhs.data.MealCacheManager;
 
 
 public class MealActivity3 extends ActionBarActivity implements ActionBar.TabListener {
@@ -217,5 +221,7 @@ public class MealActivity3 extends ActionBarActivity implements ActionBar.TabLis
     /* TODO - 네트워킹 코드 DailyMealFragment 에서 MealActivity3 으로 이동
        TODO - 데이터 캐싱
      */
+
+
 
 }

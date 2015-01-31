@@ -47,7 +47,7 @@ public class DailyMealFragment extends Fragment {
     TextView DinnerText;
 
     SwipeRefreshLayout SRL;
-    
+
     static int DAY;
 
     public static DailyMealFragment newInstance(int sectionNumber, int day) {
@@ -140,6 +140,12 @@ public class DailyMealFragment extends Fragment {
         * TODO - 네트워킹 코드 모두 MealActivity3 으로 이동
         * */
         SRL.setRefreshing(true);
+        final MealCacheManager manager = new MealCacheManager();
+        try{
+            LunchText.setText(manager.loadLunchCache()[DAY]);
+            DinnerText.setText(manager.loadDinnerCache()[DAY]);
+        }catch(Exception e){}
+
         final Handler mHandler = new Handler();
         new Thread()
         {
@@ -172,12 +178,14 @@ public class DailyMealFragment extends Fragment {
                         if(lunchstring[DAY]==null){
                             LunchText.setText(getResources().getString(R.string.nodata));
                         }else{
-                        LunchText.setText(lunchstring[DAY] + "\n" + lunchkcalstring[DAY]);}
+                            LunchText.setText(lunchstring[DAY] + "\n" + lunchkcalstring[DAY]);}
                         if(dinnerstring[DAY] == null){
                             DinnerText.setText(getResources().getString(R.string.nodata));
                         }else{
-                        DinnerText.setText(dinnerstring[DAY] + "\n" + dinnerkcalstring[DAY]);}
+                            DinnerText.setText(dinnerstring[DAY] + "\n" + dinnerkcalstring[DAY]);}
                         Log.d("DONE", "Done Setting Content");
+
+                        manager.updateCache(lunchstring, dinnerstring);
                         SRL.setRefreshing(false);
                         handler.sendEmptyMessage(0);
                     }
