@@ -118,6 +118,11 @@ public class PostViewActivity extends ActionBarActivity {
                     Document doc = Jsoup.connect(URL).get();
                     Element element = doc.select("td").get(4);
                    data = element.getAllElements().toString();
+                    if(data==null){
+                        data = getResources().getString(R.string.nodata);
+                    }else if(data.equals("")){
+                        data = getResources().getString(R.string.nodata);
+                    }else{}
 
                 } catch (IOException e) {
                     e.printStackTrace();
