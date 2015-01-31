@@ -17,6 +17,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -26,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:id="@+id/toolbar"
         android:minHeight="?actionBarSize"
         android:background="?colorPrimary"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
@@ -41,7 +42,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 android:text="Large Text"
                 android:id="@+id/month"
                 android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"/>
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/white"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -51,7 +53,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 android:background="?selectableItemBackground"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                android:layout_alignParentStart="true"
+                android:textColor="@android:color/white"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -61,7 +64,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 android:layout_alignTop="@+id/minus"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
-                android:background="?selectableItemBackground"/>
+                android:background="?selectableItemBackground"
+                android:textColor="@android:color/white"/>
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
     <android.support.v4.widget.SwipeRefreshLayout

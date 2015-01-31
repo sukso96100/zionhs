@@ -16,6 +16,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <android.support.v4.widget.DrawerLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Main"
@@ -45,7 +46,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                android:layout_height="140dp"
                android:background="@drawable/schoolimg"
                android:id="@+id/toolbar"
-               android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+               app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                android:gravity="bottom"
                android:paddingBottom="16dp"/>
             <android.support.v7.widget.CardView
