@@ -32,6 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/textView"
-        android:padding="8dp"/>
+        android:padding="8dp"
+        android:divider="#FF000000"/>
     </android.support.v4.widget.SwipeRefreshLayout>
 </RelativeLayout>
