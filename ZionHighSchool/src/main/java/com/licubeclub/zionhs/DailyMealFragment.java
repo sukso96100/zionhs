@@ -1,14 +1,20 @@
 package com.licubeclub.zionhs;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.ShareActionProvider;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -29,6 +35,7 @@ import com.licubeclub.zionhs.data.MealCacheManager;
 * TODO - 공유버튼 추가(ShareActionProvider 이용)
 * */
 public class DailyMealFragment extends Fragment {
+    ShareActionProvider mShareActionProvider;
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -88,6 +95,7 @@ public class DailyMealFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        setHasOptionsMenu(true);
         SRL = (SwipeRefreshLayout)
                 inflater.inflate(R.layout.fragment_day_meal, container, false);
         LunchText = (TextView)SRL.findViewById(R.id.lunchtxt);
@@ -186,6 +194,10 @@ public class DailyMealFragment extends Fragment {
                         Log.d("DONE", "Done Setting Content");
 
                         manager.updateCache(lunchstring, dinnerstring);
+                        if (mShareActionProvider != null ) {
+                            mShareActionProvider.setShareIntent(createShareIntent());
+                        } else {
+                        }
                         SRL.setRefreshing(false);
                         handler.sendEmptyMessage(0);
                     }
@@ -195,5 +207,41 @@ public class DailyMealFragment extends Fragment {
         }.start();
     }
 
+    private Intent createShareIntent() {
+        //액션은 ACTION_SEND 로 합니다.
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        //Flag 를 설정해 줍니다. 공유하기 위해 공유에 사용할 다른 앱의 하나의 Activity 만 열고,
+        //다시 돌아오면 열었던 Activity 는 꺼야 하기 때문에
+        //FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET 로 해줍니다.
+        shareIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+        //공유할 것의 형태입니다. 우리는 텍스트를 공유합니다.
+        shareIntent.setType("text/plain");
 
+        String mealData =
+                getResources().getString(R.string.lunch)+"\n"
+                +LunchText.getText()+"\n\n"
+                +getResources().getString(R.string.dinner)+"\n"
+                +DinnerText.getText()+"\n\n";
+        //보낼 데이터를 Extra 로 넣어줍니다.
+        shareIntent.putExtra(Intent.EXTRA_TEXT,mealData);
+        return shareIntent;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        // 정의한 Menu 리소스를 여기서 Inflate 합니다.
+        inflater.inflate(R.menu.fragment_meal, menu);
+        // 공유 버튼 찾기
+        MenuItem menuItem = menu.findItem(R.id.action_share);
+
+        // ShareActionProvider 얻기
+        mShareActionProvider =
+                (ShareActionProvider) MenuItemCompat.getActionProvider(menuItem);
+
+        // 공유 버튼에 사용할 Intent 를 만들어 주는 메서드를 호출합니다.
+        if (mShareActionProvider != null ) {
+            mShareActionProvider.setShareIntent(createShareIntent());
+        } else {
+        }
+    }
 }
