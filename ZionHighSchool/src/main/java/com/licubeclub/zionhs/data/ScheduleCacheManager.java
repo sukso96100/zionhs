@@ -12,11 +12,13 @@ public class ScheduleCacheManager {
     }
 
     public void updateCache(ArrayList<String> Date, ArrayList<String> Content){
-        ScheduleCache.deleteAll(ScheduleCache.class);
-        for(int i=0; i<Date.size(); i++){
-            ScheduleCache scheduleCacheItem = new ScheduleCache(Date.get(i), Content.get(i));
-            scheduleCacheItem.save();
-        }
+        try {
+            ScheduleCache.deleteAll(ScheduleCache.class);
+            for (int i = 0; i < Date.size(); i++) {
+                ScheduleCache scheduleCacheItem = new ScheduleCache(Date.get(i), Content.get(i));
+                scheduleCacheItem.save();
+            }
+        }catch(Exception e){}
     }
 
     public ArrayList<String> loadDateCache(){
