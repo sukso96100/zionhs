@@ -1,6 +1,7 @@
 package com.licubeclub.zionhs;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.view.MenuItemCompat;
@@ -82,7 +83,10 @@ public class PostViewActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.open) {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse(URL));
+            startActivity(intent);
             return true;
         }
 
@@ -118,16 +122,12 @@ public class PostViewActivity extends ActionBarActivity {
                     Document doc = Jsoup.connect(URL).get();
                     Element element = doc.select("td").get(4);
                    data = element.getAllElements().toString();
-                    if(data==null){
-                        data = getResources().getString(R.string.nodata);
-                    }else if(data.equals("")){
-                        data = getResources().getString(R.string.nodata);
-                    }else{}
+
 
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Log.d("DATA",data);
+
                 mHandler.post(new Runnable()
                 {
                     public void run()
@@ -139,6 +139,12 @@ public class PostViewActivity extends ActionBarActivity {
                             }
                         });
 //                        WV.loadData(data,"text/html","utf-8");
+                        if(data==null){
+                            data = getResources().getString(R.string.nodata);
+                        }else if(data.equals("<td class=\"writeBody writeContent\"></td>")){
+                            data = getResources().getString(R.string.nodata);
+                        }else{}
+                        Log.d("DATA",data);
                         WV.loadDataWithBaseURL(null, data, "text/html", "utf-8", null);
                         handler.sendEmptyMessage(0);
                     }

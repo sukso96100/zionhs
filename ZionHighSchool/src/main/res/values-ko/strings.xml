@@ -241,4 +241,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="drawer_close">Drawer Close</string>
     <string name="nodata">데이터 없음</string>
     <string name="share">Share</string>
+    <string name="open_in_new_window">Open In New Window</string>
 </resources>

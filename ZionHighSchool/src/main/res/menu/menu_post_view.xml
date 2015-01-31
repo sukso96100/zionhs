@@ -6,4 +6,9 @@
         android:title="@string/share"
         app:showAsAction="ifRoom"
         app:actionProviderClass="android.support.v7.widget.ShareActionProvider"/>
+    <item android:id="@+id/open"
+        android:title="@string/open_in_new_window"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_open_in_new_white_48dp"/>
+
 </menu>

@@ -228,5 +228,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="nodata">No Data</string>
     <string name="share">Share</string>
     <string name="title_activity_post_view">PostViewActivity</string>
+    <string name="open_in_new_window">Open In New Window</string>
 
 </resources>
