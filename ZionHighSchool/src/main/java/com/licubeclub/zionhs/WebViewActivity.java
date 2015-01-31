@@ -37,6 +37,7 @@ public class WebViewActivity extends ActionBarActivity {
 
         WB.loadUrl(ViewURL);
 
+
     }
 
 }
