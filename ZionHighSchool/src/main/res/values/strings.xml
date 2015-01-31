@@ -226,4 +226,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
     <string name="nodata">No Data</string>
+    <string name="share">Share</string>
 </resources>

@@ -1,6 +1,7 @@
 <component name="libraryTable">
   <library name="support-v4-21.0.3">
     <CLASSES>
+<<<<<<< HEAD
       <root url="file://$PROJECT_DIR$/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/res" />
       <root url="jar://$PROJECT_DIR$/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar!/" />
       <root url="jar://$PROJECT_DIR$/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar!/" />
@@ -8,6 +9,15 @@
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/21.0.3/support-v4-21.0.3-sources.jar!/" />
+=======
+      <root url="jar://$PROJECT_DIR$/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-v4/21.0.3/support-v4-21.0.3-sources.jar!/" />
+>>>>>>> f80d427b9d1aea01c90ecaf33360ca16e82262d7
     </SOURCES>
   </library>
 </component>
