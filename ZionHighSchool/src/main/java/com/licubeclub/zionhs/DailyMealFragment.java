@@ -183,21 +183,28 @@ public class DailyMealFragment extends Fragment {
                         Log.d("Setting Text", "Setting Meal Text");
                         Log.d("Content", lunchstring[DAY]+lunchkcalstring[DAY]);
                         Log.d("Content", dinnerstring[DAY]+dinnerkcalstring[DAY]);
-                        if(lunchstring[DAY]==null){
-                            LunchText.setText(getResources().getString(R.string.nodata));
-                        }else{
-                            LunchText.setText(lunchstring[DAY] + "\n" + lunchkcalstring[DAY]);}
-                        if(dinnerstring[DAY] == null){
-                            DinnerText.setText(getResources().getString(R.string.nodata));
-                        }else{
-                            DinnerText.setText(dinnerstring[DAY] + "\n" + dinnerkcalstring[DAY]);}
-                        Log.d("DONE", "Done Setting Content");
-
+                        try {
+                            if (lunchstring[DAY] == null) {
+                                LunchText.setText(getResources().getString(R.string.nodata));
+                            } else {
+                                LunchText.setText(lunchstring[DAY] + "\n" + lunchkcalstring[DAY]);
+                            }
+                            if (dinnerstring[DAY] == null) {
+                                DinnerText.setText(getResources().getString(R.string.nodata));
+                            } else {
+                                DinnerText.setText(dinnerstring[DAY] + "\n" + dinnerkcalstring[DAY]);
+                            }
+                            Log.d("DONE", "Done Setting Content");
+                        }catch (Exception e){}
                         manager.updateCache(lunchstring, dinnerstring);
-                        if (mShareActionProvider != null ) {
-                            mShareActionProvider.setShareIntent(createShareIntent());
-                        } else {
-                        }
+                        try {
+                            if (mShareActionProvider != null) {
+                                mShareActionProvider.setShareIntent(createShareIntent());
+                            } else {
+                            }
+
+                        }catch (Exception e){}
+
                         SRL.setRefreshing(false);
                         handler.sendEmptyMessage(0);
                     }

@@ -18,8 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.licubeclub.zionhs"
-    android:versionCode="11"
-    android:versionName="1.0.2" >
+    android:versionCode="15"
+    android:versionName="1.1" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -32,13 +32,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:name="android.hardware.sensor.accelerometer"
         android:required="true" />
 
-    <android:uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -127,10 +125,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.Appinfo" />
-        </activity>
-        <activity
-            android:name=".WebViewActivity"
-            android:label="@string/title_activity_web_view" >
         </activity>
         <activity
             android:name=".MealActivity3"
