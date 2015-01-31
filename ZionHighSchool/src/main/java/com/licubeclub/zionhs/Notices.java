@@ -61,6 +61,8 @@ public class Notices extends ActionBarActivity {
     private PostListAdapter adapter;
     private SwipeRefreshLayout SRL;
     ListView listview;
+    String url;
+    String title;
 
     private final Handler handler = new Handler()
     {
@@ -75,6 +77,10 @@ public class Notices extends ActionBarActivity {
         setContentView(R.layout.activity_notices);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         listview = (ListView) findViewById(R.id.listView);
+
+        url=getIntent().getStringExtra("url");
+        title = getIntent().getStringExtra("title");
+        getSupportActionBar().setTitle(title);
 
         cManager=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
         mobile = cManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
@@ -141,7 +147,7 @@ private void networkTask(){
                 authorarray = new ArrayList<String>();
                 datearray = new ArrayList<String>();
                 //파싱할 페이지 URL
-                Document doc = Jsoup.connect("http://www.zion.hs.kr/main.php?menugrp=110100&master=bbs&act=list&master_sid=58").get();
+                Document doc = Jsoup.connect(url).get();
                 Elements rawmaindata = doc.select(".listbody a"); //Get contents from tags,"a" which are in the class,"listbody"
                 Elements rawauthordata = doc.select("td:eq(3)"); //작성자 이름 얻기 - 3번째 td셀 에서 얻기
                 Elements rawdatedata = doc.select("td:eq(4)"); //작성 날자 얻기 - 4번째 td셀 에서 얻기

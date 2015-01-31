@@ -35,6 +35,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.licubeclub.zionhs.data.ScheduleCacheManager;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -214,6 +216,9 @@ public class Schedule extends ActionBarActivity {
                 /*
                 * TODO - 데이터 캐싱
                 * */
+
+                ScheduleCacheManager manager = new ScheduleCacheManager();
+                manager.updateCache(dayarray,schedulearray);
 
                 mHandler.post(new Runnable()
                 {
