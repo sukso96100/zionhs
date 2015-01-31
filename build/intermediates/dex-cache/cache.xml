@@ -2,81 +2,60 @@
 <items version="2" >
 
     <item
-        jar="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/exploded-aar/com.github.satyan/sugar/1.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="07e07903922250dabf50c7d131d6fa069a050305">
-        <dex dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/classes-52e8ecf20a7f7dded2121349ec3e6349f083b08f.jar" />
-    </item>
-    <item
-        jar="/home/youngbin/zionhs/ZionHighSchool/libs/jericho-android.3.1.jar"
-        jumboMode="false"
-        revision="21.0.2"
-        sha1="b9d53e9eeea55b5b67e78a0c94e1a1ac8b357ffc">
-        <dex dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/jericho-android.3.1-de24887505164de5855b64a2301c666e0816cf1e.jar" />
-    </item>
-    <item
-        jar="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="7d2525cba8ed61fff102977caed964fc22061e34">
-        <dex dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/classes-88b97d8819ac27d64880b9489ba022be46c5b999.jar" />
-    </item>
-    <item
-        jar="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/classes-df883b2d65c1f4135ffc82b62ac21e3f9bf34e84.jar" />
-    </item>
-    <item
-        jar="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/classes-7768f2e976c21f7982be6dd3f4896ca0cc04575b.jar" />
-    </item>
-    <item
-        jar="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.0.2"
-        sha1="7d2525cba8ed61fff102977caed964fc22061e34">
-        <dex dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/classes-88b97d8819ac27d64880b9489ba022be46c5b999.jar" />
-    </item>
-    <item
-        jar="/home/youngbin/zionhs/ZionHighSchool/libs/jericho-android.3.1.jar"
+        jar="C:\gitrepo\zionhs\ZionHighSchool\libs\jericho-android.3.1.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="b9d53e9eeea55b5b67e78a0c94e1a1ac8b357ffc">
-        <dex dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/jericho-android.3.1-de24887505164de5855b64a2301c666e0816cf1e.jar" />
+        <dex dex="C:\gitrepo\zionhs\ZionHighSchool\build\intermediates\pre-dexed\debug\jericho-android.3.1-df4d470b210e058df3dc40383eea90e3908203a3.jar" />
     </item>
     <item
-        jar="/home/youngbin/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-aeb38ee984947a43c5df37b3eb4ec260de7f9768.jar" />
-    </item>
-    <item
-        jar="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jar="C:\gitrepo\zionhs\ZionHighSchool\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-84eba7f027d00d17710fcd659bd786a2a51b36f3.jar" />
+        <dex dex="C:\gitrepo\zionhs\ZionHighSchool\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-faacba7072c3b8e980f5f557c0efbb475a228740.jar" />
     </item>
     <item
-        jar="/home/youngbin/zionhs/ZionHighSchool/libs/jsoup-1.7.3.jar"
-        jumboMode="false"
-        revision="21.0.2"
-        sha1="ab1f22cadc2f8b514e55ba368f5128056fe304da">
-        <dex dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/jsoup-1.7.3-2cdc3040429074eb233a1f3b88d37b935a509921.jar" />
-    </item>
-    <item
-        jar="/home/youngbin/zionhs/ZionHighSchool/libs/jsoup-1.7.3.jar"
+        jar="C:\gitrepo\zionhs\ZionHighSchool\libs\jsoup-1.7.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="ab1f22cadc2f8b514e55ba368f5128056fe304da">
-        <dex dex="/home/youngbin/zionhs/ZionHighSchool/build/intermediates/pre-dexed/debug/jsoup-1.7.3-2cdc3040429074eb233a1f3b88d37b935a509921.jar" />
+        <dex dex="C:\gitrepo\zionhs\ZionHighSchool\build\intermediates\pre-dexed\debug\jsoup-1.7.3-50b6dc0ee4b9dfc5eb585d7be4fb0c75c7c83b42.jar" />
+    </item>
+    <item
+        jar="C:\gitrepo\zionhs\ZionHighSchool\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\gitrepo\zionhs\ZionHighSchool\build\intermediates\pre-dexed\debug\classes-12f3227b1f311ee2b603117ed603e4f73a4a51d0.jar" />
+    </item>
+    <item
+        jar="C:\gitrepo\zionhs\ZionHighSchool\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7d2525cba8ed61fff102977caed964fc22061e34">
+        <dex dex="C:\gitrepo\zionhs\ZionHighSchool\build\intermediates\pre-dexed\debug\classes-d6eda4bd0852aa5d6758f50963239af92cd1db0b.jar" />
+    </item>
+    <item
+        jar="C:\Users\영자신문-1\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\gitrepo\zionhs\ZionHighSchool\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-13dbc1a64654a4f3c09d2df21a186dd11feadddf.jar" />
+    </item>
+    <item
+        jar="C:\gitrepo\zionhs\ZionHighSchool\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\gitrepo\zionhs\ZionHighSchool\build\intermediates\pre-dexed\debug\classes-7cb9563599ef1366f4dad36ba8b65695988b6add.jar" />
+    </item>
+    <item
+        jar="C:\gitrepo\zionhs\ZionHighSchool\build\intermediates\exploded-aar\com.github.satyan\sugar\1.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="07e07903922250dabf50c7d131d6fa069a050305">
+        <dex dex="C:\gitrepo\zionhs\ZionHighSchool\build\intermediates\pre-dexed\debug\classes-3baa77491ef3393bfaa7819b2dc0853a6a8d0d34.jar" />
     </item>
 
 </items>
