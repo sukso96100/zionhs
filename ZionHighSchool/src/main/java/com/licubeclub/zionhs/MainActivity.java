@@ -223,7 +223,7 @@ public class MainActivity extends ActionBarActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-                        startActivity(new Intent(MainActivity.this, MealActivity3.class));
+                        startActivity(new Intent(MainActivity.this, MealActivity.class));
                         break;
                     case 1:
                         startActivity(new Intent(MainActivity.this, Schedule.class));
