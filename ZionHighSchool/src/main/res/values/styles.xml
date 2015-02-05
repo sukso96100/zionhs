@@ -28,7 +28,6 @@
         <item name="colorPrimaryDark">#ff202c59</item>
         <item name="colorAccent">#fff</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
-        <item name="android:textColorPrimary">@android:color/white</item>
     </style>
 
     <style name="Theme.Zion_Material.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">

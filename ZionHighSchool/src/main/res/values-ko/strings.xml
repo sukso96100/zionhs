@@ -31,7 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="quickexec_noti">빠른실행 서비스 알림 보이기</string>
     <string name="appsettings_settings_title">앱 설정</string>
     <string name="appsettings_settings_select">빠른실행시 보여줄 화면 선택 :</string>
-    <string name="error">불러오기 오류. 데이터를 불러올 수 없습니.</string>
+    <string name="error">불러오기 오류. 데이터를 불러올 수 없습니다.</string>
 
     <string-array name="quickexec_select">
         <item>홈 화면</item>

@@ -1,9 +1,12 @@
 package com.licubeclub.zionhs;
 
+import java.util.Calendar;
 import java.util.Locale;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -14,6 +17,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.ShareActionProvider;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
@@ -23,7 +27,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.licubeclub.zionhs.data.MealCache;
 import com.licubeclub.zionhs.data.MealCacheManager;
 import com.licubeclub.zionhs.view.SlidingTabLayout;
 
@@ -37,6 +43,7 @@ public class MealActivity extends ActionBarActivity {
     private SlidingTabLayout mSlidingTabLayout;
     private ViewPager mViewPager;
     SwipeRefreshLayout SRL;
+    ShareActionProvider mShareActionProvider;
 
     static String[] LunchArray;
     static String[] LunchKcalArray;
@@ -69,6 +76,29 @@ public class MealActivity extends ActionBarActivity {
 
         loadMealTask();
 
+        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                if (mShareActionProvider != null ) {
+                    mShareActionProvider.setShareIntent(createShareIntent());
+                } else {
+                }
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if (mShareActionProvider != null ) {
+                    mShareActionProvider.setShareIntent(createShareIntent());
+                } else {
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
         SRL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -78,13 +108,25 @@ public class MealActivity extends ActionBarActivity {
 
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.main, menu);
-//        return true;
-//    }
-//
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.fragment_meal, menu);
+        // 공유 버튼 찾기
+        MenuItem menuItem = menu.findItem(R.id.action_share);
+
+        // ShareActionProvider 얻기
+        mShareActionProvider =
+                (ShareActionProvider) MenuItemCompat.getActionProvider(menuItem);
+
+        // 공유 버튼에 사용할 Intent 를 만들어 주는 메서드를 호출합니다.
+        if (mShareActionProvider != null ) {
+            mShareActionProvider.setShareIntent(createShareIntent());
+        } else {
+        }
+        return true;
+    }
+
 //    @Override
 //    public boolean onOptionsItemSelected(MenuItem item) {
 //        // Handle action bar item clicks here. The action bar will
@@ -230,6 +272,10 @@ public class MealActivity extends ActionBarActivity {
                         mSlidingTabLayout.setViewPager(mViewPager);
                         manager.updateCache(LunchArray, LunchKcalArray, DinnerArray, DinnerKcalArray);
                         Log.d("MealLoadTadk","Data Loading Done");
+                        if (mShareActionProvider != null ) {
+                            mShareActionProvider.setShareIntent(createShareIntent());
+                        } else {
+                        }
                         SRL.setRefreshing(false);
                         handler.sendEmptyMessage(0);
                     }
@@ -239,15 +285,58 @@ public class MealActivity extends ActionBarActivity {
         }.start();
 
        }else{
+            Toast.makeText(MealActivity.this,
+                    getResources().getString(R.string.network_connection_warning), Toast.LENGTH_LONG).show();
             //Load from Cache
+            Log.d("MealLoadTask", "Loading from Cache");
             LunchArray = manager.loadLunchCache();
             LunchKcalArray = manager.loadLunchKcalcache();
             DinnerArray = manager.loadDinnerCache();
             DinnerKcalArray = manager.loadDinnerKcalCache();
             mViewPager.setAdapter(new SamplePagerAdapter());
             mSlidingTabLayout.setViewPager(mViewPager);
+            if (mShareActionProvider != null ) {
+                mShareActionProvider.setShareIntent(createShareIntent());
+            } else {
+            }
             SRL.setRefreshing(false);
         }
+    }
+
+    public int getDefaultPageNumber(){
+        Calendar c = Calendar.getInstance();
+        int DAY = c.get(Calendar.DAY_OF_WEEK);
+        if(DAY==0){
+            return 0;
+        }else if(DAY==6){
+            return 6;
+        }else{
+            return DAY-1;
+        }
+    }
+
+    private Intent createShareIntent() {
+        //액션은 ACTION_SEND 로 합니다.
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        //Flag 를 설정해 줍니다. 공유하기 위해 공유에 사용할 다른 앱의 하나의 Activity 만 열고,
+        //다시 돌아오면 열었던 Activity 는 꺼야 하기 때문에
+        //FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET 로 해줍니다.
+        shareIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+        //공유할 것의 형태입니다. 우리는 텍스트를 공유합니다.
+        shareIntent.setType("text/plain");
+        String mealData;
+        try {
+            mealData =
+                    getResources().getString(R.string.lunch) + "\n"
+                            + LunchArray[mViewPager.getCurrentItem()+1] + "\n\n"
+                            + getResources().getString(R.string.dinner) + "\n"
+                            + DinnerArray[mViewPager.getCurrentItem()+1] + "\n\n";
+        }catch (Exception e){
+            mealData = getResources().getString(R.string.nodata);
+        }
+        //보낼 데이터를 Extra 로 넣어줍니다.
+        shareIntent.putExtra(Intent.EXTRA_TEXT,mealData);
+        return shareIntent;
     }
 
 }
