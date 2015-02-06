@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.licubeclub.zionhs;
+package kr.hs.zion.android;
 
 import java.util.Calendar;
 import java.util.Locale;
@@ -38,10 +38,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.licubeclub.zionhs.data.MealCacheManager;
-import com.licubeclub.zionhs.view.SlidingTabLayout;
 
-import org.w3c.dom.Text;
+import kr.hs.zion.android.R;
+
+import kr.hs.zion.android.data.MealCacheManager;
+import kr.hs.zion.android.view.SlidingTabLayout;
 
 
 public class MealActivity extends ActionBarActivity {

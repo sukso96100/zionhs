@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.licubeclub.zionhs;
+package kr.hs.zion.android;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -26,6 +26,8 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
 import android.widget.TextView;
 import android.view.View;
+
+import kr.hs.zion.android.R;
 
 public class Appinfo extends ActionBarActivity {
     /*
@@ -68,7 +70,7 @@ public class Appinfo extends ActionBarActivity {
             public void onClick(View v) {
                 Intent update = new Intent(Intent.ACTION_VIEW);
                 update.setData(Uri.parse("https://play.google.com/store/" +
-                        "apps/details?id=com.licubeclub.zionhs&hl=ko"));
+                        "apps/details?id=kr.hs.zion.android&hl=ko"));
                 startActivity(update);
             }
         });

@@ -15,28 +15,23 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.licubeclub.zionhs.data;
-
-import android.content.Context;
+package kr.hs.zion.android.data;
 
 import com.orm.SugarRecord;
 
 /**
  * Created by youngbin on 15. 1. 28.
  */
-public class MealCache extends SugarRecord<MealCache> {
-    String lunch;
-    String lunchkcal;
-    String dinner;
-    String dinnerkcal;
+public class ScheduleCache extends SugarRecord<ScheduleCache> {
+    String date;
+    String content;
 
-    public MealCache(){
+    public ScheduleCache(){
+
     }
 
-    public MealCache(String Lunch, String LunchKcal, String Dinner, String DinnerKcal){
-        this.lunch = Lunch;
-        this.lunchkcal = LunchKcal;
-        this.dinner = Dinner;
-        this.dinnerkcal = DinnerKcal;
+    public ScheduleCache(String Date, String Content){
+        this.date = Date;
+        this.content = Content;
     }
 }

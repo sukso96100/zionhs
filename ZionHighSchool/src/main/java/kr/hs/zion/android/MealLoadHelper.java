@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.licubeclub.zionhs;
+package kr.hs.zion.android;
 
 /**
  * Created by youngbin on 14. 9. 5.

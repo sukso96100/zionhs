@@ -12,7 +12,7 @@ All the contributors' information of this project will be written in English
 
 For more accurate information about this project's contributors, visit following the URL below.
 이 프로젝트 기여자에 대한 좀 더 정확한 정보는, 아래 URL을 따라가세요.
-https://github.com/sukso96100/zionhs/graphs/contributors
+https://github.com/zionhs/zionhs-android/graphs/contributors
 
 ====================
 Main contributors of this project

@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.licubeclub.zionhs;
+package kr.hs.zion.android;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -34,6 +34,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
+
+import kr.hs.zion.android.R;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

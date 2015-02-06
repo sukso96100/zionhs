@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.licubeclub.zionhs;
+package kr.hs.zion.android;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -35,6 +35,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import kr.hs.zion.android.R;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

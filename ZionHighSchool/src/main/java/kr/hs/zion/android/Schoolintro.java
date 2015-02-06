@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.licubeclub.zionhs;
+package kr.hs.zion.android;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -27,7 +27,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import com.licubeclub.zionhs.view.SlidingTabLayout;
+import kr.hs.zion.android.R;
+
+import kr.hs.zion.android.view.SlidingTabLayout;
 
 public class Schoolintro extends ActionBarActivity {
 

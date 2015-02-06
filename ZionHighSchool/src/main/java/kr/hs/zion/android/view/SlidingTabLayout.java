@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.licubeclub.zionhs.view;
+package kr.hs.zion.android.view;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -31,8 +31,6 @@ import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.licubeclub.zionhs.R;
 
 /**
  * To be used with ViewPager to provide a tab indicator component which give constant feedback as to

@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.licubeclub.zionhs;
+package kr.hs.zion.android;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -24,6 +24,8 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.TextView;
+
+import kr.hs.zion.android.R;
 
 public class Schoolinfo extends ActionBarActivity {
 

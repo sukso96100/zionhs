@@ -17,7 +17,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.licubeclub.zionhs"
+    package="kr.hs.zion.android"
     android:versionCode="17"
     android:versionName="1.2.1" >
 
@@ -45,7 +45,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.licubeclub" />
 
         <activity
-            android:name=".MainActivity"
+            android:name="kr.hs.zion.android.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.Zion_Material.NoActionBar" >
             <intent-filter>
@@ -55,96 +55,96 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             </intent-filter>
         </activity>
         <activity
-            android:name=".Appinfo"
+            android:name="kr.hs.zion.android.Appinfo"
             android:label="@string/info"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName="kr.hs.zion.android.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.licubeclub.zionhs.MainActivity" />
+                android:value="kr.hs.zion.android.MainActivity" />
         </activity>
         <activity
-            android:name=".Notices"
+            android:name="kr.hs.zion.android.Notices"
             android:label="@string/notices"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName="kr.hs.zion.android.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.licubeclub.zionhs.MainActivity" />
+                android:value="kr.hs.zion.android.MainActivity" />
         </activity>
         <activity
-            android:name=".Schoolinfo"
+            android:name="kr.hs.zion.android.Schoolinfo"
             android:label="@string/schoolinfo"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName="kr.hs.zion.android.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.licubeclub.zionhs.MainActivity" />
+                android:value="kr.hs.zion.android.MainActivity" />
         </activity>
         <activity
-            android:name=".Schedule"
+            android:name="kr.hs.zion.android.Schedule"
             android:label="@string/schedule"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="kr.hs.zion.android.MainActivity"
             android:theme="@style/Theme.Zion_Material.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.licubeclub.zionhs.MainActivity" />
+                android:value="kr.hs.zion.android.MainActivity" />
         </activity>
         <activity
-            android:name=".Schoolintro"
+            android:name="kr.hs.zion.android.Schoolintro"
             android:label="@string/schoolintro"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="kr.hs.zion.android.MainActivity"
             android:theme="@style/Theme.Zion_Material.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.licubeclub.zionhs.MainActivity" />
+                android:value="kr.hs.zion.android.MainActivity" />
         </activity>
         <activity
-            android:name=".Doc_Readme"
+            android:name="kr.hs.zion.android.Doc_Readme"
             android:label="@string/title_activity_doc__readme"
-            android:parentActivityName=".Appinfo" >
+            android:parentActivityName="kr.hs.zion.android.Appinfo" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.licubeclub.zionhs.Appinfo" />
+                android:value="kr.hs.zion.android.Appinfo" />
         </activity>
         <activity
-            android:name=".Doc_Notices"
+            android:name="kr.hs.zion.android.Doc_Notices"
             android:label="@string/title_activity_doc__notices"
-            android:parentActivityName=".Appinfo" >
+            android:parentActivityName="kr.hs.zion.android.Appinfo" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.licubeclub.zionhs.Appinfo" />
+                android:value="kr.hs.zion.android.Appinfo" />
         </activity>
         <activity
-            android:name=".Doc_Copying"
+            android:name="kr.hs.zion.android.Doc_Copying"
             android:label="@string/title_activity_doc__copying"
-            android:parentActivityName=".Appinfo" >
+            android:parentActivityName="kr.hs.zion.android.Appinfo" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.licubeclub.zionhs.Appinfo" />
+                android:value="kr.hs.zion.android.Appinfo" />
         </activity>
         <activity
-            android:name=".Doc_Contributors"
+            android:name="kr.hs.zion.android.Doc_Contributors"
             android:label="@string/title_activity_doc__contributors"
-            android:parentActivityName=".Appinfo" >
+            android:parentActivityName="kr.hs.zion.android.Appinfo" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.licubeclub.zionhs.Appinfo" />
+                android:value="kr.hs.zion.android.Appinfo" />
         </activity>
         <activity
-            android:name=".PostViewActivity"
+            android:name="kr.hs.zion.android.PostViewActivity"
             android:label="@string/title_activity_post_view"
-            android:parentActivityName=".Notices"
+            android:parentActivityName="kr.hs.zion.android.Notices"
             android:theme="@style/Theme.Zion_Material.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.licubeclub.zionhs.Notices" />
+                android:value="kr.hs.zion.android.Notices" />
         </activity>
         <activity
-            android:name=".MealActivity"
+            android:name="kr.hs.zion.android.MealActivity"
             android:label="@string/meal"
             android:theme="@style/Theme.Zion_Material.NoActionBar"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName="kr.hs.zion.android.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.licubeclub.zionhs.MainActivity" />
+                android:value="kr.hs.zion.android.MainActivity" />
         </activity>
     </application>
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.licubeclub.zionhs.view;
+package kr.hs.zion.android.view;
 
 import android.R;
 import android.content.Context;

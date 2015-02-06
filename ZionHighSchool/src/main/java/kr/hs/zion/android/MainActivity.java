@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.licubeclub.zionhs;
+package kr.hs.zion.android;
 
 import android.content.Context;
 import android.content.Intent;
@@ -40,6 +40,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import kr.hs.zion.android.R;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

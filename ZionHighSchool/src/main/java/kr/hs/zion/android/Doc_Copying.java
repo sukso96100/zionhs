@@ -16,17 +16,19 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.licubeclub.zionhs;
+package kr.hs.zion.android;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import kr.hs.zion.android.R;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class Doc_Contributors extends ActionBarActivity {
+public class Doc_Copying extends ActionBarActivity {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,7 @@ public class Doc_Contributors extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
     private String readTxt(){
-        InputStream inputStream = getResources().openRawResource(R.raw.contributors);
+        InputStream inputStream = getResources().openRawResource(R.raw.copying);
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 
         int i;

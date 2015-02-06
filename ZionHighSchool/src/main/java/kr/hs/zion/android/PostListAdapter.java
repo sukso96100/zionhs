@@ -15,34 +15,37 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.licubeclub.zionhs;
+
+package kr.hs.zion.android;
 
 import android.app.Activity;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import kr.hs.zion.android.R;
 
 import java.util.ArrayList;
 
 /**
- * Created by youngbin on 14. 11. 24.
+ * Created by youngbin on 13. 12. 14.
  */
-public class DrawerListAdapter extends BaseAdapter {
+public class PostListAdapter extends BaseAdapter {
 
     Activity context;
     ArrayList<String> title;
-    ArrayList<Drawable> icon;
+    ArrayList<String> date;
+    ArrayList<String> author;
 
-    public DrawerListAdapter(Activity context, ArrayList<String> title,
-                             ArrayList<Drawable> icon) {
+    public PostListAdapter(Activity context, ArrayList<String> title,
+                           ArrayList<String> date, ArrayList<String> author) {
         super();
         this.context = context;
         this.title = title;
-        this.icon = icon;
+        this.date = date;
+        this.author = author;
     }
 
     public int getCount() {
@@ -64,7 +67,8 @@ public class DrawerListAdapter extends BaseAdapter {
 
     private class ViewHolder {
         TextView txtViewTitle;
-        ImageView imgViewIcon;
+        TextView txtViewDate;
+        TextView txtViewAuthor;
     }
 
     public View getView(int position, View convertView, ViewGroup parent)
@@ -74,10 +78,11 @@ public class DrawerListAdapter extends BaseAdapter {
 
         if (convertView == null)
         {
-            convertView = inflater.inflate(R.layout.item_drawer, null);
+            convertView = inflater.inflate(R.layout.row_layout, null);
             holder = new ViewHolder();
             holder.txtViewTitle = (TextView) convertView.findViewById(R.id.title);
-            holder.imgViewIcon = (ImageView) convertView.findViewById(R.id.icon);
+            holder.txtViewDate = (TextView) convertView.findViewById(R.id.date);
+            holder.txtViewAuthor = (TextView) convertView.findViewById(R.id.author);
             convertView.setTag(holder);
         }
         else
@@ -86,7 +91,8 @@ public class DrawerListAdapter extends BaseAdapter {
         }
 
         holder.txtViewTitle.setText(title.get(position));
-        holder.imgViewIcon.setImageDrawable(icon.get(position));
+        holder.txtViewDate.setText(date.get(position));
+        holder.txtViewAuthor.setText(author.get(position));
         return convertView;
     }
 
