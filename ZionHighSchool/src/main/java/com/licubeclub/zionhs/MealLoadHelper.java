@@ -1,3 +1,20 @@
+/*
+ * Zion High School Application for Android
+ * Copyright (C) 2013-2015 The Zion High School Application for Android Open Source Project
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 package com.licubeclub.zionhs;
 
 /**
@@ -9,7 +26,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 import net.htmlparser.jericho.Element;
-import net.htmlparser.jericho.Segment;
 import net.htmlparser.jericho.Source;
 
 public class MealLoadHelper

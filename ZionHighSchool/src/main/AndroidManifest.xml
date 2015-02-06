@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 Zion High School Application for Android
-Copyright (C) 2013 Youngbin Han<sukso96100@gmail.com>
+Copyright (C) 2013-2015 The Zion High School Application for Android Open Source Project
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -18,8 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.licubeclub.zionhs"
-    android:versionCode="16"
-    android:versionName="1.2" >
+    android:versionCode="17"
+    android:versionName="1.2.1" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -90,7 +90,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <activity
             android:name=".Schoolintro"
             android:label="@string/schoolintro"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.Zion_Material.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.MainActivity" />

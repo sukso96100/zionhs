@@ -1,6 +1,6 @@
 /*
  * Zion High School Application for Android
- * Copyright (C) 2013 Youngbin Han<sukso96100@gmail.com>
+ * Copyright (C) 2013-2015 The Zion High School Application for Android Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,10 +18,8 @@
 
 package com.licubeclub.zionhs;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -327,10 +325,6 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void handleMessage(Message msg)
             {
-//            Toast toast = Toast.makeText(getApplicationContext(),
-//                    getResources().getString(R.string.notices_info), Toast.LENGTH_LONG);
-//            toast.setGravity(Gravity.TOP, 0, 0);
-//            toast.show();
             }
         };
 
@@ -474,8 +468,6 @@ public class MainActivity extends ActionBarActivity {
 
             }
         }.start();
-
-
 
     }
 

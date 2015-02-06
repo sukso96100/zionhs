@@ -1,6 +1,6 @@
 /*
  * Zion High School Application for Android
- * Copyright (C) 2013 Youngbin Han<sukso96100@gmail.com>
+ * Copyright (C) 2013-2015 The Zion High School Application for Android Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,7 +24,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -34,7 +33,6 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 import org.jsoup.Jsoup;

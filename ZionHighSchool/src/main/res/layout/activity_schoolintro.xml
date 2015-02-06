@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
 Zion High School Application for Android
-Copyright (C) 2013 Youngbin Han<sukso96100@gmail.com>
+Copyright (C) 2013-2015 The Zion High School Application for Android Open Source Project
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,26 +16,33 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
 
-        <android.support.v4.view.PagerTitleStrip
-            android:id="@+id/pager_title_strip"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?colorPrimary"
+
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </android.support.v7.widget.Toolbar>
+    <com.licubeclub.zionhs.view.SlidingTabLayout
+        android:id="@+id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:background="#ff27347a"
-            android:textColor="#ffffffff"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp" />
-    </android.support.v4.view.ViewPager>
-</RelativeLayout>
-
+            android:layout_height="0px"
+            android:layout_weight="1"/>
+</LinearLayout>
