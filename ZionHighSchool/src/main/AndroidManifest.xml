@@ -18,8 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.licubeclub.zionhs"
-    android:versionCode="11"
-    android:versionName="1.0.2" >
+    android:versionCode="16"
+    android:versionName="1.2" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -28,19 +28,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <uses-feature
-        android:name="android.hardware.sensor.accelerometer"
-        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Zion_Material" >
+        android:theme="@style/Theme.Zion_Material"
+        android:name="com.orm.SugarApp">
+        <meta-data android:name="DATABASE" android:value="cache.db" />
+        <meta-data android:name="VERSION" android:value="2" />
+        <meta-data android:name="QUERY_LOG" android:value="true" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.licubeclub" />
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Zion_Material.NoActionBar">
+            android:theme="@style/Theme.Zion_Material.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -75,7 +82,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:name=".Schedule"
             android:label="@string/schedule"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Zion_Material.NoActionBar">
+            android:theme="@style/Theme.Zion_Material.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.MainActivity" />
@@ -83,14 +90,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <activity
             android:name=".Schoolintro"
             android:label="@string/schoolintro"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.licubeclub.zionhs.MainActivity" />
-        </activity>
-        <activity
-            android:name=".Notices_Parents"
-            android:label="@string/title_activity_notices__parents"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -129,13 +128,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 android:value="com.licubeclub.zionhs.Appinfo" />
         </activity>
         <activity
-            android:name=".WebViewActivity"
-            android:label="@string/title_activity_web_view" >
+            android:name=".PostViewActivity"
+            android:label="@string/title_activity_post_view"
+            android:parentActivityName=".Notices"
+            android:theme="@style/Theme.Zion_Material.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licubeclub.zionhs.Notices" />
         </activity>
         <activity
-            android:name=".MealActivity3"
+            android:name=".MealActivity"
             android:label="@string/meal"
-            android:parentActivityName=".MainActivity" >
+            android:theme="@style/Theme.Zion_Material.NoActionBar"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.licubeclub.zionhs.MainActivity" />

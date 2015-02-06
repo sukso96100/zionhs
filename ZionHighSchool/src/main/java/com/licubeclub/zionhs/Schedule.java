@@ -30,10 +30,13 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.licubeclub.zionhs.data.ScheduleCacheManager;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -141,93 +144,94 @@ public class Schedule extends ActionBarActivity {
             }
         });
 
-        if(mobile.isConnected() || wifi.isConnected()){}
-        else{
-            Toast toast = Toast.makeText(getApplicationContext(),
-                    getString(R.string.network_connection_warning), Toast.LENGTH_LONG);
-            finish();
-        }
             networkTask();
 
     }
 
-    private void networkTask(){
-        final Handler mHandler = new Handler();
-        new Thread()
-        {
+    private void networkTask() {
+        SRL.setRefreshing(true);
+        ScheduleCacheManager manager = new ScheduleCacheManager();
+        NetworkChecker NetCheck = new NetworkChecker(Schedule.this);
+        if (NetCheck.isNetworkConnected()) {
+            final Handler mHandler = new Handler();
 
-            public void run()
+            new Thread()
             {
+                public void run()
+                {
 
-                mHandler.post(new Runnable(){
 
-                    public void run()
-                    {
-                        SRL.setRefreshing(true);
-                    }
-                });
+                    //Task
 
-                //Task
-
-                //Notices URL
-                try {
-                    int skip = 0;
-                    boolean skipedboolean = false;
-                    schedulearray = new ArrayList<String>();
-                    dayarray = new ArrayList<String>();
+                    //Notices URL
+                    try {
+                        int skip = 0;
+                        boolean skipedboolean = false;
+                        schedulearray = new ArrayList<String>();
+                        dayarray = new ArrayList<String>();
 
 //                    학사일정 데이터 학교 홈페이지에서 파싱해 가져오기
-                    Document doc = Jsoup.connect(URL).get();
+                        Document doc = Jsoup.connect(URL).get();
 
-                    Elements rawdaydata = doc.select(".listDay"); //Get contents from the class,"listDay"
-                    for (Element el : rawdaydata) {
-                        String daydata = el.text();
-                        if(daydata.equals("") | daydata==null){
-                            if(skipedboolean){
+                        Elements rawdaydata = doc.select(".listDay"); //Get contents from the class,"listDay"
+                        for (Element el : rawdaydata) {
+                            String daydata = el.text();
+                            if(daydata.equals("") | daydata==null){
+                                if(skipedboolean){
+                                }else{
+                                    skip++;
+                                }
                             }else{
-                                skip++;
+                                dayarray.add(daydata); // add value to ArrayList
+                                skipedboolean = true;
                             }
-                        }else{
-                            dayarray.add(daydata); // add value to ArrayList
-                            skipedboolean = true;
                         }
-                    }
-                    Log.d("Schedule","Parsed Day Array" + dayarray);
+                        Log.d("Schedule","Parsed Day Array" + dayarray);
 
-                    Elements rawscheduledata = doc.select(".listData"); //Get contents from tags,"a" which are in the class,"ellipsis"
-                    for (Element el : rawscheduledata) {
-                        String scheduledata = el.text();
-                        if(skip>0){
-                            skip--;
-                        }else {
-                            schedulearray.add(scheduledata); // add value to ArrayList
+                        Elements rawscheduledata = doc.select(".listData"); //Get contents from tags,"a" which are in the class,"ellipsis"
+                        for (Element el : rawscheduledata) {
+                            String scheduledata = el.text();
+                            if(skip>0){
+                                skip--;
+                            }else {
+                                schedulearray.add(scheduledata); // add value to ArrayList
+                            }
                         }
-                    }
-                    Log.d("Schedule","Parsed Schedule Array" + schedulearray);
+                        Log.d("Schedule","Parsed Schedule Array" + schedulearray);
 
 //                    SRL.setRefreshing(false);
-                } catch (IOException e) {
-                    e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
 //                    SRL.setRefreshing(false);
+
+                    }
+                    mHandler.post(new Runnable()
+                    {
+                        public void run()
+                        {
+                            //UI Task
+                            adapter = new ListCalendarAdapter(Schedule.this, dayarray, schedulearray);
+                            listview.setAdapter(adapter);
+                            ScheduleCacheManager manager = new ScheduleCacheManager();
+                            manager.updateCache(dayarray,schedulearray);
+                            SRL.setRefreshing(false);
+                            handler.sendEmptyMessage(0);
+                        }
+                    });
 
                 }
+            }.start();
 
+        } else {
+            Log.d("Schedule","Loading from Cache");
+            Toast.makeText(Schedule.this,
+                    getResources().getString(R.string.network_connection_warning),Toast.LENGTH_LONG).show();
+            dayarray = manager.loadDateCache();
+            schedulearray = manager.loadContentCache();
+            adapter = new ListCalendarAdapter(Schedule.this, dayarray, schedulearray);
+            listview.setAdapter(adapter);
+        }
 
-                mHandler.post(new Runnable()
-                {
-                    public void run()
-                    {
-                        //UI Task
-                        adapter = new ListCalendarAdapter(Schedule.this, dayarray, schedulearray);
-                        listview.setAdapter(adapter);
-                        SRL.setRefreshing(false);
-                        handler.sendEmptyMessage(0);
-
-                    }
-                });
-
-            }
-        }.start();
 
     }
 }

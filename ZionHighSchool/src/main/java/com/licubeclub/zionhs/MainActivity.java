@@ -51,7 +51,9 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
-
+/*
+* TODO - 중식/석식, 학사일정 알림서비스 추가(이건 가장 마지막에 시간 날떄)
+* */
 public class MainActivity extends ActionBarActivity {
     private DrawerLayout NavigationDrawer;
     private ActionBarDrawerToggle DrawerToggle;
@@ -108,20 +110,10 @@ public class MainActivity extends ActionBarActivity {
         wifi = cManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
 
         setContentView(R.layout.activity_main);
-        //Launch Tutorial Activity If user new to this app
-        SharedPreferences pref = getSharedPreferences("pref", Activity.MODE_PRIVATE);
-        Boolean firstrun = pref.getBoolean("firstrun", true);
-//        if (firstrun) {
-//            Intent guide = new Intent(MainActivity.this, Tutorial.class);
-//            startActivity(guide);
-//            SharedPreferences.Editor editor = pref.edit(); // Load Editor
-//            editor.putBoolean("firstrun", false); //put value
-//            editor.commit(); // Save value
-//        }
-//        else{
-//            //Do Nothing
-//        }
 
+        /*
+        * TODO - 시간에 따른 툴바 배경 설정(아침/점심/저녁)
+        * */
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -138,15 +130,17 @@ public class MainActivity extends ActionBarActivity {
         notices.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Notices.class);
-                startActivity(intent);
+                Intent intent0 = new Intent(MainActivity.this, Notices.class);
+                intent0.putExtra("url","http://www.zion.hs.kr/main.php?menugrp=110100&master=bbs&act=list&master_sid=58");
+                intent0.putExtra("title",getResources().getString(R.string.notices));
+                startActivity(intent0);
             }
         });
 
         meal.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MealActivity3.class);
+                Intent intent = new Intent(MainActivity.this, MealActivity.class);
                 startActivity(intent);
             }
         });
@@ -167,7 +161,9 @@ public class MainActivity extends ActionBarActivity {
         notices_parents.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Notices_Parents.class);
+                Intent intent = new Intent(MainActivity.this, Notices.class);
+                intent.putExtra("url","http://www.zion.hs.kr/main.php?menugrp=110200&master=bbs&act=list&master_sid=59");
+                intent.putExtra("title", getResources().getString(R.string.title_activity_notices__parents));
                 startActivity(intent);
             }
         });
@@ -227,16 +223,22 @@ public class MainActivity extends ActionBarActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-                        startActivity(new Intent(MainActivity.this, MealActivity3.class));
+                        startActivity(new Intent(MainActivity.this, MealActivity.class));
                         break;
                     case 1:
                         startActivity(new Intent(MainActivity.this, Schedule.class));
                         break;
                     case 2:
-                        startActivity(new Intent(MainActivity.this, Notices_Parents.class));
+                        Intent intent = new Intent(MainActivity.this, Notices.class);
+                        intent.putExtra("url","http://www.zion.hs.kr/main.php?menugrp=110200&master=bbs&act=list&master_sid=59");
+                        intent.putExtra("title", getResources().getString(R.string.title_activity_notices__parents));
+                        startActivity(intent);
                         break;
                     case 3:
-                        startActivity(new Intent(MainActivity.this, Notices.class));
+                        Intent intent0 = new Intent(MainActivity.this, Notices.class);
+                        intent0.putExtra("url","http://www.zion.hs.kr/main.php?menugrp=110100&master=bbs&act=list&master_sid=58");
+                        intent0.putExtra("title",getResources().getString(R.string.notices));
+                        startActivity(intent0);
                         break;
                     case 4:
                         startActivity(new Intent(MainActivity.this, Schoolintro.class));

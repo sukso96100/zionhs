@@ -32,7 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="quickexec_noti">Show Notification for QuickLaunch Service</string>
     <string name="appsettings_settings_title">App Settings</string>
     <string name="appsettings_settings_select">Select Screen to show on QuickLaunch :</string>
-    <string name="error">Loading Error. Cannot Load from the School Homepage</string>
+    <string name="error">Loading Error. Cannot Load Data</string>
 
     <string-array name="quickexec_select">
         <item>Home</item>
@@ -226,4 +226,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
     <string name="nodata">No Data</string>
+    <string name="share">Share</string>
+    <string name="title_activity_post_view">PostViewActivity</string>
+    <string name="open_in_new_window">Open In New Window</string>
+
 </resources>
