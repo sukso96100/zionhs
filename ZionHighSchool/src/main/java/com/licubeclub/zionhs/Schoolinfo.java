@@ -25,8 +25,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import kr.hs.zion.android.R;
-
 public class Schoolinfo extends ActionBarActivity {
 
     @Override

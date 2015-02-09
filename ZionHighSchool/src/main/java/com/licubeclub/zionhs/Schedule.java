@@ -35,8 +35,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import kr.hs.zion.android.R;
-
 import com.licubeclub.zionhs.data.ScheduleCacheManager;
 
 import org.jsoup.Jsoup;

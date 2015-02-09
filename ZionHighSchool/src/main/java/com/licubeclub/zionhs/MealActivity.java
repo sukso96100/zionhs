@@ -39,8 +39,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import kr.hs.zion.android.R;
-
 import com.licubeclub.zionhs.data.MealCacheManager;
 import com.licubeclub.zionhs.view.SlidingTabLayout;
 

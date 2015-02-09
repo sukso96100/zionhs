@@ -20,7 +20,7 @@ package com.licubeclub.zionhs.data;
 import android.content.Context;
 import android.util.Log;
 
-import kr.hs.zion.android.R;
+import com.licubeclub.zionhs.R;
 
 import java.util.List;
 

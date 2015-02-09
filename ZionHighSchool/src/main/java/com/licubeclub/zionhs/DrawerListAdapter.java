@@ -26,8 +26,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import kr.hs.zion.android.R;
-
 import java.util.ArrayList;
 
 /**

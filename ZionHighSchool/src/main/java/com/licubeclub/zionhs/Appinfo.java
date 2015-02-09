@@ -27,8 +27,6 @@ import android.net.Uri;
 import android.widget.TextView;
 import android.view.View;
 
-import kr.hs.zion.android.R;
-
 public class Appinfo extends ActionBarActivity {
     /*
     * TODO -  학사일정 및 급식 알림 설정 항목 추가(알림 서비스 만 떄 작업)

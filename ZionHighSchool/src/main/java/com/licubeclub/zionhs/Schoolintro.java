@@ -27,8 +27,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import kr.hs.zion.android.R;
-
 import com.licubeclub.zionhs.view.SlidingTabLayout;
 
 public class Schoolintro extends ActionBarActivity {
