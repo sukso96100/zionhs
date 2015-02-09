@@ -1,6 +1,6 @@
 /*
  * Zion High School Application for Android
- * Copyright (C) 2013 Youngbin Han<sukso96100@gmail.com>
+ * Copyright (C) 2013-2015 The Zion High School Application for Android Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -30,7 +30,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -133,10 +132,6 @@ public class Schedule extends ActionBarActivity {
         mobile = cManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
         wifi = cManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
         SRL = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
-        SRL.setColorSchemeColors(Color.rgb(231, 76, 60),
-                Color.rgb(46, 204, 113),
-                Color.rgb(41, 128, 185),
-                Color.rgb(241, 196, 15));
         SRL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {

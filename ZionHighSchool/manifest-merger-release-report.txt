@@ -151,57 +151,59 @@ ADDED from AndroidManifest.xml:90:9
 		ADDED from AndroidManifest.xml:92:13
 	android:parentActivityName
 		ADDED from AndroidManifest.xml:93:13
+	android:theme
+		ADDED from AndroidManifest.xml:94:13
 	android:name
 		ADDED from AndroidManifest.xml:91:13
 activity#com.licubeclub.zionhs.Doc_Readme
-ADDED from AndroidManifest.xml:98:9
+ADDED from AndroidManifest.xml:99:9
 	android:label
-		ADDED from AndroidManifest.xml:100:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:101:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:102:13
 	android:name
-		ADDED from AndroidManifest.xml:99:13
+		ADDED from AndroidManifest.xml:100:13
 activity#com.licubeclub.zionhs.Doc_Notices
-ADDED from AndroidManifest.xml:106:9
+ADDED from AndroidManifest.xml:107:9
 	android:label
-		ADDED from AndroidManifest.xml:108:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:109:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:110:13
 	android:name
-		ADDED from AndroidManifest.xml:107:13
+		ADDED from AndroidManifest.xml:108:13
 activity#com.licubeclub.zionhs.Doc_Copying
-ADDED from AndroidManifest.xml:114:9
+ADDED from AndroidManifest.xml:115:9
 	android:label
-		ADDED from AndroidManifest.xml:116:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:117:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:118:13
 	android:name
-		ADDED from AndroidManifest.xml:115:13
+		ADDED from AndroidManifest.xml:116:13
 activity#com.licubeclub.zionhs.Doc_Contributors
-ADDED from AndroidManifest.xml:122:9
+ADDED from AndroidManifest.xml:123:9
 	android:label
-		ADDED from AndroidManifest.xml:124:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:125:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:126:13
 	android:name
-		ADDED from AndroidManifest.xml:123:13
+		ADDED from AndroidManifest.xml:124:13
 activity#com.licubeclub.zionhs.PostViewActivity
-ADDED from AndroidManifest.xml:130:9
+ADDED from AndroidManifest.xml:131:9
 	android:label
-		ADDED from AndroidManifest.xml:132:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:133:13
-	android:theme
-		ADDED from AndroidManifest.xml:134:13
-	android:name
-		ADDED from AndroidManifest.xml:131:13
-activity#com.licubeclub.zionhs.MealActivity
-ADDED from AndroidManifest.xml:139:9
-	android:label
-		ADDED from AndroidManifest.xml:141:13
 	android:parentActivityName
-		ADDED from AndroidManifest.xml:143:13
+		ADDED from AndroidManifest.xml:134:13
 	android:theme
-		ADDED from AndroidManifest.xml:142:13
+		ADDED from AndroidManifest.xml:135:13
 	android:name
-		ADDED from AndroidManifest.xml:140:13
+		ADDED from AndroidManifest.xml:132:13
+activity#com.licubeclub.zionhs.MealActivity
+ADDED from AndroidManifest.xml:140:9
+	android:label
+		ADDED from AndroidManifest.xml:142:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:144:13
+	android:theme
+		ADDED from AndroidManifest.xml:143:13
+	android:name
+		ADDED from AndroidManifest.xml:141:13
