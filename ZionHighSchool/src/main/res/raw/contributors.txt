@@ -15,35 +15,32 @@ For more accurate information about this project's contributors, visit following
 https://github.com/zionhs/zionhs-android/graphs/contributors
 
 ====================
-Main contributors of this project
-이 프로젝트의 주요 기여자
+Maintainers of this project
+이 프로젝트의 메인테이너(관리자)
+
+N : Woongkyu, Park
+E : pwk824@naver.com
 
 N : Youngbin, Han
 E : sukso96100@gmail.com
-D : maintainer of this project
-W : http://youngbin-han.kr.pe
-
-N : Hyesu, Shin
-E : exeplain@naver.com
-D : main developer of this project
-
-N : Minjun, Kim
-E : rgg800@gmail.com
-D : main developer of this project
-
-N : Huynjung, Kim
-E : bbkim98@naver.com
-D : main developer of this project
-
-N : Hyungi, Shin
-E : tlsgusrl9942@gmail.com
-D : main developer of this project
+D : Starter of this project
 
 ====================
 
 Contributors of this project
 이 프로젝트의 기여자
 
+N : Hyesu, Shin
+E : exeplain@naver.com
+
+N : Minjun, Kim
+E : rgg800@gmail.com
+
+N : Huynjung, Kim
+E : bbkim98@naver.com
+
+N : Hyungi, Shin
+E : tlsgusrl9942@gmail.com
+
 N : Minseok, Kim
 E : iluvmc969@naver.com
-D : English Translator of this Project

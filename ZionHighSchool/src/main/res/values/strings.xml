@@ -28,20 +28,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="schedule">Schedule</string>
     <string name="schoolintro">About the School</string>
     <string name="info">About the App/App Settings</string>
-    <string name="quickexec">QuickLaunch : Launch with Shaking your device</string>
-    <string name="quickexec_noti">Show Notification for QuickLaunch Service</string>
     <string name="appsettings_settings_title">App Settings</string>
     <string name="appsettings_settings_select">Select Screen to show on QuickLaunch :</string>
     <string name="error">Loading Error. Cannot Load Data</string>
-
-    <string-array name="quickexec_select">
-        <item>Home</item>
-        <item>Notices</item>
-        <item>Lunch/Dinner</item>
-        <item>School Informations</item>
-        <item>Schedule</item>
-        <item>About the School</item>
-    </string-array>
 
     <string name="appsettings_apinfo_title">Application Information</string>
     <string name="appsettings_appinfo_update">Check for updates on  Google Play</string>
@@ -172,43 +161,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         \n-제2외국어 선택 폭 확대(Spanish, Chinese, Japanese)
         \n-외국어교육 강화를 위한 현대화된 Lab실 활용 극대화
         \n-the English-speaking world, 일본 학교와 국제교류확대 추진</string>
-    <string name="noti_shake_start">Zion High School : QuickLaunch Service is Enabled</string>
-    <string name="noti_shake_title">QuickLaunch Service</string>
-    <string name="noti_shake_title_sub">Click to configure QuickLaunch Service</string>
-    <string name="title_activity_tutorial">Tutorial</string>
-    <string name="tutorial_0">Start</string>
-    <string name="tutorial_0_0">Slide from right to continue</string>
-    <string name="tutorial_1">Features</string>
-    <string name="tutorial_1_0">Available Features : Notices, Meal Menu,\n School Information, Schedule, App Settings,\n About the School, QuickLaunch</string>
-    <string name="tutorial_2">School Information</string>
-    <string name="tutorial_2_0">You can Check for School Information \n such as the location, contact and more.</string>
-    <string name="tutorial_3">About the School</string>
-    <string name="tutorial_3_0">Read the introduction about our school</string>
-    <string name="tutorial_4">Lunch/Dinner</string>
-    <string name="tutorial_4_0">Check Lunch/Dinner Menu for this week</string>
-    <string name="notices_info">Showing 15 Recent Notices from the School</string>
+    <string name="recent">Recent 15 Posts from the School</string>
     <string name="schedule_info">School Schedules in This Month</string>
-    <string name="tutorial_5">Notices</string>
-    <string name="tutorial_5_0">You can check recent 15 notices from the school</string>
-    <string name="tutorial_6">Schedule</string>
-    <string name="tutorial_6_0">You can check school schedules in this month</string>
     <string name="title_activity_notices__parents">Notices for Parents</string>
-    <string name="noti_parents_info">Showing 15 Recent Notices for Parents from the School</string>
-    <string name="tutorial_7">Schedule</string>
-    <string name="tutorial_7_0">You can check recent 15 notices for parents from the school</string>
-    <string name="tutorial_8">QuickLaunch</string>
-    <string name="tutorial_8_0">        Shake your device to launch this app quickly\n
-        To use this feature, Enable\n
-        [QuickLaunch]in [About the App/App Settings]</string>
-    <string name="tutorial_9">Open Sourced</string>
-    <string name="tutorial_9_0">        This Application is Open Source Software\n
-        which is licensed under the GNU GPL V3\n
-        You can get the Full Source code of this\n
-        (Remember, this is not the reason of\n
-        why this app is zero price)</string>
-    <string name="tutorial_done">DONE!</string>
-    <string name="tutorial_done_0">        To End this tutorial,\n
-        Press the button, [End Tutorial] below</string>
     <string name="tutorial_done_btn">End Tutorial</string>
     <string name="title_activity_doc__readme">README</string>
     <string name="title_activity_doc__notices">NOTICES</string>
@@ -219,9 +174,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="title_activity_meal">MealActivity</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_meal_activity3">MealActivity3</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
     <string name="not_loaded_yet">Not Loaded Yet...</string>
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>

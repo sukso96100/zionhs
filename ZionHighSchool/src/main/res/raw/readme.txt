@@ -1,5 +1,5 @@
 Zion High School Application for Android
-Copyright (C) 2013 Youngbin Han<sukso96100@gmail.com>
+Copyright (C) 2013-2015 The Zion High School Application for Android Open Source Project
 ====================
 
 This program is free software: you can redistribute it and/or modify

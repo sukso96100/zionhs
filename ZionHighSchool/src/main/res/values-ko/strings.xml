@@ -27,20 +27,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="schedule">학사일정</string>
     <string name="schoolintro">학교소개</string>
     <string name="info">앱 정보 및 설정</string>
-    <string name="quickexec">빠른실행 : 흔들어서 실행하기</string>
-    <string name="quickexec_noti">빠른실행 서비스 알림 보이기</string>
     <string name="appsettings_settings_title">앱 설정</string>
     <string name="appsettings_settings_select">빠른실행시 보여줄 화면 선택 :</string>
     <string name="error">불러오기 오류. 데이터를 불러올 수 없습니다.</string>
-
-    <string-array name="quickexec_select">
-        <item>홈 화면</item>
-        <item>공지사항</item>
-        <item>중식/석식</item>
-        <item>학교정보</item>
-        <item>학사일정</item>
-        <item>학교소개</item>
-    </string-array>
     <string name="appsettings_apinfo_title">앱 정보</string>
     <string name="appsettings_appinfo_update">Google Play 에서 업데이트 확인</string>
     <string name="appsettings_appinfo_src">GitHub에서 소스코드 얻기</string>
@@ -194,46 +183,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         \n-영어권, 일본 학교와 국제교류확대 추진
     </string>
 
-    <string name="noti_shake_start">시온고등학교 : 빠른실행 서비스가 켜졌습니다.</string>
-    <string name="noti_shake_title">빠른실행 서비스</string>
-    <string name="noti_shake_title_sub">빠른실행 서비스를 설정하려면 클릭하세요.</string>
-    <string name="title_activity_tutorial">튜토리얼</string>
-    <string name="tutorial_0">시작</string>
-    <string name="tutorial_0_0">오른쪽으로부터 밀어서 게속하기</string>
-    <string name="tutorial_1">기능</string>
-    <string name="tutorial_1_0">포함된 기능들 : 공지사항, 중식/석식, 학교정보,\n학사일정, 앱 정보 및 설정, 학교소개, 빠른실행</string>
-    <string name="tutorial_2">학교정보</string>
-    <string name="tutorial_2_0">학교위치, 연락처 등의 학교정보 확인이 가능합니다.</string>
-    <string name="tutorial_3">학교소개</string>
-    <string name="tutorial_3_0">학교에 관한 소개를 읽어보실 수 있습니다.</string>
-    <string name="tutorial_4">중식/석식</string>
-    <string name="tutorial_4_0">이번주 중식/석식 을 확인하실 수 있습니다.</string>
-    <string name="notices_info">학교로부터의 최근 15개 공지사항</string>
-    <string name="schedule_info">이번달 학사일정</string>
-    <string name="tutorial_5">공지사항</string>
-    <string name="tutorial_5_0">최근 15개 학교 공지사항을 확인하실 수 있습니다.</string>
-    <string name="tutorial_6">학사일정</string>
-    <string name="tutorial_6_0">이번달 학사일정을 확인하실 수 있습니다.</string>
+    <string name="recent">최근 15개 게시물</string>
+    <string name="schedule_info">이번달 학사물일정</string>
     <string name="title_activity_notices__parents">가정통신문</string>
-    <string name="noti_parents_info">학교로부터의 최근 15개 가정통신문</string>
-    <string name="tutorial_7">가정통신문</string>
-    <string name="tutorial_7_0">최근 15개 학교 가정통신문을 확인하실 수 있습니다.</string>
-    <string name="tutorial_8">빠른실행</string>
-    <string name="tutorial_8_0">
-        디바이스를 흔들어서 특정 기능을 바로 사용 가능합니다.\n
-        이 기능을 사용하려면, [앱 정보 및 설정]에서\n
-        [빠른실행]을 켜시면 됩니다.</string>
-    <string name="tutorial_9">오픈소스</string>
-    <string name="tutorial_9_0">
-        이 애플리케이션은 GNU GPL V3 이 적용된\n
-        오픈소스 소프트웨어 입니다.\n
-        언제든지 이 앱의 소스코드를 얻으실 수 있습니다.\n
-        (참고 : 이 앱이 무료인 이유는\n
-        오픈소스 소프트웨어여서가 아닙니다.)</string>
-    <string name="tutorial_done">끝!</string>
-    <string name="tutorial_done_0">
-        튜토리얼을 마치려면,\n
-        [튜토리얼 마치기] 버튼을 누르세요.</string>
     <string name="tutorial_done_btn">튜토리얼 마치기</string>
     <string name="title_activity_web_view">웹 뷰어</string>
     <string name="not_loaded_yet">아직 로드되지 않음...</string>
